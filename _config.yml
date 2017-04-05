@@ -4,14 +4,14 @@
 
 # Site
 title: 时间的朋友
-subtitle: 51World.pub
-description: 把琐碎的时间堆砌成一个伟大的生命。
+subtitle: 把琐碎的时间堆砌成一个伟大的生命。
+description: 一个土木工程出身的码农。
 author: 喵小哥
 language: zh-Hans
 timezone:
 
 # 多说评论 http://miaoxiaoge.duoshuo.com/admin/
-duoshuo_shortname: miaoxiaoge
+#duoshuo_shortname: miaoxiaoge
 
 # 百度统计 用户名-miaoxiaoge http://tongji.baidu.com/
 baidu_analytics: c854619f060bceda20bd4b4b29ce99f3
@@ -80,10 +80,12 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: NexT
+theme: next
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://github.com/taketimeasafriend/taketimeasafriend.github.io.git
+  repo:
+    github: https://github.com/taketimeasafriend/taketimeasafriend.github.io.git,master
+    coding: https://git.coding.net/miaoxiaoge/hexo_blog.git,master

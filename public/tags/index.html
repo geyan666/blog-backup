@@ -27,6 +27,9 @@
 
 
 
+
+
+
   
   
   <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
@@ -65,7 +68,7 @@
 
 <link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
   <meta name="keywords" content="Hexo, NexT" />
@@ -77,23 +80,23 @@
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/uploads/favicon_books.ico?v=5.0.2" />
+  <link rel="shortcut icon" type="image/x-icon" href="/uploads/favicon_books.ico?v=5.1.0" />
 
 
 
 
 
 
-<meta name="description" content="把琐碎的时间堆砌成一个伟大的生命。">
+<meta name="description" content="一个土木工程出身的码农。">
 <meta property="og:type" content="website">
-<meta property="og:title" content="标签云">
+<meta property="og:title" content="🖇">
 <meta property="og:url" content="https://taketimeasafriend.github.io/tags/index.html">
 <meta property="og:site_name" content="时间的朋友">
-<meta property="og:description" content="把琐碎的时间堆砌成一个伟大的生命。">
-<meta property="og:updated_time" content="2016-12-18T05:12:33.000Z">
+<meta property="og:description" content="一个土木工程出身的码农。">
+<meta property="og:updated_time" content="2017-03-30T19:22:30.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="标签云">
-<meta name="twitter:description" content="把琐碎的时间堆砌成一个伟大的生命。">
+<meta name="twitter:title" content="🖇">
+<meta name="twitter:description" content="一个土木工程出身的码农。">
 
 
 
@@ -102,7 +105,7 @@
   var CONFIG = {
     root: '/',
     scheme: 'Muse',
-    sidebar: {"position":"left","display":"always"},
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
     fancybox: true,
     motion: true,
     duoshuo: {
@@ -113,8 +116,8 @@
       applicationID: '',
       apiKey: '',
       indexName: '',
-      hits: "",
-      labels: ""
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
     }
   };
 </script>
@@ -131,7 +134,7 @@
   
 
   
-    标签云 | 时间的朋友
+    🖇 | 时间的朋友
   
 </title>
 </head>
@@ -141,11 +144,13 @@
   
 
 
+
+
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
           m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
   ga('create', 'UA-87405681-1', 'auto');
   ga('send', 'pageview');
 </script>
@@ -167,35 +172,47 @@
 
 
 
+  <div style="display: none;">
+    <script src="//s95.cnzz.com/z_stat.php?id=1261612368&web_id=1261612368" language="JavaScript"></script>
+  </div>
+
+
+
+
+
 
   
   
     
   
 
-  <div class="container one-collumn sidebar-position-left  ">
+  <div class="container sidebar-position-left  ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-meta ">
-  
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
 
-  <div class="custom-logo-site-title">
-    <a href="/"  class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <span class="site-title">时间的朋友</span>
-      <span class="logo-line-after"><i></i></span>
-    </a>
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">时间的朋友</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">把琐碎的时间堆砌成一个伟大的生命。</h1>
+      
   </div>
-  <p class="site-subtitle">51World.pub</p>
-</div>
 
-<div class="site-nav-toggle">
-  <button>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-  </button>
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
 </div>
 
 <nav class="site-nav">
@@ -210,7 +227,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            扉页
+            首页
           </a>
         </li>
       
@@ -230,7 +247,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-th-list"></i> <br />
             
-            类别
+            分类
           </a>
         </li>
       
@@ -240,17 +257,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-thumb-tack"></i> <br />
             
-            关键字
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-schedule">
-          <a href="/schedule" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-calendar"></i> <br />
-            
-            日程
+            标签
           </a>
         </li>
       
@@ -260,17 +267,17 @@
             
               <i class="menu-item-icon fa fa-fw fa-user-plus"></i> <br />
             
-            About
+            关于
           </a>
         </li>
       
         
-        <li class="menu-item menu-item-commonweal">
-          <a href="/404.html" rel="section">
+        <li class="menu-item menu-item-test">
+          <a href="/test" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-heart"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-flask"></i> <br />
             
-            公益404
+            待续...
           </a>
         </li>
       
@@ -293,12 +300,23 @@
   
     <div class="site-search">
       
-  <div class="popup">
- <span class="search-icon fa fa-search"></span>
- <input type="text" id="local-search-input">
- <div id="local-search-result"></div>
- <span class="popup-btn-close">close</span>
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocapitalize="off" autocomplete="off" autocorrect="off"
+             placeholder="请输入在本站搜索的关键字..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
 </div>
+
 
 
     </div>
@@ -319,7 +337,7 @@
   <div id="posts" class="posts-expand">
   <header class="post-header">
 
-	<h2 class="post-title" itemprop="name headline">标签云</h2>
+	<h2 class="post-title" itemprop="name headline">🖇</h2>
 
 
 
@@ -329,10 +347,10 @@
     
       <div class="tag-cloud">
         <div class="tag-cloud-title">
-            目前共计 21 个标签
+            目前共计 42 个标签
         </div>
         <div class="tag-cloud-tags">
-          <a href="/tags/English/" style="font-size: 18px; color: #8e8e8e">English</a> <a href="/tags/Mac/" style="font-size: 12px; color: #ccc">Mac</a> <a href="/tags/Markdown/" style="font-size: 12px; color: #ccc">Markdown</a> <a href="/tags/Notes/" style="font-size: 12px; color: #ccc">Notes</a> <a href="/tags/元学习/" style="font-size: 12px; color: #ccc">元学习</a> <a href="/tags/写作/" style="font-size: 12px; color: #ccc">写作</a> <a href="/tags/单反/" style="font-size: 12px; color: #ccc">单反</a> <a href="/tags/在线/" style="font-size: 12px; color: #ccc">在线</a> <a href="/tags/女性/" style="font-size: 12px; color: #ccc">女性</a> <a href="/tags/尼康-D5100/" style="font-size: 12px; color: #ccc">尼康 D5100</a> <a href="/tags/工具/" style="font-size: 12px; color: #ccc">工具</a> <a href="/tags/常用/" style="font-size: 12px; color: #ccc">常用</a> <a href="/tags/拖延症/" style="font-size: 12px; color: #ccc">拖延症</a> <a href="/tags/摄影/" style="font-size: 12px; color: #ccc">摄影</a> <a href="/tags/操作指南/" style="font-size: 12px; color: #ccc">操作指南</a> <a href="/tags/新生大学/" style="font-size: 24px; color: #4f4f4f">新生大学</a> <a href="/tags/游戏/" style="font-size: 12px; color: #ccc">游戏</a> <a href="/tags/演讲/" style="font-size: 12px; color: #ccc">演讲</a> <a href="/tags/理财投资/" style="font-size: 12px; color: #ccc">理财投资</a> <a href="/tags/直播课/" style="font-size: 24px; color: #4f4f4f">直播课</a> <a href="/tags/读书/" style="font-size: 30px; color: #111">读书</a>
+          <a href="/tags/English/" style="font-size: 19.2px; color: #818181">English</a> <a href="/tags/Github/" style="font-size: 12px; color: #ccc">Github</a> <a href="/tags/G点/" style="font-size: 12px; color: #ccc">G点</a> <a href="/tags/Mac/" style="font-size: 15.6px; color: #a7a7a7">Mac</a> <a href="/tags/Markdown/" style="font-size: 12px; color: #ccc">Markdown</a> <a href="/tags/Spotlight/" style="font-size: 12px; color: #ccc">Spotlight</a> <a href="/tags/git/" style="font-size: 12px; color: #ccc">git</a> <a href="/tags/github/" style="font-size: 12px; color: #ccc">github</a> <a href="/tags/hexo/" style="font-size: 12px; color: #ccc">hexo</a> <a href="/tags/mpv/" style="font-size: 12px; color: #ccc">mpv</a> <a href="/tags/next/" style="font-size: 12px; color: #ccc">next</a> <a href="/tags/xdite/" style="font-size: 12px; color: #ccc">xdite</a> <a href="/tags/乔布斯/" style="font-size: 12px; color: #ccc">乔布斯</a> <a href="/tags/人生/" style="font-size: 30px; color: #111">人生</a> <a href="/tags/元学习/" style="font-size: 12px; color: #ccc">元学习</a> <a href="/tags/全栈/" style="font-size: 12px; color: #ccc">全栈</a> <a href="/tags/写作/" style="font-size: 12px; color: #ccc">写作</a> <a href="/tags/单反/" style="font-size: 12px; color: #ccc">单反</a> <a href="/tags/女性/" style="font-size: 12px; color: #ccc">女性</a> <a href="/tags/婚姻/" style="font-size: 12px; color: #ccc">婚姻</a> <a href="/tags/尼康-D5100/" style="font-size: 12px; color: #ccc">尼康 D5100</a> <a href="/tags/工具/" style="font-size: 12px; color: #ccc">工具</a> <a href="/tags/幸福/" style="font-size: 12px; color: #ccc">幸福</a> <a href="/tags/心理/" style="font-size: 12px; color: #ccc">心理</a> <a href="/tags/性格/" style="font-size: 12px; color: #ccc">性格</a> <a href="/tags/拖延症/" style="font-size: 15.6px; color: #a7a7a7">拖延症</a> <a href="/tags/摄影/" style="font-size: 12px; color: #ccc">摄影</a> <a href="/tags/李笑来/" style="font-size: 26.4px; color: #363636">李笑来</a> <a href="/tags/概念升级/" style="font-size: 22.8px; color: #5c5c5c">概念升级</a> <a href="/tags/比特币/" style="font-size: 12px; color: #ccc">比特币</a> <a href="/tags/游戏/" style="font-size: 12px; color: #ccc">游戏</a> <a href="/tags/演讲/" style="font-size: 12px; color: #ccc">演讲</a> <a href="/tags/牛人/" style="font-size: 15.6px; color: #a7a7a7">牛人</a> <a href="/tags/理财投资/" style="font-size: 15.6px; color: #a7a7a7">理财投资</a> <a href="/tags/直播课/" style="font-size: 19.2px; color: #818181">直播课</a> <a href="/tags/编程/" style="font-size: 12px; color: #ccc">编程</a> <a href="/tags/罗振宇/" style="font-size: 12px; color: #ccc">罗振宇</a> <a href="/tags/规律/" style="font-size: 12px; color: #ccc">规律</a> <a href="/tags/读书/" style="font-size: 26.4px; color: #363636">读书</a> <a href="/tags/财富自由/" style="font-size: 15.6px; color: #a7a7a7">财富自由</a> <a href="/tags/配置/" style="font-size: 15.6px; color: #a7a7a7">配置</a> <a href="/tags/魔方/" style="font-size: 12px; color: #ccc">魔方</a>
         </div>
       </div>
     
@@ -344,14 +362,6 @@
 
 
           
-  <div class="comments" id="comments">
-    
-      <div class="ds-thread" data-thread-key="tags/index.html"
-           data-title="标签云" data-url="https://taketimeasafriend.github.io/tags/index.html">
-      </div>
-    
-  </div>
-
 
         </div>
         
@@ -378,29 +388,38 @@
                src="/uploads/avatar.jpg"
                alt="喵小哥" />
           <p class="site-author-name" itemprop="name">喵小哥</p>
-          <p class="site-description motion-element" itemprop="description">把琐碎的时间堆砌成一个伟大的生命。</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+           
         </div>
         <nav class="site-state motion-element">
-          <div class="site-state-item site-state-posts">
-            <a href="/archives">
-              <span class="site-state-item-count">18</span>
-              <span class="site-state-item-name">日志</span>
-            </a>
-          </div>
 
           
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">30</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
             <div class="site-state-item site-state-categories">
-              <a href="/categories">
-                <span class="site-state-item-count">2</span>
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">9</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
           
 
           
+            
+            
             <div class="site-state-item site-state-tags">
-              <a href="/tags">
-                <span class="site-state-item-count">21</span>
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">42</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -412,6 +431,26 @@
 
         <div class="links-of-author motion-element">
           
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/taketimeasafriend" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/miaoxiaogege" target="_blank" title="微博">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  微博
+                </a>
+              </span>
+            
+          
         </div>
 
         
@@ -419,11 +458,47 @@
 
         
         
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              拓展学习
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://zhibimo.com/explore/books/" title="知笔墨" target="_blank">知笔墨</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://web.archive.org/web/20111228123747/http://www.lixiaolai.com/" title="李笑来" target="_blank">李笑来</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://macshuo.com/" title="MacTalk" target="_blank">MacTalk</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://mindhacks.cn/" title="MindHacks" target="_blank">MindHacks</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.ruanyifeng.com/blog/" title="阮一峰" target="_blank">阮一峰</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.devtang.com/" title="唐巧" target="_blank">唐巧</a>
+                </li>
+              
+            </ul>
+          </div>
+        
 
         
 
 
       </section>
+
+      
 
       
 
@@ -441,12 +516,13 @@
   
   更新于<i class="fa fa-clock-o" aria-hidden="true"></i>
   
-  <span itemprop="copyrightYear">2016-12-19</span>
+  <span itemprop="copyrightYear">2017-04-05</span>
   <span class="with-love">
     <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">喵小哥</span>
 </div>
+
 
 <div class="powered-by">
   每天进步一点点
@@ -465,9 +541,13 @@
       </div>
     </footer>
 
-    <div class="back-to-top">
-      <i class="fa fa-arrow-up"></i>
-    </div>
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
   </div>
 
   
@@ -489,6 +569,11 @@
   
 
 
+  
+
+
+
+
 
   
   <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
@@ -508,52 +593,65 @@
   
   <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
 
+  
+  <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+
 
   
 
 
-  <script type="text/javascript" src="/js/src/utils.js?v=5.0.2"></script>
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
 
-  <script type="text/javascript" src="/js/src/motion.js?v=5.0.2"></script>
-
-
-
-  
-  
-
-  
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.2"></script>
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
 
 
 
   
+  
 
   
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  
+
     
-  
-
-  <script type="text/javascript">
-    var duoshuoQuery = {short_name:"miaoxiaoge"};
-    (function() {
-      var ds = document.createElement('script');
-      ds.type = 'text/javascript';ds.async = true;
-      ds.id = 'duoshuo-script';
-      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-      ds.charset = 'UTF-8';
-      (document.getElementsByTagName('head')[0]
-      || document.getElementsByTagName('body')[0]).appendChild(ds);
-    })();
-  </script>
-
-  
+      <script id="dsq-count-scr" src="https://taketimeasafriend.disqus.com/count.js" async></script>
     
+
     
-    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
-    <script src="/js/src/hook-duoshuo.js"></script>
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
   
 
 
@@ -561,10 +659,8 @@
 
 
 
-
-
   
-  
+
   <script type="text/javascript">
     // Popup Window;
     var isfetched = false;
@@ -577,7 +673,9 @@
     // monitor main search box;
 
     function proceedsearch() {
-      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
       $('.popup').toggle();
     }
     // search function;
@@ -681,7 +779,7 @@
 
     $('.popup-btn-close').click(function(e){
       $('.popup').hide();
-      $(".popoverlay").remove();
+      $(".local-search-pop-overlay").remove();
       $('body').css('overflow', '');
     });
     $('.popup').click(function(e){
@@ -690,7 +788,8 @@
   </script>
 
 
-  
+
+
 
   
 
@@ -820,6 +919,7 @@
 
   
 
+  
 
 </body>
 </html>

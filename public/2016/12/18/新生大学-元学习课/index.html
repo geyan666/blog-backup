@@ -27,6 +27,9 @@
 
 
 
+
+
+
   
   
   <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
@@ -65,44 +68,35 @@
 
 <link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="新生大学,元学习," />
-
-
-
-
-
-
-
-
-  <link rel="shortcut icon" type="image/x-icon" href="/uploads/favicon_books.ico?v=5.0.2" />
+  <meta name="keywords" content="元学习," />
 
 
 
 
 
 
-<meta name="description" content="如果能过目不忘且可温故知新，那就可以不记笔记了，否则就是轻视世界加轻视自己的一条咸鱼 —— 相信我，你会丢掉好多时光。
-关于需要学习编程知识的诀窍的人太多了，教不完。那就先来一个“学习方法”的课程，从编程角度切入，进而向全栈工程师迈进。本课程，目的是为了让所有对编程有兴趣的人，突破从 0 → 1 的大难关。
-另外，可以通过这种方法逆向工程自己的大脑，拓展你对学习未知领域的疆界。
-学习编程或其他未知">
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/uploads/favicon_books.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="我们可以掌控大脑来让大脑掌控我们。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="新生大学-元学习课">
+<meta property="og:title" content="元学习-真正意义上的从入门到精通">
 <meta property="og:url" content="https://taketimeasafriend.github.io/2016/12/18/新生大学-元学习课/index.html">
 <meta property="og:site_name" content="时间的朋友">
-<meta property="og:description" content="如果能过目不忘且可温故知新，那就可以不记笔记了，否则就是轻视世界加轻视自己的一条咸鱼 —— 相信我，你会丢掉好多时光。
-关于需要学习编程知识的诀窍的人太多了，教不完。那就先来一个“学习方法”的课程，从编程角度切入，进而向全栈工程师迈进。本课程，目的是为了让所有对编程有兴趣的人，突破从 0 → 1 的大难关。
-另外，可以通过这种方法逆向工程自己的大脑，拓展你对学习未知领域的疆界。
-学习编程或其他未知">
-<meta property="og:updated_time" content="2016-12-18T05:12:33.000Z">
+<meta property="og:description" content="我们可以掌控大脑来让大脑掌控我们。">
+<meta property="og:updated_time" content="2017-04-01T20:31:41.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="新生大学-元学习课">
-<meta name="twitter:description" content="如果能过目不忘且可温故知新，那就可以不记笔记了，否则就是轻视世界加轻视自己的一条咸鱼 —— 相信我，你会丢掉好多时光。
-关于需要学习编程知识的诀窍的人太多了，教不完。那就先来一个“学习方法”的课程，从编程角度切入，进而向全栈工程师迈进。本课程，目的是为了让所有对编程有兴趣的人，突破从 0 → 1 的大难关。
-另外，可以通过这种方法逆向工程自己的大脑，拓展你对学习未知领域的疆界。
-学习编程或其他未知">
+<meta name="twitter:title" content="元学习-真正意义上的从入门到精通">
+<meta name="twitter:description" content="我们可以掌控大脑来让大脑掌控我们。">
 
 
 
@@ -111,7 +105,7 @@
   var CONFIG = {
     root: '/',
     scheme: 'Muse',
-    sidebar: {"position":"left","display":"always"},
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
     fancybox: true,
     motion: true,
     duoshuo: {
@@ -122,8 +116,8 @@
       applicationID: '',
       apiKey: '',
       indexName: '',
-      hits: "",
-      labels: ""
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
     }
   };
 </script>
@@ -136,7 +130,7 @@
 
 
 
-  <title> 新生大学-元学习课 | 时间的朋友 </title>
+  <title> 元学习-真正意义上的从入门到精通 | 时间的朋友 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -144,11 +138,13 @@
   
 
 
+
+
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
           m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
   ga('create', 'UA-87405681-1', 'auto');
   ga('send', 'pageview');
 </script>
@@ -170,35 +166,47 @@
 
 
 
+  <div style="display: none;">
+    <script src="//s95.cnzz.com/z_stat.php?id=1261612368&web_id=1261612368" language="JavaScript"></script>
+  </div>
+
+
+
+
+
 
   
   
     
   
 
-  <div class="container one-collumn sidebar-position-left page-post-detail ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-meta ">
-  
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
 
-  <div class="custom-logo-site-title">
-    <a href="/"  class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <span class="site-title">时间的朋友</span>
-      <span class="logo-line-after"><i></i></span>
-    </a>
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">时间的朋友</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">把琐碎的时间堆砌成一个伟大的生命。</h1>
+      
   </div>
-  <p class="site-subtitle">51World.pub</p>
-</div>
 
-<div class="site-nav-toggle">
-  <button>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-  </button>
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
 </div>
 
 <nav class="site-nav">
@@ -213,7 +221,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            扉页
+            首页
           </a>
         </li>
       
@@ -233,7 +241,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-th-list"></i> <br />
             
-            类别
+            分类
           </a>
         </li>
       
@@ -243,17 +251,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-thumb-tack"></i> <br />
             
-            关键字
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-schedule">
-          <a href="/schedule" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-calendar"></i> <br />
-            
-            日程
+            标签
           </a>
         </li>
       
@@ -263,17 +261,17 @@
             
               <i class="menu-item-icon fa fa-fw fa-user-plus"></i> <br />
             
-            About
+            关于
           </a>
         </li>
       
         
-        <li class="menu-item menu-item-commonweal">
-          <a href="/404.html" rel="section">
+        <li class="menu-item menu-item-test">
+          <a href="/test" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-heart"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-flask"></i> <br />
             
-            公益404
+            待续...
           </a>
         </li>
       
@@ -296,12 +294,23 @@
   
     <div class="site-search">
       
-  <div class="popup">
- <span class="search-icon fa fa-search"></span>
- <input type="text" id="local-search-input">
- <div id="local-search-result"></div>
- <span class="popup-btn-close">close</span>
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocapitalize="off" autocomplete="off" autocorrect="off"
+             placeholder="请输入在本站搜索的关键字..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
 </div>
+
 
 
     </div>
@@ -329,38 +338,45 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="https://taketimeasafriend.github.io/2016/12/18/新生大学-元学习课/">
+    <link itemprop="mainEntityOfPage" href="https://taketimeasafriend.github.io/2016/12/18/新生大学-元学习课/">
 
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="喵小哥">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="/uploads/avatar.jpg">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="时间的朋友">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="时间的朋友" src="">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="喵小哥">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
     </span>
-  </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="时间的朋友">
+    </span>
 
     
       <header class="post-header">
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h2 class="post-title" itemprop="name headline">
             
             
               
-                新生大学-元学习课
+                元学习-真正意义上的从入门到精通
               
             
-          </h1>
+          </h2>
         
 
         <div class="post-meta">
           <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-12-18T13:12:33+08:00">
+                2016-12-18
+              </time>
             
 
             
@@ -369,30 +385,58 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/新生大学/" itemprop="url" rel="index">
+                    <span itemprop="name">新生大学</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
               <span class="post-comments-count">
                 <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
                 <a href="/2016/12/18/新生大学-元学习课/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/18/新生大学-元学习课/" itemprop="commentCount"></span>
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2016/12/18/新生大学-元学习课/" itemprop="commentCount"></span>
                 </a>
               </span>
             
           
 
           
-
           
-          
-             <span id="/2016/12/18/新生大学-元学习课/" class="leancloud_visitors" data-flag-title="新生大学-元学习课">
+             <span id="/2016/12/18/新生大学-元学习课/" class="leancloud_visitors" data-flag-title="元学习-真正意义上的从入门到精通">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
                </span>
-               <span class="post-meta-item-text">阅读次数 </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
           
 
           
@@ -410,7 +454,9 @@
       
 
       
-        <p><strong>如果能过目不忘且可温故知新，那就可以不记笔记了，否则就是轻视世界加轻视自己的一条咸鱼 —— 相信我，你会丢掉好多时光。</strong></p>
+        <blockquote class="blockquote-center">我们可以掌控大脑来让大脑掌控我们。</blockquote>
+
+<a id="more"></a>
 <p>关于需要学习编程知识的诀窍的人太多了，教不完。那就先来一个“学习方法”的课程，从编程角度切入，进而向全栈工程师迈进。本课程，目的是为了让所有对编程有兴趣的人，突破从 0 → 1 的大难关。</p>
 <p>另外，可以通过这种方法逆向工程自己的大脑，拓展你对学习未知领域的疆界。</p>
 <h2 id="学习编程或其他未知领域的天险"><a href="#学习编程或其他未知领域的天险" class="headerlink" title="学习编程或其他未知领域的天险"></a>学习编程或其他未知领域的天险</h2><p>一般都是三天新鲜完成了序章 → 紧接着卡壳 → 困惑+盲目+弯路 → 无成就感而止步不前</p>
@@ -454,6 +500,7 @@
 </ul>
 </li>
 </ol>
+   <video src="http://ogudt6aal.bkt.clouddn.com/video/%E5%AD%A6%E4%B9%A0%E6%98%AF%E4%BB%B6%E7%BB%88%E7%94%9F%E5%A4%A7%E4%BA%8B.mp4" controls="controls" style="max-width: 100%; display: block; margin-left: auto; margin-right: auto;"><br>   your browser does not support the video tag<br>   </video>
 
       
     </div>
@@ -461,6 +508,11 @@
     <div>
       
         
+<div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="/uploads/weigonghao.jpg" alt="喵小哥 wechat" style="width: 200px; max-width: 100%;"/>
+    <div>上面是一个挤牙膏式的微公号。</div>
+</div>
+
 
       
     </div>
@@ -468,16 +520,62 @@
     <div>
       
         
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div> <span> - </span> 坚持分享  鼓励创作 <span> - </span> </div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/uploads/Wechat.png" alt="喵小哥 WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/uploads/Alipay.png" alt="喵小哥 Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+      
+        <div id="bitcoin" style="display: inline-block">
+          <img id="bitcoin_qr" src="/uploads/bitcoin.png" alt="喵小哥 Bitcoin"/>
+          <p>比特币打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
 
       
     </div>
 
+    <div>
+      
+        
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+      <strong>本文作者：</strong>
+      喵小哥
+    </li>
+    <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://taketimeasafriend.github.io/2016/12/18/新生大学-元学习课/" title="元学习-真正意义上的从入门到精通">https://taketimeasafriend.github.io/2016/12/18/新生大学-元学习课/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong>
+      本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+
+
+      
+    </div>
 
     <footer class="post-footer">
       
         <div class="post-tags">
-          
-            <a href="/tags/新生大学/" rel="tag"># 新生大学</a>
           
             <a href="/tags/元学习/" rel="tag"># 元学习</a>
           
@@ -485,11 +583,15 @@
       
 
       
+        
+      
+
+      
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/12/18/新生大学-写作课/" rel="next" title="新生大学-写作课">
-                <i class="fa fa-chevron-left"></i> 新生大学-写作课
+              <a href="/2016/12/18/编程那点事儿-Sex and Seduction-20 Erotic Stories/" rel="next" title="Sex and Seduction - 20 Erotic Stories">
+                <i class="fa fa-chevron-left"></i> Sex and Seduction - 20 Erotic Stories
               </a>
             
           </div>
@@ -498,8 +600,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/12/18/性格测试/" rel="prev" title="什么是性格？你是什么性格？">
-                什么是性格？你是什么性格？ <i class="fa fa-chevron-right"></i>
+              <a href="/2016/12/18/新生大学-写作课/" rel="prev" title="网络世界牛人的写作">
+                网络世界牛人的写作 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -526,8 +628,11 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/12/18/新生大学-元学习课/"
-           data-title="新生大学-元学习课" data-url="https://taketimeasafriend.github.io/2016/12/18/新生大学-元学习课/">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
       </div>
     
   </div>
@@ -567,29 +672,38 @@
                src="/uploads/avatar.jpg"
                alt="喵小哥" />
           <p class="site-author-name" itemprop="name">喵小哥</p>
-          <p class="site-description motion-element" itemprop="description">把琐碎的时间堆砌成一个伟大的生命。</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+           
         </div>
         <nav class="site-state motion-element">
-          <div class="site-state-item site-state-posts">
-            <a href="/archives">
-              <span class="site-state-item-count">18</span>
-              <span class="site-state-item-name">日志</span>
-            </a>
-          </div>
 
           
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">30</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
             <div class="site-state-item site-state-categories">
-              <a href="/categories">
-                <span class="site-state-item-count">2</span>
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">9</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
           
 
           
+            
+            
             <div class="site-state-item site-state-tags">
-              <a href="/tags">
-                <span class="site-state-item-count">21</span>
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">42</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -601,12 +715,66 @@
 
         <div class="links-of-author motion-element">
           
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/taketimeasafriend" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/miaoxiaogege" target="_blank" title="微博">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  微博
+                </a>
+              </span>
+            
+          
         </div>
 
         
         
 
         
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              拓展学习
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://zhibimo.com/explore/books/" title="知笔墨" target="_blank">知笔墨</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://web.archive.org/web/20111228123747/http://www.lixiaolai.com/" title="李笑来" target="_blank">李笑来</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://macshuo.com/" title="MacTalk" target="_blank">MacTalk</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://mindhacks.cn/" title="MindHacks" target="_blank">MindHacks</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.ruanyifeng.com/blog/" title="阮一峰" target="_blank">阮一峰</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.devtang.com/" title="唐巧" target="_blank">唐巧</a>
+                </li>
+              
+            </ul>
+          </div>
         
 
         
@@ -632,6 +800,8 @@
       <!--/noindex-->
       
 
+      
+
     </div>
   </aside>
 
@@ -646,12 +816,13 @@
   
   更新于<i class="fa fa-clock-o" aria-hidden="true"></i>
   
-  <span itemprop="copyrightYear">2016-12-19</span>
+  <span itemprop="copyrightYear">2017-04-05</span>
   <span class="with-love">
     <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">喵小哥</span>
 </div>
+
 
 <div class="powered-by">
   每天进步一点点
@@ -670,9 +841,13 @@
       </div>
     </footer>
 
-    <div class="back-to-top">
-      <i class="fa fa-arrow-up"></i>
-    </div>
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
   </div>
 
   
@@ -694,6 +869,11 @@
   
 
 
+  
+
+
+
+
 
   
   <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
@@ -713,56 +893,81 @@
   
   <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
 
-
   
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.0.2"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.0.2"></script>
-
-
-
-  
-  
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
-
+  <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
 
 
   
 
 
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.2"></script>
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
 
 
 
   
 
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
   
+
+
+  
+
     
-  
-
-  <script type="text/javascript">
-    var duoshuoQuery = {short_name:"miaoxiaoge"};
-    (function() {
-      var ds = document.createElement('script');
-      ds.type = 'text/javascript';ds.async = true;
-      ds.id = 'duoshuo-script';
-      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-      ds.charset = 'UTF-8';
-      (document.getElementsByTagName('head')[0]
-      || document.getElementsByTagName('body')[0]).appendChild(ds);
-    })();
-  </script>
-
-  
+      <script id="dsq-count-scr" src="https://taketimeasafriend.disqus.com/count.js" async></script>
     
+
     
-    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
-    <script src="/js/src/hook-duoshuo.js"></script>
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'https://taketimeasafriend.github.io/2016/12/18/新生大学-元学习课/';
+          this.page.identifier = '2016/12/18/新生大学-元学习课/';
+          this.page.title = '元学习-真正意义上的从入门到精通';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://taketimeasafriend.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
   
 
 
@@ -770,10 +975,8 @@
 
 
 
-
-
   
-  
+
   <script type="text/javascript">
     // Popup Window;
     var isfetched = false;
@@ -786,7 +989,9 @@
     // monitor main search box;
 
     function proceedsearch() {
-      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
       $('.popup').toggle();
     }
     // search function;
@@ -890,7 +1095,7 @@
 
     $('.popup-btn-close').click(function(e){
       $('.popup').hide();
-      $(".popoverlay").remove();
+      $(".local-search-pop-overlay").remove();
       $('body').css('overflow', '');
     });
     $('.popup').click(function(e){
@@ -899,7 +1104,8 @@
   </script>
 
 
-  
+
+
 
   
 
@@ -1029,6 +1235,7 @@
 
   
 
+  
 
 </body>
 </html>
