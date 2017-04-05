@@ -45,5 +45,5 @@ tags:
 1. clone到本地（如果是别人的，可以fork到自己账户中再操作）
  $ git clone git@github.com:xxx/yyy.git
 2. $ git checkout -b version-x
-3. 编辑后直接
+3. 编辑后直接add-commit-push
 ```
