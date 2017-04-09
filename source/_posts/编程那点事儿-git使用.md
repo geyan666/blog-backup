@@ -17,7 +17,7 @@ tags:
 1. 进入文件夹内：
  $ git config --global user.name "xxx"
  $ git config --global user.email xxx@gmail.com
-2. git init
+2. git init(或新建好工程后，再初始化也行)
 3. 文件夹添加文件后：
  $ git add .
  $ git commit -m "add a file to test"
