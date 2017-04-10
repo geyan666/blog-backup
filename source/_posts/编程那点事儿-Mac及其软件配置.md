@@ -45,6 +45,16 @@ launchctl unload -w /Library/Launch.../... .plist
 ```
 [命令参考链接](https://developer.apple.com/legacy/library/documentation/Darwin/Reference/ManPages/man1/launchctl.1.html "命令参考链接")
 
+## Finder相关
+
+user（你的名字）下其实有个看不见的 Library 文件夹，系统默认不可见。
+
+访问方法：
+``` bash
+打开Finder，按 shift+command+g，输入“~/Library”（引号里面的），回车，进入Library下。
+```
+这样就可以找一些难找的文件（比如优酷下载的视频文件，在 /Library/Containers/com.youku.mac/Data 下）。
+
 ## 备受好评的mpv播放器使用指南(默认配置)
 
 ### 播放速度
