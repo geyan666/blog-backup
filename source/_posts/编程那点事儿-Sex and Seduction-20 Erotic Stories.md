@@ -222,7 +222,4 @@ I studied the wicked silhouette of her generous tits and gave my pocket-rocket a
 We adjourned to the room next door, a tastefully-appointed sleeping and sex flop big enough to shelter a Wobblies' convention. She pulled open a drawer, handed it to me. It was an 8 by 10 glossy of a black dildo --- a rather immense dildo if I was any judge of perspective, and pricks. I glanced from the picture to her, and her face went redder than post-war Russia.
 
 
-
-
-
-- to be continued...
+## to be continued...

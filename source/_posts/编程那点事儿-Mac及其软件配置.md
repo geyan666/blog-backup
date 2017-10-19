@@ -14,13 +14,23 @@ tags:
 
 **如果能过目不忘且可温故知新，那就可以不记笔记了，否则就是轻视世界加轻视自己的一条咸鱼 —— 相信我，你会丢掉好多时光。**
 
-## 系统设置
+## Mac 系统设置
 
-### Spotlight搜索文件内容设置
+### Spotlight - 搜索文件内容设置
 
-system preferences - spotlight 的 “search results” 和 “privacy” 选项配置
+system preferences - spotlight 的 “search results” 和 “privacy” 选项配置。
 
-### 设定可以在指定文件夹内打开iTerm
+### Finder - 文件管理器搜不到的文件设置
+
+user（你的名字）下其实有个看不见的 Library 文件夹，系统默认不可见。
+
+访问方法：
+``` bash
+打开Finder，按 shift+command+g，输入“~/Library”（引号里面的），回车，进入Library下。
+```
+这样就可以找一些难找的文件（比如优酷下载的视频文件，在 /Library/Containers/com.youku.mac/Data 下）。
+
+### 设定可以在指定文件夹内打开 iTerm 命令行
 
 ``` bash
 1. 打开 “Automator” ➡️ 选 “服务” ➡️ 确定 “选取”
@@ -29,6 +39,11 @@ system preferences - spotlight 的 “search results” 和 “privacy” 选项
 4. CMD+S 存储为 “...”（你想叫的功能名字）
 5. 验证：Finder中选定一个文件夹，右键 ➡️ 服务 ➡️ 找到你第4步命名的功能
 ```
+
+比如我把这个功能叫做 `open-iterm-in-folder`：
+
+![](http://ogudt6aal.bkt.clouddn.com/image/20170811021704_gav3Cv_open-iterm-in-folder.jpeg)
+![](http://ogudt6aal.bkt.clouddn.com/image/20170811021902_NLRYOw_open-iterm-in-folder2.jpeg)
 
 ### 开机启动项
 
@@ -45,19 +60,11 @@ launchctl unload -w /Library/Launch.../... .plist
 ```
 [命令参考链接](https://developer.apple.com/legacy/library/documentation/Darwin/Reference/ManPages/man1/launchctl.1.html "命令参考链接")
 
-## Finder相关
+## Mac 常用软件
 
-user（你的名字）下其实有个看不见的 Library 文件夹，系统默认不可见。
+### 备受好评的 mpv 播放器使用指南(默认配置)
 
-访问方法：
-``` bash
-打开Finder，按 shift+command+g，输入“~/Library”（引号里面的），回车，进入Library下。
-```
-这样就可以找一些难找的文件（比如优酷下载的视频文件，在 /Library/Containers/com.youku.mac/Data 下）。
-
-## 备受好评的mpv播放器使用指南(默认配置)
-
-### 播放速度
+#### 播放速度
 
 ``` bash
 space - 暂停/播放
@@ -76,7 +83,7 @@ space - 暂停/播放
 Backspace - 重置为正常播放速度
 ```
 
-### 字幕 音轨
+#### 字幕 音轨
 
 ``` bash
 j(J) - 循环（反向）选择字幕文件
@@ -85,7 +92,7 @@ j(J) - 循环（反向）选择字幕文件
 0 - 音量加 2
 ```
 
-### 屏幕相关
+#### 屏幕相关
 
 ``` bash
 f - 切换全屏
@@ -96,7 +103,7 @@ Alt+s - 自动逐帧视频截图，再按一次停止截图
 , - 退到前一帧
 ```
 
-## 高级配置（这里才是玩Mac的程序员的G点）
+#### 高级配置（这里才是玩Mac的程序员的G点）
 
 /Users/yourname/.config/mpv 下新建如下文件实现不同配置。
 
@@ -104,7 +111,7 @@ Alt+s - 自动逐帧视频截图，再按一次停止截图
 ~/.config/mpv
 ```
 
-### 解码 字幕配置：mpv.conf
+##### 解码 字幕配置：mpv.conf
 
 ``` bash
 vo=opengl:gamma-auto:icc-profile-auto
@@ -285,7 +292,7 @@ mp.register_event("start-file", find_and_add_entries)
 
 ```
 
-### 快捷键配置：input.conf
+##### 快捷键配置：input.conf
 
 ``` bash
 # mpv keybindings
@@ -507,8 +514,9 @@ Alt+- add sub-scale -0.1
 ```
 
 ---
-### 拓展链接
 
-#### mpv 官方 git
+## 拓展链接
+
+### mpv 官方 git
 
 - [戳我看 mpv 官方 git](https://github.com/mpv-player/mpv/blob/master/DOCS/man/options.rst "mpv 官方 git")

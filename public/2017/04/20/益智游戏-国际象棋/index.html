@@ -1,0 +1,1224 @@
+<!doctype html>
+
+
+
+
+<html class="theme-next muse" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+<link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+<style>
+    .pace .pace-progress {
+        background: #DC143C; /*进度条颜色*/
+        height: 3px;
+    }
+    .pace .pace-progress-inner {
+         box-shadow: 0 0 10px #00d200, 0 0 5px     #00d200; /*阴影颜色*/
+    }
+    .pace .pace-activity {
+        border-top-color: #00d200;    /*上边框颜色*/
+        border-left-color: #f00;    /*左边框颜色*/
+    }
+</style>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="规律,国际象棋," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/uploads/favicon_books.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="有些东西你错过了，还是可以找回来的。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="学习国际象棋-有些东西一直在脑海里时隐时现">
+<meta property="og:url" content="https://taketimeasafriend.github.io/2017/04/20/益智游戏-国际象棋/index.html">
+<meta property="og:site_name" content="时间的朋友">
+<meta property="og:description" content="有些东西你错过了，还是可以找回来的。">
+<meta property="og:image" content="http://ogudt6aal.bkt.clouddn.com/image/%E5%9B%BD%E9%99%85%E8%B1%A1%E6%A3%8B.png">
+<meta property="og:image" content="http://ogudt6aal.bkt.clouddn.com/image/%E5%9B%BD%E9%99%85%E8%B1%A1%E6%A3%8B%E6%A3%8B%E5%AD%90%E8%AF%B4%E6%98%8E.png">
+<meta property="og:image" content="http://ogudt6aal.bkt.clouddn.com/image/%E5%9B%BD%E9%99%85%E8%B1%A1%E6%A3%8B%E6%A3%8B%E5%AD%90%E5%BD%A2%E8%B1%A1.png">
+<meta property="og:updated_time" content="2017-04-20T08:29:00.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="学习国际象棋-有些东西一直在脑海里时隐时现">
+<meta name="twitter:description" content="有些东西你错过了，还是可以找回来的。">
+<meta name="twitter:image" content="http://ogudt6aal.bkt.clouddn.com/image/%E5%9B%BD%E9%99%85%E8%B1%A1%E6%A3%8B.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: false,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://taketimeasafriend.github.io/2017/04/20/益智游戏-国际象棋/"/>
+
+
+
+
+
+  <title> 学习国际象棋-有些东西一直在脑海里时隐时现 | 时间的朋友 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-87405681-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?c854619f060bceda20bd4b4b29ce99f3";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+  <div style="display: none;">
+    <script src="//s95.cnzz.com/z_stat.php?id=1261612368&web_id=1261612368" language="JavaScript"></script>
+  </div>
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">时间的朋友</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">把琐碎的时间堆砌成一个伟大的生命。</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-clock-o"></i> <br />
+            
+            时间轴
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th-list"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-thumb-tack"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-museum">
+          <a href="/university" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-university"></i> <br />
+            
+            博物馆
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-test">
+          <a href="/test" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-flask"></i> <br />
+            
+            实验室
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user-plus"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            站内搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocapitalize="off" autocomplete="off" autocorrect="off"
+             placeholder="请输入在本站搜索的关键字..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    
+      <div id="idhyt-surprise-ball">
+  <div id="idhyt-surprise-ball-animation">
+    <!--xxxxxxx xxx xxxxx -->
+    <!--why you are here? -->
+    <span id="layer0Go" class="drag">w</span>
+    <span id="layer1Go" class="drag">h</span>
+    <span id="layer2Go" class="drag">y</span>
+    <span id="layer3Go" class="drag"></span>
+    <span id="layer4Go" class="drag">y</span>
+    <span id="layer5Go" class="drag">o</span>
+    <span id="layer6Go" class="drag">u</span>
+    <span id="layer7Go" class="drag">a</span>
+    <span id="layer8Go" class="drag">r</span>
+    <span id="layer9Go" class="drag">e</span>
+    <span id="layer10Go" class="drag">h</span>
+    <span id="layer11Go" class="drag">e</span>
+    <span id="layer12Go" class="drag">r</span>
+    <span id="layer13Go" class="drag">e</span>
+    <span id="layer14Go" class="drag">?</span>
+    <span id="layer15Go" class="drag ball"></span>
+  </div>
+</div>
+
+    
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://taketimeasafriend.github.io/2017/04/20/益智游戏-国际象棋/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="喵小哥">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="时间的朋友">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+            
+            
+              
+                学习国际象棋-有些东西一直在脑海里时隐时现
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-20T00:42:21+08:00">
+                2017-04-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/益智游戏/" itemprop="url" rel="index">
+                    <span itemprop="name">益智游戏</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote class="blockquote-center">有些东西你错过了，还是可以找回来的。</blockquote>
+
+<a id="more"></a>
+<h2 id="基本规则"><a href="#基本规则" class="headerlink" title="基本规则"></a>基本规则</h2><p><img src="http://ogudt6aal.bkt.clouddn.com/image/%E5%9B%BD%E9%99%85%E8%B1%A1%E6%A3%8B.png" alt="Mac版国际象棋" title="Mac版国际象棋"></p>
+<h3 id="棋盘"><a href="#棋盘" class="headerlink" title="棋盘"></a>棋盘</h3><p>黑白交错 8 x 8 = 64 个小方格组成（右下角是白格）。从白方左到右用A - H表示；从白方到黑用数字1、2、3、4、5、6、7、8表示。</p>
+<p>棋子在格子中走动。</p>
+<h3 id="棋子"><a href="#棋子" class="headerlink" title="棋子"></a>棋子</h3><p><img src="http://ogudt6aal.bkt.clouddn.com/image/%E5%9B%BD%E9%99%85%E8%B1%A1%E6%A3%8B%E6%A3%8B%E5%AD%90%E8%AF%B4%E6%98%8E.png" alt="国际象棋棋子说明" title="国际象棋棋子说明"><br><img src="http://ogudt6aal.bkt.clouddn.com/image/%E5%9B%BD%E9%99%85%E8%B1%A1%E6%A3%8B%E6%A3%8B%E5%AD%90%E5%BD%A2%E8%B1%A1.png" alt="国际象棋棋子形象" title="国际象棋棋子形象"></p>
+<h3 id="走法"><a href="#走法" class="headerlink" title="走法"></a>走法</h3><p>白者先行。</p>
+<h4 id="一般"><a href="#一般" class="headerlink" title="一般"></a>一般</h4><ul>
+<li>王(K): 横、竖、斜(一格)。不可送吃(即被敌方控制的格子，己方王不能走进去。否则算“送王”犯规，三次就判负)。  <ul>
+<li>易位 - 由王和己方一个车一起进行的仍被视作王的一步走法。</li>
+</ul>
+</li>
+<li>后(Q): 横、竖、斜(格不受限)，但不能越子。</li>
+<li>车(R): 横、竖(格不受限)，除王车易位外不能越子。</li>
+<li>象(B): 斜(格不受限)，不能越子。</li>
+<li>马(N): 先横走或直走一格，然后再往外斜走一格；或先斜走一格，最后再往外横走或竖走一格（即“日”字）。可越子，没有中国象棋“蹩马腿”。</li>
+<li>兵(P): 只能向前直走(一格)。但走第一步时，可以走一格或两格。直走斜吃，即如果兵的斜进一格内有对方棋子，就可以吃掉它而占据该格。</li>
+</ul>
+<h4 id="特殊"><a href="#特殊" class="headerlink" title="特殊"></a>特殊</h4><ul>
+<li>吃过路兵: 如果对方兵第一次行棋且直进两格，刚好形成本方有兵与其横向紧贴并列，则本方的兵可立即斜进，把对方兵吃掉，并视为一步棋。这个动作须立刻进行，缓着后无效。</li>
+<li>兵升变: 本方任何一个兵直进达到对方底线时，即可升变为除“王”和“兵”以外的任何一种棋子，不能不变。视为一步棋。升变后按新棋子的规则走。</li>
+<li>王车易位: 每局双方各有一次机会，让王朝车的方向移动两格，然后车越过王，放在与王紧邻的一格，作为王执行的一步棋。</li>
+</ul>
+<h2 id="写在后面"><a href="#写在后面" class="headerlink" title="写在后面"></a>写在后面</h2><p>其实细细数来，生活中充斥着很多耳熟能详却好像跟你从来无关的东西或事物，现如今大多数人靠手机聊天来排解无聊，真可谓是一种很难解脱的怪圈。大多数人都干的事情你也无脑地效仿，那你就是那个庸俗的大多数。为什么有的技能别人会，而你却支支吾吾来一句“我听说过”；为什么你总是那个傻乐呵的吃瓜群众而别人是主角？</p>
+<p>举个例子，比如说你花 5K左右 人民币赶时髦买了个iPhone，有的人肯定会说不值。这个“不值”的结论是怎么得出来的呢？</p>
+<p>我们简单计算一下：</p>
+<ul>
+<li>一部iPhone假设 5000¥</li>
+<li>现如今智能时代电子产品大爆发，保守估计，你的手机2年淘汰，换新手机  </li>
+</ul>
+<p>好了，那么平均每天你在手机上花费的毛爷爷是：</p>
+<ul>
+<li>5000¥ ／ （2年 x 365天）= 5000 ／ 730 = 6.85 ¥／天</li>
+</ul>
+<p>最后，你每天在手机上花费的时间是多少？你觉得你对这个手机的投资给你带来了什么回报？有时候觉得，有的人聊天真的挺贵哦～这个稍不留神就会落后的智能时代，你抱着智能设备娱乐至死却心安理得…</p>
+<p>有的人大学时候跟老爹老妈要钱买电脑，说是学习需要，结果90%时间都是用电脑打游戏看电影聊天把妹；有的人信誓旦旦精挑细选买了个单反，结果天天宅在家里大门不出，然后说“我的兴趣原来不在这里”…拜托，兴趣不是靠发现的，是靠培养的。</p>
+<p>好吧，其实说了这么多有用没用的，就是为了督促自己，今天在Mac电脑上无聊打开系统自带的国际象棋，两眼一抹黑，不禁鄙视了自己一把。因为想起了自己小时候看到别人（有钱人家孩子）玩的“高级玩具”，我都不会，恨自己不是官二代富二代…哈哈，扯远了。现如今我天朝发展飞速啊，人人都有手机电脑，想看什么就看什么，网络世界无远弗届…</p>
+<p><strong>这是一个自由的时代，这是一个机会丛生的时代。</strong></p>
+<p>不要说自己运气不好，是你没有去把握。</p>
+<p>你想画画但不会，学啊！<br>你想弹吉他把妹，学啊！<br>最强大脑魔方比赛是不是让你震惊？其实你也可以的！<br>国际象棋你是不是听说过？小时候看到有人玩的时候心痒痒？不要等到你老死的时候才觉得有点遗憾，学啊！</p>
+<p>人类文化真是博大精深。一个人的寿命才几十年，整个人类用几千年积淀下的成果哺育着当今时代的人们，有的人觉得自己耕种天朝分的一亩三分地吃点瓜就心满意足了，有的人却钻进了浩瀚的文明海洋，酣畅淋漓。</p>
+<p>不是同一个世界，不是同一个梦想。如此而已。</p>
+<hr>
+<h2 id="拓展"><a href="#拓展" class="headerlink" title="拓展"></a>拓展</h2><p>Sudoku数独已上线: <a href="http://51world.win/sudoku/index.html" target="_blank" rel="external">http://51world.win/sudoku/index.html</a></p>
+
+      
+    </div>
+
+    <div>
+      
+        <div>
+    
+        <div style="text-align:center;color: #A52A2A; font-size:18px;">
+        < - 完 - >
+        </div>
+    
+</div>
+
+      
+    </div>
+    
+    <div>
+      
+        
+<div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="/uploads/weigonghao.jpg" alt="喵小哥 wechat" style="width: 200px; max-width: 100%;"/>
+    <div>上面是一个挤牙膏式的微公号。</div>
+</div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div> <span> - </span> 坚持分享  鼓励创作 <span> - </span> </div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/uploads/Wechat.png" alt="喵小哥 WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/uploads/Alipay.png" alt="喵小哥 Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+      
+        <div id="bitcoin" style="display: inline-block">
+          <img id="bitcoin_qr" src="/uploads/bitcoin.png" alt="喵小哥 Bitcoin"/>
+          <p>比特币打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+      <strong>本文作者：</strong>
+      喵小哥
+    </li>
+    <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://taketimeasafriend.github.io/2017/04/20/益智游戏-国际象棋/" title="学习国际象棋-有些东西一直在脑海里时隐时现">https://taketimeasafriend.github.io/2017/04/20/益智游戏-国际象棋/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong>
+      本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/规律/" rel="tag"><i class="fa fa-thumb-tack" aria-hidden="true"></i> 规律</a>
+          
+            <a href="/tags/国际象棋/" rel="tag"><i class="fa fa-thumb-tack" aria-hidden="true"></i> 国际象棋</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/04/18/编程那点事儿-德雷福斯模型/" rel="next" title="学习-工作 的德雷福斯模型">
+                <i class="fa fa-chevron-left"></i> 学习-工作 的德雷福斯模型
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/04/23/编程那点事儿-冲破天花板/" rel="prev" title="如何冲破职业生涯天花板">
+                如何冲破职业生涯天花板 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style_24x24">
+	<a class="jiathis_button_fb"></a>
+	<a class="jiathis_button_twitter"></a>
+	<a class="jiathis_button_googleplus"></a>
+	<a class="jiathis_button_linkedin"></a>
+	<a class="jiathis_button_ydnote"></a>
+	<a class="jiathis_button_tsina"></a>
+	<a class="jiathis_button_weixin"></a>
+	<a class="jiathis_button_qzone"></a>
+	<a class="jiathis_button_tieba"></a>
+	<a class="jiathis_button_fav"></a>
+	<a class="jiathis_button_copy"></a>
+	<a class="jiathis_button_cqq"></a>
+	<a class="jiathis_button_douban"></a>
+	<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+</div>
+<script type="text/javascript" >
+  var jiathis_config={
+    hideMore: false
+  }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image" src="/uploads/avatar.jpg" alt="喵小哥"/>
+          <p class="site-author-name" itemprop="name">喵小哥</p>
+          
+            <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">90</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              
+                <a href="/categories/index.html">
+                
+                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-name">分类</span>
+                
+                </a>
+              
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              
+                <a href="/tags/index.html">
+                
+                <span class="site-state-item-count">86</span>
+                <span class="site-state-item-name">标签</span>
+                
+                </a>
+              
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/taketimeasafriend" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://wangwei.party" target="_blank" title="Resume">
+                  
+                    <i class="fa fa-fw fa-user-secret"></i>
+                  
+                  Resume
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element  links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              拓展学习
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://zhibimo.com/explore/books/" title="知笔墨" target="_blank">知笔墨</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://web.archive.org/web/20111228123747/http://www.lixiaolai.com/" title="李笑来" target="_blank">李笑来</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://macshuo.com/" title="池建强" target="_blank">池建强</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.geekonomics10000.com/" title="万维钢" target="_blank">万维钢</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://mindhacks.cn/" title="刘未鹏" target="_blank">刘未鹏</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.ruanyifeng.com/blog/" title="阮一峰" target="_blank">阮一峰</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.yinwang.org/" title="王 垠" target="_blank">王 垠</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.devtang.com/" title="唐 巧" target="_blank">唐 巧</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        <div class="hissoryCounter">
+          <div class="hissoryCounterChild1">-历史访问次数-<img border="0" src="http://cc.amazingcounters.com/counter.php?i=3214334&c=9643315" alt="AmazingCounters.com"></div>
+          <div class="hissoryCounterChild2">-历史访问人数-<img border="0" src="http://cc.amazingcounters.com/counter.php?i=3214333&c=9643312" alt="AmazingCounters.com"></div>
+        </div>
+
+
+        <!-- Start of StatCounter Code for Default Guide -->
+        <script type="text/javascript">
+        var sc_project=11440510;
+        var sc_invisible=1;
+        var sc_security="9bd592ab";
+        var scJsHost = (("https:" == document.location.protocol) ?
+        "https://secure." : "http://www.");
+        document.write("<sc"+"ript type='text/javascript' src='" +
+        scJsHost+
+        "statcounter.com/counter/counter.js'></"+"script>");
+        </script>
+        <noscript><div class="statcounter"><a title="site stats"
+        href="http://statcounter.com/" target="_blank"><img
+        class="statcounter"
+        src="//c.statcounter.com/11440510/0/9bd592ab/1/" alt="site
+        stats"></a></div></noscript>
+        <!-- End of StatCounter Code for Default Guide -->
+        <a href="http://statcounter.com/p11440510/?guest=1" style="color: #00FF7F; font-size: 12px;">
+        More Data
+        </a>
+
+
+        
+
+
+      </section>
+
+      
+        <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#基本规则"><span class="nav-number">1.</span> <span class="nav-text">基本规则</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#棋盘"><span class="nav-number">1.1.</span> <span class="nav-text">棋盘</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#棋子"><span class="nav-number">1.2.</span> <span class="nav-text">棋子</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#走法"><span class="nav-number">1.3.</span> <span class="nav-text">走法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#一般"><span class="nav-number">1.3.1.</span> <span class="nav-text">一般</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#特殊"><span class="nav-number">1.3.2.</span> <span class="nav-text">特殊</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#写在后面"><span class="nav-number">2.</span> <span class="nav-text">写在后面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#拓展"><span class="nav-number">3.</span> <span class="nav-text">拓展</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+        <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  更新于<i class="fa fa-clock-o" aria-hidden="true"></i>
+  
+  <span itemprop="copyrightYear">2017-10-20</span>
+  <span class="with-love">
+    <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder"><a href="http://wangwei.party/">喵小哥</a></span>
+</div>
+
+<div class="theme-info">
+  <span class="post-count">当前博客共120.0k字</span>
+  <div class="powered-by"></div>
+</div>
+
+<div class="powered-by">
+  每天进步一点点
+</div>
+
+<div class="theme-info">
+  去另一条
+  <a class="theme-link" href="https://51world.wordpress.com/">
+    时间轴
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+  
+  <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+      search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.popup').toggle();
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+      $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = $( "entry", xmlResponse ).map(function() {
+            return {
+              title: $( "title", this ).text(),
+              content: $("content",this).text(),
+              url: $( "url" , this).text()
+            };
+          }).get();
+          var $input = document.getElementById(search_id);
+          var $resultContent = document.getElementById(content_id);
+          $input.addEventListener('input', function(){
+            var matchcounts = 0;
+            var str='<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length > 1) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var content_index = [];
+                var data_title = data.title.trim().toLowerCase();
+                var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                var data_url = decodeURIComponent(data.url);
+                var index_title = -1;
+                var index_content = -1;
+                var first_occur = -1;
+                // only match artiles with not empty titles and contents
+                if(data_title != '') {
+                  keywords.forEach(function(keyword, i) {
+                    index_title = data_title.indexOf(keyword);
+                    index_content = data_content.indexOf(keyword);
+                    if( index_title >= 0 || index_content >= 0 ){
+                      isMatch = true;
+                      if (i == 0) {
+                        first_occur = index_content;
+                      }
+                    }
+
+                  });
+                }
+                // show search results
+                if (isMatch) {
+                  matchcounts += 1;
+                  str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                  var content = data.content.trim().replace(/<[^>]+>/g,"");
+                  if (first_occur >= 0) {
+                    // cut out 100 characters
+                    var start = first_occur - 20;
+                    var end = first_occur + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if(start == 0){
+                      end = 50;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    var match_content = content.substring(start, end);
+                    // highlight all keywords
+                    keywords.forEach(function(keyword){
+                      var regS = new RegExp(keyword, "gi");
+                      match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                    });
+
+                    str += "<p class=\"search-result\">" + match_content +"...</p>"
+                  }
+                  str += "</li>";
+                }
+              })};
+            str += "</ul>";
+            if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+            if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+            $resultContent.innerHTML = str;
+          });
+          proceedsearch();
+        }
+      });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+
+  
+
+</body>
+</html>

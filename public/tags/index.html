@@ -2,15 +2,28 @@
 
 
 
-  
 
-
-<html class="theme-next muse use-motion" lang="zh-Hans">
+<html class="theme-next muse" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
+<script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+<link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+<style>
+    .pace .pace-progress {
+        background: #DC143C; /*进度条颜色*/
+        height: 3px;
+    }
+    .pace .pace-progress-inner {
+         box-shadow: 0 0 10px #00d200, 0 0 5px     #00d200; /*阴影颜色*/
+    }
+    .pace .pace-activity {
+        border-top-color: #00d200;    /*上边框颜色*/
+        border-left-color: #f00;    /*左边框颜色*/
+    }
+</style>
 
 
 <meta http-equiv="Cache-Control" content="no-transform" />
@@ -71,7 +84,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="时间的朋友" />
 
 
 
@@ -107,7 +120,7 @@
     scheme: 'Muse',
     sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
     fancybox: true,
-    motion: true,
+    motion: false,
     duoshuo: {
       userId: '0',
       author: '博主'
@@ -262,12 +275,12 @@
         </li>
       
         
-        <li class="menu-item menu-item-about">
-          <a href="/about" rel="section">
+        <li class="menu-item menu-item-museum">
+          <a href="/university" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-user-plus"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-university"></i> <br />
             
-            关于
+            博物馆
           </a>
         </li>
       
@@ -277,7 +290,17 @@
             
               <i class="menu-item-icon fa fa-fw fa-flask"></i> <br />
             
-            待续...
+            实验室
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user-plus"></i> <br />
+            
+            关于
           </a>
         </li>
       
@@ -328,6 +351,32 @@
  </div>
     </header>
 
+    
+      <div id="idhyt-surprise-ball">
+  <div id="idhyt-surprise-ball-animation">
+    <!--xxxxxxx xxx xxxxx -->
+    <!--why you are here? -->
+    <span id="layer0Go" class="drag">w</span>
+    <span id="layer1Go" class="drag">h</span>
+    <span id="layer2Go" class="drag">y</span>
+    <span id="layer3Go" class="drag"></span>
+    <span id="layer4Go" class="drag">y</span>
+    <span id="layer5Go" class="drag">o</span>
+    <span id="layer6Go" class="drag">u</span>
+    <span id="layer7Go" class="drag">a</span>
+    <span id="layer8Go" class="drag">r</span>
+    <span id="layer9Go" class="drag">e</span>
+    <span id="layer10Go" class="drag">h</span>
+    <span id="layer11Go" class="drag">e</span>
+    <span id="layer12Go" class="drag">r</span>
+    <span id="layer13Go" class="drag">e</span>
+    <span id="layer14Go" class="drag">?</span>
+    <span id="layer15Go" class="drag ball"></span>
+  </div>
+</div>
+
+    
+
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
@@ -347,10 +396,10 @@
     
       <div class="tag-cloud">
         <div class="tag-cloud-title">
-            目前共计 42 个标签
+            目前共计 86 个标签
         </div>
         <div class="tag-cloud-tags">
-          <a href="/tags/English/" style="font-size: 19.2px; color: #818181">English</a> <a href="/tags/Github/" style="font-size: 12px; color: #ccc">Github</a> <a href="/tags/G点/" style="font-size: 12px; color: #ccc">G点</a> <a href="/tags/Mac/" style="font-size: 15.6px; color: #a7a7a7">Mac</a> <a href="/tags/Markdown/" style="font-size: 12px; color: #ccc">Markdown</a> <a href="/tags/Spotlight/" style="font-size: 12px; color: #ccc">Spotlight</a> <a href="/tags/git/" style="font-size: 12px; color: #ccc">git</a> <a href="/tags/github/" style="font-size: 12px; color: #ccc">github</a> <a href="/tags/hexo/" style="font-size: 12px; color: #ccc">hexo</a> <a href="/tags/mpv/" style="font-size: 12px; color: #ccc">mpv</a> <a href="/tags/next/" style="font-size: 12px; color: #ccc">next</a> <a href="/tags/xdite/" style="font-size: 12px; color: #ccc">xdite</a> <a href="/tags/乔布斯/" style="font-size: 12px; color: #ccc">乔布斯</a> <a href="/tags/人生/" style="font-size: 30px; color: #111">人生</a> <a href="/tags/元学习/" style="font-size: 12px; color: #ccc">元学习</a> <a href="/tags/全栈/" style="font-size: 12px; color: #ccc">全栈</a> <a href="/tags/写作/" style="font-size: 12px; color: #ccc">写作</a> <a href="/tags/单反/" style="font-size: 12px; color: #ccc">单反</a> <a href="/tags/女性/" style="font-size: 12px; color: #ccc">女性</a> <a href="/tags/婚姻/" style="font-size: 12px; color: #ccc">婚姻</a> <a href="/tags/尼康-D5100/" style="font-size: 12px; color: #ccc">尼康 D5100</a> <a href="/tags/工具/" style="font-size: 12px; color: #ccc">工具</a> <a href="/tags/幸福/" style="font-size: 12px; color: #ccc">幸福</a> <a href="/tags/心理/" style="font-size: 12px; color: #ccc">心理</a> <a href="/tags/性格/" style="font-size: 12px; color: #ccc">性格</a> <a href="/tags/拖延症/" style="font-size: 15.6px; color: #a7a7a7">拖延症</a> <a href="/tags/摄影/" style="font-size: 12px; color: #ccc">摄影</a> <a href="/tags/李笑来/" style="font-size: 26.4px; color: #363636">李笑来</a> <a href="/tags/概念升级/" style="font-size: 22.8px; color: #5c5c5c">概念升级</a> <a href="/tags/比特币/" style="font-size: 12px; color: #ccc">比特币</a> <a href="/tags/游戏/" style="font-size: 12px; color: #ccc">游戏</a> <a href="/tags/演讲/" style="font-size: 12px; color: #ccc">演讲</a> <a href="/tags/牛人/" style="font-size: 15.6px; color: #a7a7a7">牛人</a> <a href="/tags/理财投资/" style="font-size: 15.6px; color: #a7a7a7">理财投资</a> <a href="/tags/直播课/" style="font-size: 19.2px; color: #818181">直播课</a> <a href="/tags/编程/" style="font-size: 12px; color: #ccc">编程</a> <a href="/tags/罗振宇/" style="font-size: 12px; color: #ccc">罗振宇</a> <a href="/tags/规律/" style="font-size: 12px; color: #ccc">规律</a> <a href="/tags/读书/" style="font-size: 26.4px; color: #363636">读书</a> <a href="/tags/财富自由/" style="font-size: 15.6px; color: #a7a7a7">财富自由</a> <a href="/tags/配置/" style="font-size: 15.6px; color: #a7a7a7">配置</a> <a href="/tags/魔方/" style="font-size: 12px; color: #ccc">魔方</a>
+          <a href="/tags/Ajax/" style="font-size: 16px; color: #a4a4a4">Ajax</a> <a href="/tags/C/" style="font-size: 14px; color: #bbb">C++</a> <a href="/tags/CLI/" style="font-size: 16px; color: #a4a4a4">CLI</a> <a href="/tags/CSS/" style="font-size: 14px; color: #bbb">CSS</a> <a href="/tags/DNS/" style="font-size: 14px; color: #bbb">DNS</a> <a href="/tags/Emoji/" style="font-size: 14px; color: #bbb">Emoji</a> <a href="/tags/English/" style="font-size: 18px; color: #8c8c8c">English</a> <a href="/tags/Font-Awesome/" style="font-size: 14px; color: #bbb">Font Awesome</a> <a href="/tags/GitHub/" style="font-size: 16px; color: #a4a4a4">GitHub</a> <a href="/tags/G点/" style="font-size: 20px; color: #757575">G点</a> <a href="/tags/HTTP/" style="font-size: 14px; color: #bbb">HTTP</a> <a href="/tags/Hexo/" style="font-size: 18px; color: #8c8c8c">Hexo</a> <a href="/tags/JavaScript/" style="font-size: 14px; color: #bbb">JavaScript</a> <a href="/tags/Linux/" style="font-size: 14px; color: #bbb">Linux</a> <a href="/tags/Mac/" style="font-size: 22px; color: #5e5e5e">Mac</a> <a href="/tags/Markdown/" style="font-size: 14px; color: #bbb">Markdown</a> <a href="/tags/NexT/" style="font-size: 16px; color: #a4a4a4">NexT</a> <a href="/tags/Python/" style="font-size: 14px; color: #bbb">Python</a> <a href="/tags/QQ/" style="font-size: 14px; color: #bbb">QQ</a> <a href="/tags/Ruby/" style="font-size: 14px; color: #bbb">Ruby</a> <a href="/tags/SEO/" style="font-size: 14px; color: #bbb">SEO</a> <a href="/tags/SQL/" style="font-size: 20px; color: #757575">SQL</a> <a href="/tags/Spotlight/" style="font-size: 14px; color: #bbb">Spotlight</a> <a href="/tags/git/" style="font-size: 18px; color: #8c8c8c">git</a> <a href="/tags/jQuery/" style="font-size: 16px; color: #a4a4a4">jQuery</a> <a href="/tags/mpv/" style="font-size: 16px; color: #a4a4a4">mpv</a> <a href="/tags/rails/" style="font-size: 14px; color: #bbb">rails</a> <a href="/tags/ruby/" style="font-size: 14px; color: #bbb">ruby</a> <a href="/tags/乌合之众/" style="font-size: 14px; color: #bbb">乌合之众</a> <a href="/tags/乔布斯/" style="font-size: 14px; color: #bbb">乔布斯</a> <a href="/tags/人工智能/" style="font-size: 14px; color: #bbb">人工智能</a> <a href="/tags/人生/" style="font-size: 28px; color: #171717">人生</a> <a href="/tags/元学习/" style="font-size: 14px; color: #bbb">元学习</a> <a href="/tags/全文检索/" style="font-size: 14px; color: #bbb">全文检索</a> <a href="/tags/全栈/" style="font-size: 16px; color: #a4a4a4">全栈</a> <a href="/tags/写作/" style="font-size: 16px; color: #a4a4a4">写作</a> <a href="/tags/前端/" style="font-size: 24px; color: #464646">前端</a> <a href="/tags/医学/" style="font-size: 14px; color: #bbb">医学</a> <a href="/tags/单反/" style="font-size: 14px; color: #bbb">单反</a> <a href="/tags/历史/" style="font-size: 16px; color: #a4a4a4">历史</a> <a href="/tags/吴军/" style="font-size: 14px; color: #bbb">吴军</a> <a href="/tags/国际象棋/" style="font-size: 14px; color: #bbb">国际象棋</a> <a href="/tags/天津/" style="font-size: 14px; color: #bbb">天津</a> <a href="/tags/女性/" style="font-size: 16px; color: #a4a4a4">女性</a> <a href="/tags/婚姻/" style="font-size: 16px; color: #a4a4a4">婚姻</a> <a href="/tags/宁夏/" style="font-size: 14px; color: #bbb">宁夏</a> <a href="/tags/尼康-D5100/" style="font-size: 14px; color: #bbb">尼康 D5100</a> <a href="/tags/工作/" style="font-size: 16px; color: #a4a4a4">工作</a> <a href="/tags/工具/" style="font-size: 18px; color: #8c8c8c">工具</a> <a href="/tags/差不多/" style="font-size: 14px; color: #bbb">差不多</a> <a href="/tags/幸福/" style="font-size: 16px; color: #a4a4a4">幸福</a> <a href="/tags/德雷福斯模型/" style="font-size: 14px; color: #bbb">德雷福斯模型</a> <a href="/tags/心理/" style="font-size: 22px; color: #5e5e5e">心理</a> <a href="/tags/性格/" style="font-size: 14px; color: #bbb">性格</a> <a href="/tags/拖延症/" style="font-size: 16px; color: #a4a4a4">拖延症</a> <a href="/tags/摄影/" style="font-size: 16px; color: #a4a4a4">摄影</a> <a href="/tags/政治/" style="font-size: 18px; color: #8c8c8c">政治</a> <a href="/tags/文青公知/" style="font-size: 24px; color: #464646">文青公知</a> <a href="/tags/时间管理/" style="font-size: 14px; color: #bbb">时间管理</a> <a href="/tags/李笑来/" style="font-size: 24px; color: #464646">李笑来</a> <a href="/tags/概念升级/" style="font-size: 26px; color: #2f2f2f">概念升级</a> <a href="/tags/比特币/" style="font-size: 16px; color: #a4a4a4">比特币</a> <a href="/tags/游戏/" style="font-size: 14px; color: #bbb">游戏</a> <a href="/tags/演讲/" style="font-size: 14px; color: #bbb">演讲</a> <a href="/tags/熬夜/" style="font-size: 14px; color: #bbb">熬夜</a> <a href="/tags/爱情/" style="font-size: 14px; color: #bbb">爱情</a> <a href="/tags/牛人/" style="font-size: 22px; color: #5e5e5e">牛人</a> <a href="/tags/独立思考/" style="font-size: 20px; color: #757575">独立思考</a> <a href="/tags/理财投资/" style="font-size: 16px; color: #a4a4a4">理财投资</a> <a href="/tags/盲打/" style="font-size: 14px; color: #bbb">盲打</a> <a href="/tags/直播课/" style="font-size: 18px; color: #8c8c8c">直播课</a> <a href="/tags/科技/" style="font-size: 14px; color: #bbb">科技</a> <a href="/tags/编程/" style="font-size: 20px; color: #757575">编程</a> <a href="/tags/网络/" style="font-size: 20px; color: #757575">网络</a> <a href="/tags/罗振宇/" style="font-size: 16px; color: #a4a4a4">罗振宇</a> <a href="/tags/老师/" style="font-size: 20px; color: #757575">老师</a> <a href="/tags/自信/" style="font-size: 14px; color: #bbb">自信</a> <a href="/tags/规律/" style="font-size: 16px; color: #a4a4a4">规律</a> <a href="/tags/计算机原理/" style="font-size: 24px; color: #464646">计算机原理</a> <a href="/tags/读书/" style="font-size: 30px; color: #000">读书</a> <a href="/tags/财富自由/" style="font-size: 18px; color: #8c8c8c">财富自由</a> <a href="/tags/软件开发/" style="font-size: 14px; color: #bbb">软件开发</a> <a href="/tags/配置/" style="font-size: 24px; color: #464646">配置</a> <a href="/tags/隐私/" style="font-size: 14px; color: #bbb">隐私</a> <a href="/tags/魔方/" style="font-size: 14px; color: #bbb">魔方</a>
         </div>
       </div>
     
@@ -384,20 +433,19 @@
 
       <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="/uploads/avatar.jpg"
-               alt="喵小哥" />
+          <img class="site-author-image" itemprop="image" src="/uploads/avatar.jpg" alt="喵小哥"/>
           <p class="site-author-name" itemprop="name">喵小哥</p>
-           
-              <p class="site-description motion-element" itemprop="description"></p>
-           
+          
+            <p class="site-description motion-element" itemprop="description"></p>
+          
         </div>
+
         <nav class="site-state motion-element">
 
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">30</span>
+                <span class="site-state-item-count">90</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -407,10 +455,14 @@
             
             
             <div class="site-state-item site-state-categories">
-              <a href="/categories/index.html">
-                <span class="site-state-item-count">9</span>
+              
+                <a href="/categories/index.html">
+                
+                <span class="site-state-item-count">12</span>
                 <span class="site-state-item-name">分类</span>
-              </a>
+                
+                </a>
+              
             </div>
           
 
@@ -418,10 +470,14 @@
             
             
             <div class="site-state-item site-state-tags">
-              <a href="/tags/index.html">
-                <span class="site-state-item-count">42</span>
+              
+                <a href="/tags/index.html">
+                
+                <span class="site-state-item-count">86</span>
                 <span class="site-state-item-name">标签</span>
-              </a>
+                
+                </a>
+              
             </div>
           
 
@@ -442,11 +498,11 @@
               </span>
             
               <span class="links-of-author-item">
-                <a href="http://weibo.com/miaoxiaogege" target="_blank" title="微博">
+                <a href="http://wangwei.party" target="_blank" title="Resume">
                   
-                    <i class="fa fa-fw fa-weibo"></i>
+                    <i class="fa fa-fw fa-user-secret"></i>
                   
-                  微博
+                  Resume
                 </a>
               </span>
             
@@ -458,7 +514,7 @@
 
         
         
-          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+          <div class="links-of-blogroll motion-element  links-of-blogroll-inline">
             <div class="links-of-blogroll-title">
               <i class="fa  fa-fw fa-globe"></i>
               拓展学习
@@ -474,11 +530,15 @@
                 </li>
               
                 <li class="links-of-blogroll-item">
-                  <a href="http://macshuo.com/" title="MacTalk" target="_blank">MacTalk</a>
+                  <a href="http://macshuo.com/" title="池建强" target="_blank">池建强</a>
                 </li>
               
                 <li class="links-of-blogroll-item">
-                  <a href="http://mindhacks.cn/" title="MindHacks" target="_blank">MindHacks</a>
+                  <a href="http://www.geekonomics10000.com/" title="万维钢" target="_blank">万维钢</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://mindhacks.cn/" title="刘未鹏" target="_blank">刘未鹏</a>
                 </li>
               
                 <li class="links-of-blogroll-item">
@@ -486,12 +546,44 @@
                 </li>
               
                 <li class="links-of-blogroll-item">
-                  <a href="http://blog.devtang.com/" title="唐巧" target="_blank">唐巧</a>
+                  <a href="http://www.yinwang.org/" title="王 垠" target="_blank">王 垠</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.devtang.com/" title="唐 巧" target="_blank">唐 巧</a>
                 </li>
               
             </ul>
           </div>
         
+
+        <div class="hissoryCounter">
+          <div class="hissoryCounterChild1">-历史访问次数-<img border="0" src="http://cc.amazingcounters.com/counter.php?i=3214334&c=9643315" alt="AmazingCounters.com"></div>
+          <div class="hissoryCounterChild2">-历史访问人数-<img border="0" src="http://cc.amazingcounters.com/counter.php?i=3214333&c=9643312" alt="AmazingCounters.com"></div>
+        </div>
+
+
+        <!-- Start of StatCounter Code for Default Guide -->
+        <script type="text/javascript">
+        var sc_project=11440510;
+        var sc_invisible=1;
+        var sc_security="9bd592ab";
+        var scJsHost = (("https:" == document.location.protocol) ?
+        "https://secure." : "http://www.");
+        document.write("<sc"+"ript type='text/javascript' src='" +
+        scJsHost+
+        "statcounter.com/counter/counter.js'></"+"script>");
+        </script>
+        <noscript><div class="statcounter"><a title="site stats"
+        href="http://statcounter.com/" target="_blank"><img
+        class="statcounter"
+        src="//c.statcounter.com/11440510/0/9bd592ab/1/" alt="site
+        stats"></a></div></noscript>
+        <!-- End of StatCounter Code for Default Guide -->
+        <a href="http://statcounter.com/p11440510/?guest=1" style="color: #00FF7F; font-size: 12px;">
+        More Data
+        </a>
+
 
         
 
@@ -516,13 +608,17 @@
   
   更新于<i class="fa fa-clock-o" aria-hidden="true"></i>
   
-  <span itemprop="copyrightYear">2017-04-05</span>
+  <span itemprop="copyrightYear">2017-10-20</span>
   <span class="with-love">
     <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">喵小哥</span>
+  <span class="author" itemprop="copyrightHolder"><a href="http://wangwei.party/">喵小哥</a></span>
 </div>
 
+<div class="theme-info">
+  <span class="post-count">当前博客共120.0k字</span>
+  <div class="powered-by"></div>
+</div>
 
 <div class="powered-by">
   每天进步一点点
@@ -530,7 +626,7 @@
 
 <div class="theme-info">
   去另一条
-  <a class="theme-link" href="http://51world.pub">
+  <a class="theme-link" href="https://51world.wordpress.com/">
     时间轴
   </a>
 </div>
@@ -620,14 +716,6 @@
 
   
 
-
-  
-
-    
-      <script id="dsq-count-scr" src="https://taketimeasafriend.disqus.com/count.js" async></script>
-    
-
-    
 
   
 
@@ -792,113 +880,6 @@
 
 
   
-
-  
-  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
-  <script>AV.initialize("WoifFymbvNMkl3JBQKcero5f-gzGzoHsz", "Q5U0HKsYgtwH2aVo1rEcSy6g");</script>
-  <script>
-    function showTime(Counter) {
-      var query = new AV.Query(Counter);
-      var entries = [];
-      var $visitors = $(".leancloud_visitors");
-
-      $visitors.each(function () {
-        entries.push( $(this).attr("id").trim() );
-      });
-
-      query.containedIn('url', entries);
-      query.find()
-        .done(function (results) {
-          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
-
-          if (results.length === 0) {
-            $visitors.find(COUNT_CONTAINER_REF).text(0);
-            return;
-          }
-
-          for (var i = 0; i < results.length; i++) {
-            var item = results[i];
-            var url = item.get('url');
-            var time = item.get('time');
-            var element = document.getElementById(url);
-
-            $(element).find(COUNT_CONTAINER_REF).text(time);
-          }
-          for(var i = 0; i < entries.length; i++) {
-            var url = entries[i];
-            var element = document.getElementById(url);
-            var countSpan = $(element).find(COUNT_CONTAINER_REF);
-            if( countSpan.text() == '') {
-              countSpan.text(0);
-            }
-          }
-        })
-        .fail(function (object, error) {
-          console.log("Error: " + error.code + " " + error.message);
-        });
-    }
-
-    function addCount(Counter) {
-      var $visitors = $(".leancloud_visitors");
-      var url = $visitors.attr('id').trim();
-      var title = $visitors.attr('data-flag-title').trim();
-      var query = new AV.Query(Counter);
-
-      query.equalTo("url", url);
-      query.find({
-        success: function(results) {
-          if (results.length > 0) {
-            var counter = results[0];
-            counter.fetchWhenSave(true);
-            counter.increment("time");
-            counter.save(null, {
-              success: function(counter) {
-                var $element = $(document.getElementById(url));
-                $element.find('.leancloud-visitors-count').text(counter.get('time'));
-              },
-              error: function(counter, error) {
-                console.log('Failed to save Visitor num, with error message: ' + error.message);
-              }
-            });
-          } else {
-            var newcounter = new Counter();
-            /* Set ACL */
-            var acl = new AV.ACL();
-            acl.setPublicReadAccess(true);
-            acl.setPublicWriteAccess(true);
-            newcounter.setACL(acl);
-            /* End Set ACL */
-            newcounter.set("title", title);
-            newcounter.set("url", url);
-            newcounter.set("time", 1);
-            newcounter.save(null, {
-              success: function(newcounter) {
-                var $element = $(document.getElementById(url));
-                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
-              },
-              error: function(newcounter, error) {
-                console.log('Failed to create');
-              }
-            });
-          }
-        },
-        error: function(error) {
-          console.log('Error:' + error.code + " " + error.message);
-        }
-      });
-    }
-
-    $(function() {
-      var Counter = AV.Object.extend("Counter");
-      if ($('.leancloud_visitors').length == 1) {
-        addCount(Counter);
-      } else if ($('.post-title-link').length > 1) {
-        showTime(Counter);
-      }
-    });
-  </script>
-
-
 
   
 <script>

@@ -1,0 +1,1241 @@
+<!doctype html>
+
+
+
+
+<html class="theme-next muse" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+<link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+<style>
+    .pace .pace-progress {
+        background: #DC143C; /*进度条颜色*/
+        height: 3px;
+    }
+    .pace .pace-progress-inner {
+         box-shadow: 0 0 10px #00d200, 0 0 5px     #00d200; /*阴影颜色*/
+    }
+    .pace .pace-activity {
+        border-top-color: #00d200;    /*上边框颜色*/
+        border-left-color: #f00;    /*左边框颜色*/
+    }
+</style>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="读书,Ruby," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/uploads/favicon_books.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="用更少的代码，做更多的事情。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Head First Ruby">
+<meta property="og:url" content="https://taketimeasafriend.github.io/2017/06/09/编程那点事儿-Head First Ruby/index.html">
+<meta property="og:site_name" content="时间的朋友">
+<meta property="og:description" content="用更少的代码，做更多的事情。">
+<meta property="og:image" content="http://ogudt6aal.bkt.clouddn.com/image/5%E5%8F%A3%E6%B0%94%E8%AF%BB%E5%AE%8C%E3%80%8AHead%20First%20Ruby%E3%80%8B.jpeg">
+<meta property="og:image" content="http://ogudt6aal.bkt.clouddn.com/image/%E4%B8%80%E4%B8%AA%20Web%20%E4%BE%8B%E5%AD%90.jpeg">
+<meta property="og:updated_time" content="2017-06-20T10:31:40.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Head First Ruby">
+<meta name="twitter:description" content="用更少的代码，做更多的事情。">
+<meta name="twitter:image" content="http://ogudt6aal.bkt.clouddn.com/image/5%E5%8F%A3%E6%B0%94%E8%AF%BB%E5%AE%8C%E3%80%8AHead%20First%20Ruby%E3%80%8B.jpeg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: false,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://taketimeasafriend.github.io/2017/06/09/编程那点事儿-Head First Ruby/"/>
+
+
+
+
+
+  <title> Head First Ruby | 时间的朋友 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-87405681-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?c854619f060bceda20bd4b4b29ce99f3";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+  <div style="display: none;">
+    <script src="//s95.cnzz.com/z_stat.php?id=1261612368&web_id=1261612368" language="JavaScript"></script>
+  </div>
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">时间的朋友</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">把琐碎的时间堆砌成一个伟大的生命。</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-clock-o"></i> <br />
+            
+            时间轴
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th-list"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-thumb-tack"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-museum">
+          <a href="/university" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-university"></i> <br />
+            
+            博物馆
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-test">
+          <a href="/test" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-flask"></i> <br />
+            
+            实验室
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user-plus"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            站内搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocapitalize="off" autocomplete="off" autocorrect="off"
+             placeholder="请输入在本站搜索的关键字..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    
+      <div id="idhyt-surprise-ball">
+  <div id="idhyt-surprise-ball-animation">
+    <!--xxxxxxx xxx xxxxx -->
+    <!--why you are here? -->
+    <span id="layer0Go" class="drag">w</span>
+    <span id="layer1Go" class="drag">h</span>
+    <span id="layer2Go" class="drag">y</span>
+    <span id="layer3Go" class="drag"></span>
+    <span id="layer4Go" class="drag">y</span>
+    <span id="layer5Go" class="drag">o</span>
+    <span id="layer6Go" class="drag">u</span>
+    <span id="layer7Go" class="drag">a</span>
+    <span id="layer8Go" class="drag">r</span>
+    <span id="layer9Go" class="drag">e</span>
+    <span id="layer10Go" class="drag">h</span>
+    <span id="layer11Go" class="drag">e</span>
+    <span id="layer12Go" class="drag">r</span>
+    <span id="layer13Go" class="drag">e</span>
+    <span id="layer14Go" class="drag">?</span>
+    <span id="layer15Go" class="drag ball"></span>
+  </div>
+</div>
+
+    
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://taketimeasafriend.github.io/2017/06/09/编程那点事儿-Head First Ruby/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="喵小哥">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="时间的朋友">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+            
+            
+              
+                Head First Ruby
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-09T10:16:21+08:00">
+                2017-06-09
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/编程那点事儿/" itemprop="url" rel="index">
+                    <span itemprop="name">编程那点事儿</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote class="blockquote-center">用更少的代码，做更多的事情。<br></blockquote>
+
+<a id="more"></a>
+<h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><p>之前看完《Head First HTML 与 CSS, XHTML》写了个<a href="http://51world.win/2017/05/31/%E7%BC%96%E7%A8%8B%E9%82%A3%E7%82%B9%E4%BA%8B%E5%84%BF-HTML%7CCSS%7CXHTML/" title="小总结" target="_blank" rel="external">小总结</a>，这是在纯野生状态下靠着兴趣玩了多半年 web 各种语言和产品（买各种云主机，搭各种博客，改各种前端）后看的第一本和网络相关完整的教材。网络上的教程和知识点毕竟只能在电子屏幕上而且碎片化，现在觉得还是手把手抓着纸质的知识心理踏实啊…</p>
+<p>前几天想找个网络方面的码农岗，试着面试了3家结果都说理论不扎实，只好回来恶补。对于理工男来说，脸皮不值钱，一切拿技术说话。跳槽虽然是涨薪的一种方式，但是我觉得长期来看还是 <strong>99%的能力，1%的运气</strong>。</p>
+<p>在没多少 Ruby 知识储备情况下，搭建了<a href="http://wangwei.party" title="两个 Web 应用" target="_blank" rel="external">两个 Web 应用</a>，懵懵懂懂。计算机语言之间虽然神似，可是 <strong>基础不牢，地动山摇</strong> 。没有理论指导，只会照猫画虎，这是肯定满足不了我的好奇心与“占有欲”。这月4号下午买的一大套书到了，快马加鞭未下鞍，到今天为止又用了 <strong>5口气</strong> 读完了《Head First Ruby》，现在做一下总结。</p>
+<p>继续补充自己的 <strong>知识 tree</strong> 。嗯，现在开始，什么都不晚。</p>
+<p><img src="http://ogudt6aal.bkt.clouddn.com/image/5%E5%8F%A3%E6%B0%94%E8%AF%BB%E5%AE%8C%E3%80%8AHead%20First%20Ruby%E3%80%8B.jpeg" alt="5口气读完《Head First Ruby》" title="5口气读完《Head First Ruby》"></p>
+<h2 id="Head-First-Ruby"><a href="#Head-First-Ruby" class="headerlink" title="Head First Ruby"></a>Head First Ruby</h2><h3 id="Ruby-的哲学"><a href="#Ruby-的哲学" class="headerlink" title="Ruby 的哲学"></a>Ruby 的哲学</h3><ul>
+<li>解释型语言，执行前无需编译</li>
+<li>一切都是对象</li>
+</ul>
+<h3 id="基本语法元素-和-面向对象"><a href="#基本语法元素-和-面向对象" class="headerlink" title="基本语法元素 和 面向对象"></a>基本语法元素 和 面向对象</h3><ul>
+<li>super</li>
+<li>yield 调用块</li>
+<li>each 简练</li>
+</ul>
+<h3 id="散列"><a href="#散列" class="headerlink" title="散列"></a>散列</h3><h3 id="include-module-mixin-模块"><a href="#include-module-mixin-模块" class="headerlink" title="include module(mixin) - 模块"></a>include module(mixin) - 模块</h3><ul>
+<li>不能initialize</li>
+<li>||= 操作符赋值</li>
+</ul>
+<h4 id="混入-Comparable（飞船操作符-lt-gt-）-和-Enumerable-处理集合相关"><a href="#混入-Comparable（飞船操作符-lt-gt-）-和-Enumerable-处理集合相关" class="headerlink" title="混入 Comparable（飞船操作符 &lt;=&gt;） 和 Enumerable(处理集合相关)"></a>混入 Comparable（飞船操作符 &lt;=&gt;） 和 Enumerable(处理集合相关)</h4><h3 id="异常"><a href="#异常" class="headerlink" title="异常"></a>异常</h3><ul>
+<li>raise “abc” 后的代码不会执行，直接跳出</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">begin</div><div class="line">  xxx.method1</div><div class="line">  puts <span class="string">"show #&#123;xxx.method2&#125;"</span></div><div class="line">rescue xxxError =&gt; error</div><div class="line">  puts <span class="string">"Error: #&#123;error.message&#125;"</span></div><div class="line">  retry <span class="comment">#返回到begin开始处；当心死循环</span></div><div class="line">ensure</div><div class="line">  xxx.method3</div><div class="line">end</div></pre></td></tr></table></figure>
+<h3 id="单元测试"><a href="#单元测试" class="headerlink" title="单元测试"></a>单元测试</h3><ul>
+<li>MiniTest 库</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">require <span class="string">'minitest/autorun'</span></div><div class="line">class xxx &lt; Minitest::<span class="built_in">test</span></div><div class="line">  def setup</div><div class="line">    @aaa = AAA.new</div><div class="line">    @aaa.b = c</div><div class="line">  end</div><div class="line"></div><div class="line">  def test_yyy</div><div class="line">    zzz</div><div class="line">  end</div><div class="line">end</div><div class="line"></div><div class="line">  def teardown</div><div class="line">    @aaa.b = d</div><div class="line">  end</div></pre></td></tr></table></figure>
+<h3 id="一个-Web-例子"><a href="#一个-Web-例子" class="headerlink" title="一个 Web 例子"></a>一个 Web 例子</h3><p><img src="http://ogudt6aal.bkt.clouddn.com/image/%E4%B8%80%E4%B8%AA%20Web%20%E4%BE%8B%E5%AD%90.jpeg" alt="一个 Web 例子" title="一个 Web 例子"></p>
+<ul>
+<li>Sinatra 库示例<ul>
+<li>需求介绍:<ul>
+<li>建立（建立工程目录；安装 Sinatra 库处理 Web 请求）</li>
+<li>处理请求（建立路由得到电影列表；创建 HTML 页面）</li>
+<li>用 HTML 显示对象（显示对象列表；增加新电影对象的表单）</li>
+<li>保存和加载对象（创建 - 保存 - 加载 - 查找 - 显示）</li>
+</ul>
+</li>
+<li>代码仓库: <a href="https://github.com/taketimeasafriend/sinatra-movies" target="_blank" rel="external">https://github.com/taketimeasafriend/sinatra-movies</a></li>
+<li>代码文件目录:<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">proj folder</div><div class="line">|</div><div class="line">|</div><div class="line">|---app.rb(核心，引用头文件 - 创建db.yml存数据 - 添加路由 - erb :index/new/show)</div><div class="line">|</div><div class="line">|---aaa.yml(注意键值匹配)( http://yaml.org/ )</div><div class="line">|</div><div class="line">|---lib folder</div><div class="line">|     |</div><div class="line">|     |---aaa.rb(attr_accessor :xxx, :yyy, :zzz, :id)</div><div class="line">|     |---aaa_store.rb(initialize - find - all - save)</div><div class="line">|</div><div class="line">|---views</div><div class="line">      |</div><div class="line">      |---index.erb(&lt;%= @aaa.each <span class="keyword">do</span> |aaa| %&gt;)</div><div class="line">      |---new.erb(&lt;form method=<span class="string">"post"</span> action=<span class="string">"/aaa/create"</span>&gt;)</div><div class="line">      |---show.erb(&lt;%= @aaa.b %&gt;)</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="剩下的"><a href="#剩下的" class="headerlink" title="剩下的"></a>剩下的</h3><h4 id="ruby-on-rails-erb模版-数据库配置-JavaScript和css"><a href="#ruby-on-rails-erb模版-数据库配置-JavaScript和css" class="headerlink" title="ruby on rails(erb模版 - 数据库配置 - JavaScript和css)"></a>ruby on rails(erb模版 - 数据库配置 - JavaScript和css)</h4><ul>
+<li><a href="http://rubyonrails.org/" target="_blank" rel="external">http://rubyonrails.org/</a></li>
+</ul>
+<h4 id="分布式dRuby"><a href="#分布式dRuby" class="headerlink" title="分布式dRuby"></a>分布式dRuby</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">require <span class="string">'drb/drb'</span> <span class="comment">#注意防火墙</span></div></pre></td></tr></table></figure>
+<h4 id="CSV"><a href="#CSV" class="headerlink" title="CSV"></a>CSV</h4><h4 id="执行文件加参数"><a href="#执行文件加参数" class="headerlink" title="执行文件加参数"></a>执行文件加参数</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ ruby xxx.rb test.txt</div><div class="line"></div><div class="line">file = File.open(ARGV[0]) <span class="keyword">do</span> |file|</div></pre></td></tr></table></figure>
+<h4 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h4><ul>
+<li>／ 夹</li>
+<li>=～</li>
+<li>{number} #重复次数</li>
+<li>#{$1} #记录表达式的值</li>
+<li>.sub 替换匹配部分</li>
+</ul>
+<h4 id="单例方法-实例上定义"><a href="#单例方法-实例上定义" class="headerlink" title="单例方法(实例上定义)"></a>单例方法(实例上定义)</h4><h4 id="为定义的参数传给-method-missing"><a href="#为定义的参数传给-method-missing" class="headerlink" title="为定义的参数传给 method_missing"></a>为定义的参数传给 method_missing</h4><h4 id="Rake-工具"><a href="#Rake-工具" class="headerlink" title="Rake 工具"></a>Rake 工具</h4><h4 id="bundler-控制gem版本"><a href="#bundler-控制gem版本" class="headerlink" title="bundler 控制gem版本"></a>bundler 控制gem版本</h4><h4 id="文档和书籍"><a href="#文档和书籍" class="headerlink" title="文档和书籍"></a>文档和书籍</h4><ul>
+<li>搞书《Programming Ruby》(工具书)</li>
+<li>《Well-Grounded Rubyist》（深度解析）</li>
+</ul>
+<hr>
+<h3 id="长路漫漫任我闯"><a href="#长路漫漫任我闯" class="headerlink" title="长路漫漫任我闯"></a>长路漫漫任我闯</h3><p>Ruby 只是个语法和概念基础，Rails 的路还很长，囊括的内容很碎（常用的 Gem，构建 API，各种 Ruby 技巧提升效率），之后接着更新博客记录，接着 coding…</p>
+
+      
+    </div>
+
+    <div>
+      
+        <div>
+    
+        <div style="text-align:center;color: #A52A2A; font-size:18px;">
+        < - 完 - >
+        </div>
+    
+</div>
+
+      
+    </div>
+    
+    <div>
+      
+        
+<div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="/uploads/weigonghao.jpg" alt="喵小哥 wechat" style="width: 200px; max-width: 100%;"/>
+    <div>上面是一个挤牙膏式的微公号。</div>
+</div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div> <span> - </span> 坚持分享  鼓励创作 <span> - </span> </div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/uploads/Wechat.png" alt="喵小哥 WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/uploads/Alipay.png" alt="喵小哥 Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+      
+        <div id="bitcoin" style="display: inline-block">
+          <img id="bitcoin_qr" src="/uploads/bitcoin.png" alt="喵小哥 Bitcoin"/>
+          <p>比特币打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+      <strong>本文作者：</strong>
+      喵小哥
+    </li>
+    <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://taketimeasafriend.github.io/2017/06/09/编程那点事儿-Head First Ruby/" title="Head First Ruby">https://taketimeasafriend.github.io/2017/06/09/编程那点事儿-Head First Ruby/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong>
+      本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/读书/" rel="tag"><i class="fa fa-thumb-tack" aria-hidden="true"></i> 读书</a>
+          
+            <a href="/tags/Ruby/" rel="tag"><i class="fa fa-thumb-tack" aria-hidden="true"></i> Ruby</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/06/08/社会生活-为什么我们身边有那么多“老师”/" rel="next" title="为什么我们身边有那么多“老师”">
+                <i class="fa fa-chevron-left"></i> 为什么我们身边有那么多“老师”
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/06/12/社会生活-差不多先生传/" rel="prev" title="差不多先生传">
+                差不多先生传 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style_24x24">
+	<a class="jiathis_button_fb"></a>
+	<a class="jiathis_button_twitter"></a>
+	<a class="jiathis_button_googleplus"></a>
+	<a class="jiathis_button_linkedin"></a>
+	<a class="jiathis_button_ydnote"></a>
+	<a class="jiathis_button_tsina"></a>
+	<a class="jiathis_button_weixin"></a>
+	<a class="jiathis_button_qzone"></a>
+	<a class="jiathis_button_tieba"></a>
+	<a class="jiathis_button_fav"></a>
+	<a class="jiathis_button_copy"></a>
+	<a class="jiathis_button_cqq"></a>
+	<a class="jiathis_button_douban"></a>
+	<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+</div>
+<script type="text/javascript" >
+  var jiathis_config={
+    hideMore: false
+  }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image" src="/uploads/avatar.jpg" alt="喵小哥"/>
+          <p class="site-author-name" itemprop="name">喵小哥</p>
+          
+            <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">90</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              
+                <a href="/categories/index.html">
+                
+                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-name">分类</span>
+                
+                </a>
+              
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              
+                <a href="/tags/index.html">
+                
+                <span class="site-state-item-count">86</span>
+                <span class="site-state-item-name">标签</span>
+                
+                </a>
+              
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/taketimeasafriend" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://wangwei.party" target="_blank" title="Resume">
+                  
+                    <i class="fa fa-fw fa-user-secret"></i>
+                  
+                  Resume
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element  links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              拓展学习
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://zhibimo.com/explore/books/" title="知笔墨" target="_blank">知笔墨</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://web.archive.org/web/20111228123747/http://www.lixiaolai.com/" title="李笑来" target="_blank">李笑来</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://macshuo.com/" title="池建强" target="_blank">池建强</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.geekonomics10000.com/" title="万维钢" target="_blank">万维钢</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://mindhacks.cn/" title="刘未鹏" target="_blank">刘未鹏</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.ruanyifeng.com/blog/" title="阮一峰" target="_blank">阮一峰</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.yinwang.org/" title="王 垠" target="_blank">王 垠</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.devtang.com/" title="唐 巧" target="_blank">唐 巧</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        <div class="hissoryCounter">
+          <div class="hissoryCounterChild1">-历史访问次数-<img border="0" src="http://cc.amazingcounters.com/counter.php?i=3214334&c=9643315" alt="AmazingCounters.com"></div>
+          <div class="hissoryCounterChild2">-历史访问人数-<img border="0" src="http://cc.amazingcounters.com/counter.php?i=3214333&c=9643312" alt="AmazingCounters.com"></div>
+        </div>
+
+
+        <!-- Start of StatCounter Code for Default Guide -->
+        <script type="text/javascript">
+        var sc_project=11440510;
+        var sc_invisible=1;
+        var sc_security="9bd592ab";
+        var scJsHost = (("https:" == document.location.protocol) ?
+        "https://secure." : "http://www.");
+        document.write("<sc"+"ript type='text/javascript' src='" +
+        scJsHost+
+        "statcounter.com/counter/counter.js'></"+"script>");
+        </script>
+        <noscript><div class="statcounter"><a title="site stats"
+        href="http://statcounter.com/" target="_blank"><img
+        class="statcounter"
+        src="//c.statcounter.com/11440510/0/9bd592ab/1/" alt="site
+        stats"></a></div></noscript>
+        <!-- End of StatCounter Code for Default Guide -->
+        <a href="http://statcounter.com/p11440510/?guest=1" style="color: #00FF7F; font-size: 12px;">
+        More Data
+        </a>
+
+
+        
+
+
+      </section>
+
+      
+        <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#写在前面"><span class="nav-number">1.</span> <span class="nav-text">写在前面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Head-First-Ruby"><span class="nav-number">2.</span> <span class="nav-text">Head First Ruby</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Ruby-的哲学"><span class="nav-number">2.1.</span> <span class="nav-text">Ruby 的哲学</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#基本语法元素-和-面向对象"><span class="nav-number">2.2.</span> <span class="nav-text">基本语法元素 和 面向对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#散列"><span class="nav-number">2.3.</span> <span class="nav-text">散列</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#include-module-mixin-模块"><span class="nav-number">2.4.</span> <span class="nav-text">include module(mixin) - 模块</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#混入-Comparable（飞船操作符-lt-gt-）-和-Enumerable-处理集合相关"><span class="nav-number">2.4.1.</span> <span class="nav-text">混入 Comparable（飞船操作符 <=>） 和 Enumerable(处理集合相关)</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#异常"><span class="nav-number">2.5.</span> <span class="nav-text">异常</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#单元测试"><span class="nav-number">2.6.</span> <span class="nav-text">单元测试</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#一个-Web-例子"><span class="nav-number">2.7.</span> <span class="nav-text">一个 Web 例子</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#剩下的"><span class="nav-number">2.8.</span> <span class="nav-text">剩下的</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#ruby-on-rails-erb模版-数据库配置-JavaScript和css"><span class="nav-number">2.8.1.</span> <span class="nav-text">ruby on rails(erb模版 - 数据库配置 - JavaScript和css)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#分布式dRuby"><span class="nav-number">2.8.2.</span> <span class="nav-text">分布式dRuby</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#CSV"><span class="nav-number">2.8.3.</span> <span class="nav-text">CSV</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#执行文件加参数"><span class="nav-number">2.8.4.</span> <span class="nav-text">执行文件加参数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#正则表达式"><span class="nav-number">2.8.5.</span> <span class="nav-text">正则表达式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#单例方法-实例上定义"><span class="nav-number">2.8.6.</span> <span class="nav-text">单例方法(实例上定义)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#为定义的参数传给-method-missing"><span class="nav-number">2.8.7.</span> <span class="nav-text">为定义的参数传给 method_missing</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Rake-工具"><span class="nav-number">2.8.8.</span> <span class="nav-text">Rake 工具</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#bundler-控制gem版本"><span class="nav-number">2.8.9.</span> <span class="nav-text">bundler 控制gem版本</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#文档和书籍"><span class="nav-number">2.8.10.</span> <span class="nav-text">文档和书籍</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#长路漫漫任我闯"><span class="nav-number">2.9.</span> <span class="nav-text">长路漫漫任我闯</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+        <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  更新于<i class="fa fa-clock-o" aria-hidden="true"></i>
+  
+  <span itemprop="copyrightYear">2017-10-20</span>
+  <span class="with-love">
+    <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder"><a href="http://wangwei.party/">喵小哥</a></span>
+</div>
+
+<div class="theme-info">
+  <span class="post-count">当前博客共120.0k字</span>
+  <div class="powered-by"></div>
+</div>
+
+<div class="powered-by">
+  每天进步一点点
+</div>
+
+<div class="theme-info">
+  去另一条
+  <a class="theme-link" href="https://51world.wordpress.com/">
+    时间轴
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+  
+  <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+      search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.popup').toggle();
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+      $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = $( "entry", xmlResponse ).map(function() {
+            return {
+              title: $( "title", this ).text(),
+              content: $("content",this).text(),
+              url: $( "url" , this).text()
+            };
+          }).get();
+          var $input = document.getElementById(search_id);
+          var $resultContent = document.getElementById(content_id);
+          $input.addEventListener('input', function(){
+            var matchcounts = 0;
+            var str='<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length > 1) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var content_index = [];
+                var data_title = data.title.trim().toLowerCase();
+                var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                var data_url = decodeURIComponent(data.url);
+                var index_title = -1;
+                var index_content = -1;
+                var first_occur = -1;
+                // only match artiles with not empty titles and contents
+                if(data_title != '') {
+                  keywords.forEach(function(keyword, i) {
+                    index_title = data_title.indexOf(keyword);
+                    index_content = data_content.indexOf(keyword);
+                    if( index_title >= 0 || index_content >= 0 ){
+                      isMatch = true;
+                      if (i == 0) {
+                        first_occur = index_content;
+                      }
+                    }
+
+                  });
+                }
+                // show search results
+                if (isMatch) {
+                  matchcounts += 1;
+                  str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                  var content = data.content.trim().replace(/<[^>]+>/g,"");
+                  if (first_occur >= 0) {
+                    // cut out 100 characters
+                    var start = first_occur - 20;
+                    var end = first_occur + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if(start == 0){
+                      end = 50;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    var match_content = content.substring(start, end);
+                    // highlight all keywords
+                    keywords.forEach(function(keyword){
+                      var regS = new RegExp(keyword, "gi");
+                      match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                    });
+
+                    str += "<p class=\"search-result\">" + match_content +"...</p>"
+                  }
+                  str += "</li>";
+                }
+              })};
+            str += "</ul>";
+            if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+            if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+            $resultContent.innerHTML = str;
+          });
+          proceedsearch();
+        }
+      });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+
+  
+
+</body>
+</html>

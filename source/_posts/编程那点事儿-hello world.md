@@ -2,8 +2,8 @@
 title: Hello World( hexo )
 categories: 编程那点事儿
 tags:
-  - hexo
-  - next
+  - Hexo
+  - NexT
 ---
 <blockquote class="blockquote-center">Welcome to [Hexo](https://hexo.io/)! This is your very first post.
 </blockquote>
@@ -49,5 +49,11 @@ More info: [Deployment](https://hexo.io/docs/deployment.html)
 ## NexT Theme Settings
 
 More info: [Settings](http://theme-next.iissnan.com/)
+
+## 添加自定义css
+
+``` bash
+themes/next(主题名称)/source/css/_custom/custom.styl
+```
 
 ## to be continued...

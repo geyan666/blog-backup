@@ -2,15 +2,28 @@
 
 
 
-  
 
-
-<html class="theme-next muse use-motion" lang="zh-Hans">
+<html class="theme-next muse" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
+<script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+<link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+<style>
+    .pace .pace-progress {
+        background: #DC143C; /*进度条颜色*/
+        height: 3px;
+    }
+    .pace .pace-progress-inner {
+         box-shadow: 0 0 10px #00d200, 0 0 5px     #00d200; /*阴影颜色*/
+    }
+    .pace .pace-activity {
+        border-top-color: #00d200;    /*上边框颜色*/
+        border-left-color: #f00;    /*左边框颜色*/
+    }
+</style>
 
 
 <meta http-equiv="Cache-Control" content="no-transform" />
@@ -71,7 +84,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="时间的朋友" />
 
 
 
@@ -87,61 +100,16 @@
 
 
 
-<meta name="description" content="To Do List
-
-
-一段牛叉吉他：Your browser does not support the audio element.
-
-
-一段视频：your browser does not support the video tag
-
-
-引入自己 js弹窗：hello!😄
-
-
-
-  一个按钮（返回顶部）
-
-  another gitpages">
+<meta name="description" content="- 游戏厅 -   数独在线 |  2048在线 |  盲打在线   魔方在线 |  赣极方棋在线 |  推箱子在线">
 <meta property="og:type" content="website">
-<meta property="og:title" content="测试">
+<meta property="og:title" content="— 这里通往更多美好的世界 —">
 <meta property="og:url" content="https://taketimeasafriend.github.io/test/index.html">
 <meta property="og:site_name" content="时间的朋友">
-<meta property="og:description" content="To Do List
-
-
-一段牛叉吉他：Your browser does not support the audio element.
-
-
-一段视频：your browser does not support the video tag
-
-
-引入自己 js弹窗：hello!😄
-
-
-
-  一个按钮（返回顶部）
-
-  another gitpages">
-<meta property="og:updated_time" content="2017-04-03T18:53:09.000Z">
+<meta property="og:description" content="- 游戏厅 -   数独在线 |  2048在线 |  盲打在线   魔方在线 |  赣极方棋在线 |  推箱子在线">
+<meta property="og:updated_time" content="2017-09-13T19:56:41.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="测试">
-<meta name="twitter:description" content="To Do List
-
-
-一段牛叉吉他：Your browser does not support the audio element.
-
-
-一段视频：your browser does not support the video tag
-
-
-引入自己 js弹窗：hello!😄
-
-
-
-  一个按钮（返回顶部）
-
-  another gitpages">
+<meta name="twitter:title" content="— 这里通往更多美好的世界 —">
+<meta name="twitter:description" content="- 游戏厅 -   数独在线 |  2048在线 |  盲打在线   魔方在线 |  赣极方棋在线 |  推箱子在线">
 
 
 
@@ -152,7 +120,7 @@
     scheme: 'Muse',
     sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
     fancybox: true,
-    motion: true,
+    motion: false,
     duoshuo: {
       userId: '0',
       author: '博主'
@@ -179,7 +147,7 @@
   
 
   
-    测试 | 时间的朋友
+    — 这里通往更多美好的世界 — | 时间的朋友
   
 </title>
 </head>
@@ -307,12 +275,12 @@
         </li>
       
         
-        <li class="menu-item menu-item-about">
-          <a href="/about" rel="section">
+        <li class="menu-item menu-item-museum">
+          <a href="/university" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-user-plus"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-university"></i> <br />
             
-            关于
+            博物馆
           </a>
         </li>
       
@@ -322,7 +290,17 @@
             
               <i class="menu-item-icon fa fa-fw fa-flask"></i> <br />
             
-            待续...
+            实验室
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user-plus"></i> <br />
+            
+            关于
           </a>
         </li>
       
@@ -373,6 +351,32 @@
  </div>
     </header>
 
+    
+      <div id="idhyt-surprise-ball">
+  <div id="idhyt-surprise-ball-animation">
+    <!--xxxxxxx xxx xxxxx -->
+    <!--why you are here? -->
+    <span id="layer0Go" class="drag">w</span>
+    <span id="layer1Go" class="drag">h</span>
+    <span id="layer2Go" class="drag">y</span>
+    <span id="layer3Go" class="drag"></span>
+    <span id="layer4Go" class="drag">y</span>
+    <span id="layer5Go" class="drag">o</span>
+    <span id="layer6Go" class="drag">u</span>
+    <span id="layer7Go" class="drag">a</span>
+    <span id="layer8Go" class="drag">r</span>
+    <span id="layer9Go" class="drag">e</span>
+    <span id="layer10Go" class="drag">h</span>
+    <span id="layer11Go" class="drag">e</span>
+    <span id="layer12Go" class="drag">r</span>
+    <span id="layer13Go" class="drag">e</span>
+    <span id="layer14Go" class="drag">?</span>
+    <span id="layer15Go" class="drag ball"></span>
+  </div>
+</div>
+
+    
+
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
@@ -382,7 +386,7 @@
   <div id="posts" class="posts-expand">
   <header class="post-header">
 
-	<h2 class="post-title" itemprop="name headline">测试</h2>
+	<h2 class="post-title" itemprop="name headline">— 这里通往更多美好的世界 —</h2>
 
 
 
@@ -390,22 +394,16 @@
 
     
     
-      <blockquote class="blockquote-center"><br>To Do List<br></blockquote>
+      <p><br></p>
+<blockquote class="blockquote-center">- 游戏厅 -<br>  <a href="http://51world.win/sudoku/index.html" class="myButton-game" target="_blank" rel="external"><i class="fa fa-sort-numeric-asc" aria-hidden="true"></i> 数独在线</a> | <a href="http://51world.win/2048/index.html" class="myButton-game" target="_blank" rel="external"><i class="fa fa-sort-amount-asc" aria-hidden="true"></i> 2048在线</a> | <a href="http://51world.win/ztype/index.html" class="myButton-game" target="_blank" rel="external"><i class="fa fa-gamepad" aria-hidden="true"></i> 盲打在线</a><br>  <a href="http://51world.win/rubik/index.html" class="myButton-game" target="_blank" rel="external"><i class="fa fa-american-sign-language-interpreting" aria-hidden="true"></i> 魔方在线</a> | <a href="http://51world.win/ganjifangqi/index.html" class="myButton-game" target="_blank" rel="external"><i class="fa fa-trophy" aria-hidden="true"></i> 赣极方棋在线</a> | <a href="http://51world.win/sokoban/index.html" class="myButton-game" target="_blank" rel="external"><i class="fa fa-arrows" aria-hidden="true"></i> 推箱子在线</a><br><br></blockquote>
 
-<hr>
-<h3 id="一段牛叉吉他："><a href="#一段牛叉吉他：" class="headerlink" title="一段牛叉吉他："></a>一段牛叉吉他：</h3><audio src="http://ogudt6aal.bkt.clouddn.com/music/Preston%20Reed%20-%20Tractor%20Pull.mp3" controls="controls" style="width: 100%; display: block; margin-left: auto; margin-right: auto;"><br>Your browser does not support the audio element.<br></audio>
+<div id="level"><br>  <div id="content"><br>    <div id="gears"><br>      <div id="gears-static"></div><br>      <div id="gear-system-1"><br>        <div class="shadow" id="shadow15"></div><br>        <div id="gear15"></div><br>        <div class="shadow" id="shadow14"></div><br>        <div id="gear14"></div><br>        <div class="shadow" id="shadow13"></div><br>        <div id="gear13"></div><br>      </div><br>      <div id="gear-system-2"><br>        <div class="shadow" id="shadow10"></div><br>        <div id="gear10"></div><br>        <div class="shadow" id="shadow3"></div><br>        <div id="gear3"></div><br>      </div><br>      <div id="gear-system-3"><br>        <div class="shadow" id="shadow9"></div><br>        <div id="gear9"></div><br>        <div class="shadow" id="shadow7"></div><br>        <div id="gear7"></div><br>      </div><br>      <div id="gear-system-4"><br>        <div class="shadow" id="shadow6"></div><br>        <div id="gear6"></div><br>        <div id="gear4"></div><br>      </div><br>      <div id="gear-system-5"><br>        <div class="shadow" id="shadow12"></div><br>        <div id="gear12"></div><br>        <div class="shadow" id="shadow11"></div><br>        <div id="gear11"></div><br>        <div class="shadow" id="shadow8"></div><br>        <div id="gear8"></div><br>      </div><br>      <div class="shadow" id="shadow1"></div><br>      <div id="gear1"></div><br>      <div id="gear-system-6"><br>        <div class="shadow" id="shadow5"></div><br>        <div id="gear5"></div><br>        <div id="gear2"></div><br>      </div><br>      <div class="shadow" id="shadowweight"></div><br>      <div id="chain-circle"></div><br>      <div id="chain"></div><br>      <div id="weight"></div><br>    </div><br>  </div><br></div>
 
-<hr>
-<h3 id="一段视频："><a href="#一段视频：" class="headerlink" title="一段视频："></a>一段视频：</h3><video src="http://ogudt6aal.bkt.clouddn.com/video/%E5%AD%A6%E4%B9%A0%E6%98%AF%E4%BB%B6%E7%BB%88%E7%94%9F%E5%A4%A7%E4%BA%8B.mp4" controls="controls" style="max-width: 100%; display: block; margin-left: auto; margin-right: auto;"><br>your browser does not support the video tag<br></video>
+<p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+<h2 id="—To-Do-List—"><a href="#—To-Do-List—" class="headerlink" title="—To Do List—"></a>—To Do List—</h2><blockquote class="blockquote-center">- 在线工具箱 -<br><a href="http://marks.51world.win/" class="myButton-game" target="_blank" rel="external"><i class="fa fa-map-signs" aria-hidden="true"></i> 我的网络导航</a><br></blockquote>
 
-<hr>
-<h3 id="引入自己-js"><a href="#引入自己-js" class="headerlink" title="引入自己 js"></a>引入自己 js</h3><p>弹窗：hello!😄</p>
-<script type="text/javascript" src="js/test.js"></script>
-
-<hr>
-<div class="text404"><br>  <a href="#" class="myButton">一个按钮（返回顶部）</a><br></div>
-
-<div class="text404"><br>  <a href="http://51world.win/gallery/" class="myButton" target="_blank" rel="external">another gitpages</a><br></div>
+<p><br></p>
+<blockquote class="blockquote-center">- 音乐馆 -<br><audio src="http://ogudt6aal.bkt.clouddn.com/music/Preston%20Reed%20-%20Tractor%20Pull.mp3" controls="controls" style="width: 100%; display: block; margin-left: auto; margin-right: auto;"><br>Your browser does not support the audio element.<br></audio><br><br>…<br></blockquote>
 
     
   </div>
@@ -438,20 +436,19 @@
 
       <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="/uploads/avatar.jpg"
-               alt="喵小哥" />
+          <img class="site-author-image" itemprop="image" src="/uploads/avatar.jpg" alt="喵小哥"/>
           <p class="site-author-name" itemprop="name">喵小哥</p>
-           
-              <p class="site-description motion-element" itemprop="description"></p>
-           
+          
+            <p class="site-description motion-element" itemprop="description"></p>
+          
         </div>
+
         <nav class="site-state motion-element">
 
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">30</span>
+                <span class="site-state-item-count">90</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -461,10 +458,14 @@
             
             
             <div class="site-state-item site-state-categories">
-              <a href="/categories/index.html">
-                <span class="site-state-item-count">9</span>
+              
+                <a href="/categories/index.html">
+                
+                <span class="site-state-item-count">12</span>
                 <span class="site-state-item-name">分类</span>
-              </a>
+                
+                </a>
+              
             </div>
           
 
@@ -472,10 +473,14 @@
             
             
             <div class="site-state-item site-state-tags">
-              <a href="/tags/index.html">
-                <span class="site-state-item-count">42</span>
+              
+                <a href="/tags/index.html">
+                
+                <span class="site-state-item-count">86</span>
                 <span class="site-state-item-name">标签</span>
-              </a>
+                
+                </a>
+              
             </div>
           
 
@@ -496,11 +501,11 @@
               </span>
             
               <span class="links-of-author-item">
-                <a href="http://weibo.com/miaoxiaogege" target="_blank" title="微博">
+                <a href="http://wangwei.party" target="_blank" title="Resume">
                   
-                    <i class="fa fa-fw fa-weibo"></i>
+                    <i class="fa fa-fw fa-user-secret"></i>
                   
-                  微博
+                  Resume
                 </a>
               </span>
             
@@ -512,7 +517,7 @@
 
         
         
-          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+          <div class="links-of-blogroll motion-element  links-of-blogroll-inline">
             <div class="links-of-blogroll-title">
               <i class="fa  fa-fw fa-globe"></i>
               拓展学习
@@ -528,11 +533,15 @@
                 </li>
               
                 <li class="links-of-blogroll-item">
-                  <a href="http://macshuo.com/" title="MacTalk" target="_blank">MacTalk</a>
+                  <a href="http://macshuo.com/" title="池建强" target="_blank">池建强</a>
                 </li>
               
                 <li class="links-of-blogroll-item">
-                  <a href="http://mindhacks.cn/" title="MindHacks" target="_blank">MindHacks</a>
+                  <a href="http://www.geekonomics10000.com/" title="万维钢" target="_blank">万维钢</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://mindhacks.cn/" title="刘未鹏" target="_blank">刘未鹏</a>
                 </li>
               
                 <li class="links-of-blogroll-item">
@@ -540,12 +549,44 @@
                 </li>
               
                 <li class="links-of-blogroll-item">
-                  <a href="http://blog.devtang.com/" title="唐巧" target="_blank">唐巧</a>
+                  <a href="http://www.yinwang.org/" title="王 垠" target="_blank">王 垠</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.devtang.com/" title="唐 巧" target="_blank">唐 巧</a>
                 </li>
               
             </ul>
           </div>
         
+
+        <div class="hissoryCounter">
+          <div class="hissoryCounterChild1">-历史访问次数-<img border="0" src="http://cc.amazingcounters.com/counter.php?i=3214334&c=9643315" alt="AmazingCounters.com"></div>
+          <div class="hissoryCounterChild2">-历史访问人数-<img border="0" src="http://cc.amazingcounters.com/counter.php?i=3214333&c=9643312" alt="AmazingCounters.com"></div>
+        </div>
+
+
+        <!-- Start of StatCounter Code for Default Guide -->
+        <script type="text/javascript">
+        var sc_project=11440510;
+        var sc_invisible=1;
+        var sc_security="9bd592ab";
+        var scJsHost = (("https:" == document.location.protocol) ?
+        "https://secure." : "http://www.");
+        document.write("<sc"+"ript type='text/javascript' src='" +
+        scJsHost+
+        "statcounter.com/counter/counter.js'></"+"script>");
+        </script>
+        <noscript><div class="statcounter"><a title="site stats"
+        href="http://statcounter.com/" target="_blank"><img
+        class="statcounter"
+        src="//c.statcounter.com/11440510/0/9bd592ab/1/" alt="site
+        stats"></a></div></noscript>
+        <!-- End of StatCounter Code for Default Guide -->
+        <a href="http://statcounter.com/p11440510/?guest=1" style="color: #00FF7F; font-size: 12px;">
+        More Data
+        </a>
+
 
         
 
@@ -570,13 +611,17 @@
   
   更新于<i class="fa fa-clock-o" aria-hidden="true"></i>
   
-  <span itemprop="copyrightYear">2017-04-05</span>
+  <span itemprop="copyrightYear">2017-10-20</span>
   <span class="with-love">
     <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">喵小哥</span>
+  <span class="author" itemprop="copyrightHolder"><a href="http://wangwei.party/">喵小哥</a></span>
 </div>
 
+<div class="theme-info">
+  <span class="post-count">当前博客共120.0k字</span>
+  <div class="powered-by"></div>
+</div>
 
 <div class="powered-by">
   每天进步一点点
@@ -584,7 +629,7 @@
 
 <div class="theme-info">
   去另一条
-  <a class="theme-link" href="http://51world.pub">
+  <a class="theme-link" href="https://51world.wordpress.com/">
     时间轴
   </a>
 </div>
@@ -674,14 +719,6 @@
 
   
 
-
-  
-
-    
-      <script id="dsq-count-scr" src="https://taketimeasafriend.disqus.com/count.js" async></script>
-    
-
-    
 
   
 
@@ -846,113 +883,6 @@
 
 
   
-
-  
-  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
-  <script>AV.initialize("WoifFymbvNMkl3JBQKcero5f-gzGzoHsz", "Q5U0HKsYgtwH2aVo1rEcSy6g");</script>
-  <script>
-    function showTime(Counter) {
-      var query = new AV.Query(Counter);
-      var entries = [];
-      var $visitors = $(".leancloud_visitors");
-
-      $visitors.each(function () {
-        entries.push( $(this).attr("id").trim() );
-      });
-
-      query.containedIn('url', entries);
-      query.find()
-        .done(function (results) {
-          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
-
-          if (results.length === 0) {
-            $visitors.find(COUNT_CONTAINER_REF).text(0);
-            return;
-          }
-
-          for (var i = 0; i < results.length; i++) {
-            var item = results[i];
-            var url = item.get('url');
-            var time = item.get('time');
-            var element = document.getElementById(url);
-
-            $(element).find(COUNT_CONTAINER_REF).text(time);
-          }
-          for(var i = 0; i < entries.length; i++) {
-            var url = entries[i];
-            var element = document.getElementById(url);
-            var countSpan = $(element).find(COUNT_CONTAINER_REF);
-            if( countSpan.text() == '') {
-              countSpan.text(0);
-            }
-          }
-        })
-        .fail(function (object, error) {
-          console.log("Error: " + error.code + " " + error.message);
-        });
-    }
-
-    function addCount(Counter) {
-      var $visitors = $(".leancloud_visitors");
-      var url = $visitors.attr('id').trim();
-      var title = $visitors.attr('data-flag-title').trim();
-      var query = new AV.Query(Counter);
-
-      query.equalTo("url", url);
-      query.find({
-        success: function(results) {
-          if (results.length > 0) {
-            var counter = results[0];
-            counter.fetchWhenSave(true);
-            counter.increment("time");
-            counter.save(null, {
-              success: function(counter) {
-                var $element = $(document.getElementById(url));
-                $element.find('.leancloud-visitors-count').text(counter.get('time'));
-              },
-              error: function(counter, error) {
-                console.log('Failed to save Visitor num, with error message: ' + error.message);
-              }
-            });
-          } else {
-            var newcounter = new Counter();
-            /* Set ACL */
-            var acl = new AV.ACL();
-            acl.setPublicReadAccess(true);
-            acl.setPublicWriteAccess(true);
-            newcounter.setACL(acl);
-            /* End Set ACL */
-            newcounter.set("title", title);
-            newcounter.set("url", url);
-            newcounter.set("time", 1);
-            newcounter.save(null, {
-              success: function(newcounter) {
-                var $element = $(document.getElementById(url));
-                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
-              },
-              error: function(newcounter, error) {
-                console.log('Failed to create');
-              }
-            });
-          }
-        },
-        error: function(error) {
-          console.log('Error:' + error.code + " " + error.message);
-        }
-      });
-    }
-
-    $(function() {
-      var Counter = AV.Object.extend("Counter");
-      if ($('.leancloud_visitors').length == 1) {
-        addCount(Counter);
-      } else if ($('.post-title-link').length > 1) {
-        showTime(Counter);
-      }
-    });
-  </script>
-
-
 
   
 <script>

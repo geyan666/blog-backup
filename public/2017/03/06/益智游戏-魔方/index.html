@@ -2,15 +2,28 @@
 
 
 
-  
 
-
-<html class="theme-next muse use-motion" lang="zh-Hans">
+<html class="theme-next muse" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
+<script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+<link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+<style>
+    .pace .pace-progress {
+        background: #DC143C; /*进度条颜色*/
+        height: 3px;
+    }
+    .pace .pace-progress-inner {
+         box-shadow: 0 0 10px #00d200, 0 0 5px     #00d200; /*阴影颜色*/
+    }
+    .pace .pace-activity {
+        border-top-color: #00d200;    /*上边框颜色*/
+        border-left-color: #f00;    /*左边框颜色*/
+    }
+</style>
 
 
 <meta http-equiv="Cache-Control" content="no-transform" />
@@ -93,14 +106,15 @@
 <meta property="og:url" content="https://taketimeasafriend.github.io/2017/03/06/益智游戏-魔方/index.html">
 <meta property="og:site_name" content="时间的朋友">
 <meta property="og:description" content="唯物主义者的世界里，一切都有规律可循。">
+<meta property="og:image" content="http://ogudt6aal.bkt.clouddn.com/image/%E5%9C%A8%E7%BA%BF%E9%AD%94%E6%96%B9%E5%A4%8D%E5%8E%9F.png">
 <meta property="og:image" content="http://ogudt6aal.bkt.clouddn.com/image/cengxianfa.jpg">
 <meta property="og:image" content="http://ogudt6aal.bkt.clouddn.com/image/4jieduilenghuan.jpeg">
 <meta property="og:image" content="http://ogudt6aal.bkt.clouddn.com/image/4jiedanbianfanleng.jpg">
-<meta property="og:updated_time" content="2017-04-03T06:13:17.000Z">
+<meta property="og:updated_time" content="2017-09-03T19:53:38.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="学习魔方-完成童年未完成的遗憾">
 <meta name="twitter:description" content="唯物主义者的世界里，一切都有规律可循。">
-<meta name="twitter:image" content="http://ogudt6aal.bkt.clouddn.com/image/cengxianfa.jpg">
+<meta name="twitter:image" content="http://ogudt6aal.bkt.clouddn.com/image/%E5%9C%A8%E7%BA%BF%E9%AD%94%E6%96%B9%E5%A4%8D%E5%8E%9F.png">
 
 
 
@@ -111,7 +125,7 @@
     scheme: 'Muse',
     sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
     fancybox: true,
-    motion: true,
+    motion: false,
     duoshuo: {
       userId: '0',
       author: '博主'
@@ -260,12 +274,12 @@
         </li>
       
         
-        <li class="menu-item menu-item-about">
-          <a href="/about" rel="section">
+        <li class="menu-item menu-item-museum">
+          <a href="/university" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-user-plus"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-university"></i> <br />
             
-            关于
+            博物馆
           </a>
         </li>
       
@@ -275,7 +289,17 @@
             
               <i class="menu-item-icon fa fa-fw fa-flask"></i> <br />
             
-            待续...
+            实验室
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user-plus"></i> <br />
+            
+            关于
           </a>
         </li>
       
@@ -325,6 +349,32 @@
 
  </div>
     </header>
+
+    
+      <div id="idhyt-surprise-ball">
+  <div id="idhyt-surprise-ball-animation">
+    <!--xxxxxxx xxx xxxxx -->
+    <!--why you are here? -->
+    <span id="layer0Go" class="drag">w</span>
+    <span id="layer1Go" class="drag">h</span>
+    <span id="layer2Go" class="drag">y</span>
+    <span id="layer3Go" class="drag"></span>
+    <span id="layer4Go" class="drag">y</span>
+    <span id="layer5Go" class="drag">o</span>
+    <span id="layer6Go" class="drag">u</span>
+    <span id="layer7Go" class="drag">a</span>
+    <span id="layer8Go" class="drag">r</span>
+    <span id="layer9Go" class="drag">e</span>
+    <span id="layer10Go" class="drag">h</span>
+    <span id="layer11Go" class="drag">e</span>
+    <span id="layer12Go" class="drag">r</span>
+    <span id="layer13Go" class="drag">e</span>
+    <span id="layer14Go" class="drag">?</span>
+    <span id="layer15Go" class="drag ball"></span>
+  </div>
+</div>
+
+    
 
     <main id="main" class="main">
       <div class="main-inner">
@@ -414,31 +464,9 @@
 
           
             
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/03/06/益智游戏-魔方/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/03/06/益智游戏-魔方/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
           
 
           
-          
-             <span id="/2017/03/06/益智游戏-魔方/" class="leancloud_visitors" data-flag-title="学习魔方-完成童年未完成的遗憾">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数 </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
           
 
           
@@ -461,7 +489,11 @@
         <blockquote class="blockquote-center">唯物主义者的世界里，一切都有规律可循。</blockquote>
 
 <a id="more"></a>
-<h2 id="3阶魔方（Rubik’s-Cube）-从最基本的开始"><a href="#3阶魔方（Rubik’s-Cube）-从最基本的开始" class="headerlink" title="3阶魔方（Rubik’s Cube） - 从最基本的开始"></a>3阶魔方（Rubik’s Cube） - 从最基本的开始</h2><h3 id="层先法-新手入门玩法"><a href="#层先法-新手入门玩法" class="headerlink" title="层先法 - 新手入门玩法"></a>层先法 - 新手入门玩法</h3><p><img src="http://ogudt6aal.bkt.clouddn.com/image/cengxianfa.jpg" alt="层先法示意图" title="层先法示意图">  </p>
+<h2 id="3阶魔方（Rubik’s-Cube）-从最基本的开始"><a href="#3阶魔方（Rubik’s-Cube）-从最基本的开始" class="headerlink" title="3阶魔方（Rubik’s Cube） - 从最基本的开始"></a>3阶魔方（Rubik’s Cube） - 从最基本的开始</h2><ul>
+<li>可以先尝试用鼠标操做下面魔方：<div style="width:800px;overflow:hidden;margin:0 auto;"><br><div><br>  <iframe allowtransparency="true" src="http://www.atool.org/magic_cube.php" height="500" width="800" frameborder="0" scrolling="no"></iframe><br></div><br></div></li>
+<li>复原成功后如图:<br><img src="http://ogudt6aal.bkt.clouddn.com/image/%E5%9C%A8%E7%BA%BF%E9%AD%94%E6%96%B9%E5%A4%8D%E5%8E%9F.png" alt="在线魔方复原成功" title="在线魔方复原成功">  <h3 id="层先法-新手入门玩法"><a href="#层先法-新手入门玩法" class="headerlink" title="层先法 - 新手入门玩法"></a>层先法 - 新手入门玩法</h3></li>
+</ul>
+<p><img src="http://ogudt6aal.bkt.clouddn.com/image/cengxianfa.jpg" alt="层先法示意图" title="层先法示意图">  </p>
 <h4 id="底层白色十字架"><a href="#底层白色十字架" class="headerlink" title="底层白色十字架"></a>底层白色十字架</h4><ol>
 <li>黄色中心白十字架</li>
 <li>对准侧面中心颜色反转为白中心白十字架</li>
@@ -534,6 +566,9 @@
 <li><p>3左2上2下1右中间点</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">入门黄十字+高级黄十字</div></pre></td></tr></table></figure>
 </li>
+<li><p>对称5块</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">rUR<span class="string">'U'</span>-MMU-RU<span class="string">'R'</span>U<span class="string">'-M'</span></div></pre></td></tr></table></figure>
+</li>
 </ul>
 <h4 id="PLL"><a href="#PLL" class="headerlink" title="PLL"></a>PLL</h4><ul>
 <li><p>3楞顺时针</p>
@@ -547,6 +582,12 @@
 </li>
 </ul>
 <p>待续…</p>
+<h3 id="装逼盲拧"><a href="#装逼盲拧" class="headerlink" title="装逼盲拧"></a>装逼盲拧</h3><h4 id="角朝向"><a href="#角朝向" class="headerlink" title="角朝向"></a>角朝向</h4><p>左坦克上下|右坦克上下|左坦克左|右坦克右<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">1. RUR<span class="string">'U-RUUR'</span> - 左手重复</div><div class="line">2. 左手重复 - RUR<span class="string">'U-RUUR'</span></div><div class="line"></div><div class="line">3. 左手RUUR<span class="string">'-U'</span>RU<span class="string">'R'</span> - 右手重复</div><div class="line">4. RUUR<span class="string">'-U'</span>RU<span class="string">'R'</span> - 左手重复</div></pre></td></tr></table></figure></p>
+<p>左后角逆|顺时针<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">(RUR<span class="string">'U'</span>)2</div><div class="line">(URU<span class="string">'R'</span>)2</div></pre></td></tr></table></figure></p>
+<h4 id="楞朝向"><a href="#楞朝向" class="headerlink" title="楞朝向"></a>楞朝向</h4><p>巧用 setup-reverse<br>对楞翻<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">上顺上顺上顺顺 - 下顺下顺下顺顺</div></pre></td></tr></table></figure></p>
+<p>4楞翻<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">四个上顺 - 四个下顺</div></pre></td></tr></table></figure></p>
+<h4 id="楞顺序"><a href="#楞顺序" class="headerlink" title="楞顺序"></a>楞顺序</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">setup-3楞换-reverse（PS：前后面只能转180度）</div></pre></td></tr></table></figure>
+<h4 id="角顺序"><a href="#角顺序" class="headerlink" title="角顺序"></a>角顺序</h4><h4 id="奇偶校验"><a href="#奇偶校验" class="headerlink" title="奇偶校验"></a>奇偶校验</h4><p>待续…</p>
 <h2 id="2阶魔方（Pocket-Rubik’s-Cube-Mini-Cube）"><a href="#2阶魔方（Pocket-Rubik’s-Cube-Mini-Cube）" class="headerlink" title="2阶魔方（Pocket Rubik’s Cube / Mini Cube）"></a>2阶魔方（Pocket Rubik’s Cube / Mini Cube）</h2><p>相当于3阶去除中心块和楞块。</p>
 <h3 id="白色层且侧面对应"><a href="#白色层且侧面对应" class="headerlink" title="白色层且侧面对应"></a>白色层且侧面对应</h3><h3 id="黄顶"><a href="#黄顶" class="headerlink" title="黄顶"></a>黄顶</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">RUR<span class="string">'U-RUUR'</span></div></pre></td></tr></table></figure>
 <h3 id="2角同色"><a href="#2角同色" class="headerlink" title="2角同色"></a>2角同色</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">RB<span class="string">'RFF-R'</span>BRFF-RR</div></pre></td></tr></table></figure>
@@ -556,19 +597,97 @@
 <h5 id="单边翻楞"><a href="#单边翻楞" class="headerlink" title="单边翻楞"></a>单边翻楞</h5><p><img src="http://ogudt6aal.bkt.clouddn.com/image/4jiedanbianfanleng.jpg" alt="4阶单边翻楞" title="4阶单边翻楞">  </p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">MR2 B2 U2 - ML U2 MR<span class="string">'</span></div><div class="line">U2 MR U2 - F2 MR F2</div><div class="line">ML' B2 MR2</div></pre></td></tr></table></figure>
 <h2 id="镜面魔方"><a href="#镜面魔方" class="headerlink" title="镜面魔方"></a>镜面魔方</h2><p>相当于3阶的颜色转换为宽度。</p>
-<h2 id="金字塔魔方"><a href="#金字塔魔方" class="headerlink" title="金字塔魔方"></a>金字塔魔方</h2><p>待续…</p>
-<h2 id="斜转魔方"><a href="#斜转魔方" class="headerlink" title="斜转魔方"></a>斜转魔方</h2><p>待续…</p>
-<h2 id="SQ1魔方（扇形魔方）"><a href="#SQ1魔方（扇形魔方）" class="headerlink" title="SQ1魔方（扇形魔方）"></a>SQ1魔方（扇形魔方）</h2><h3 id="小块集合至一层（2小块为一单元原则）"><a href="#小块集合至一层（2小块为一单元原则）" class="headerlink" title="小块集合至一层（2小块为一单元原则）"></a>小块集合至一层（2小块为一单元原则）</h3><h4 id="2小块互换技巧"><a href="#2小块互换技巧" class="headerlink" title="2小块互换技巧"></a>2小块互换技巧</h4><h3 id="上下层皆正方形"><a href="#上下层皆正方形" class="headerlink" title="上下层皆正方形"></a>上下层皆正方形</h3><h3 id="上下面同色"><a href="#上下面同色" class="headerlink" title="上下面同色"></a>上下面同色</h3><h4 id="上右-下后-楞换"><a href="#上右-下后-楞换" class="headerlink" title="上右-下后 楞换"></a>上右-下后 楞换</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">(1,0)/(3,0)/(3,0)</div><div class="line">/(-1,-1)/(-2,1)</div><div class="line">/(-3,0)／..</div></pre></td></tr></table></figure>
+<h2 id="粽子魔方"><a href="#粽子魔方" class="headerlink" title="粽子魔方"></a>粽子魔方</h2><p>两色楞（保持对角斜线）为中心的3阶魔方。</p>
+<h3 id="前两层"><a href="#前两层" class="headerlink" title="前两层"></a>前两层</h3><ul>
+<li>底层<ul>
+<li>红黄为底蓝绿为顶，使侧面中心块成标准三角形</li>
+<li>十字：从顶层接下来（方向不对：下➡️上➡️下➡️上 调整）</li>
+<li>角块：跟三阶一样</li>
+</ul>
+</li>
+<li>第二层（<strong>远</strong> -切-回-回…）<ul>
+<li><strong>对齐</strong> 时1颜色错位</li>
+</ul>
+</li>
+</ul>
+<h3 id="顶层十字-楞顺序"><a href="#顶层十字-楞顺序" class="headerlink" title="顶层十字+楞顺序"></a>顶层十字+楞顺序</h3><ul>
+<li>有1正确，假象平移后，归位和十字关系（FRU…）</li>
+<li>都不正确，小鱼…</li>
+</ul>
+<h3 id="顶层角"><a href="#顶层角" class="headerlink" title="顶层角"></a>顶层角</h3><p>待续…</p>
+<h2 id="金字塔魔方"><a href="#金字塔魔方" class="headerlink" title="金字塔魔方"></a>金字塔魔方</h2><h3 id="底层"><a href="#底层" class="headerlink" title="底层"></a>底层</h3><ol>
+<li>3点定面（先3中心块 - 后3尖儿）</li>
+<li>完成一面（对齐侧面 - 另一侧上去接 - 上车 - 回去）</li>
+</ol>
+<h3 id="顶层"><a href="#顶层" class="headerlink" title="顶层"></a>顶层</h3><ol>
+<li>第4尖儿归位</li>
+<li>三侧面<ul>
+<li>情况1: 三个错+每面异色（两色都错块置后 - 下（错色开始）下上上 - 把翻上来的继续归位）</li>
+<li>情况2: 三个错+每面同色（顺时针 - R’U’RU’R’U’R；逆时针 - 左右手互换）</li>
+<li>情况3: 两个错（情况1 + 情况2）</li>
+</ul>
+</li>
+</ol>
+<h2 id="斜转魔方"><a href="#斜转魔方" class="headerlink" title="斜转魔方"></a>斜转魔方</h2><p>特点：以8个顶点为轴转动。</p>
+<h3 id="底层白色"><a href="#底层白色" class="headerlink" title="底层白色"></a>底层白色</h3><ol>
+<li>上面白色朝侧面-转邻角（-目测方向）</li>
+<li>PS：<ul>
+<li>下角向上翻时不要让白色朝上</li>
+<li>调整时候转本身或相邻2角</li>
+</ul>
+</li>
+</ol>
+<h3 id="侧面中心-顶层角块"><a href="#侧面中心-顶层角块" class="headerlink" title="侧面中心+顶层角块"></a>侧面中心+顶层角块</h3><ol>
+<li>将顶层换到前面：上面俩顶点交替下下上上（效果：上前换+左右换）（若顶层黄，则找个错的做一次先）</li>
+<li>2（黄不在顶）后（左后黄朝向）4左：<ul>
+<li>4遍步骤1</li>
+<li>2遍步骤1</li>
+</ul>
+</li>
+</ol>
+<h2 id="SQ1魔方（扇形魔方）"><a href="#SQ1魔方（扇形魔方）" class="headerlink" title="SQ1魔方（扇形魔方）"></a>SQ1魔方（扇形魔方）</h2><h3 id="小块集合至一层（2小块为一单元原则）"><a href="#小块集合至一层（2小块为一单元原则）" class="headerlink" title="小块集合至一层（2小块为一单元原则）"></a>小块集合至一层（2小块为一单元原则）</h3><h4 id="2小块互换技巧"><a href="#2小块互换技巧" class="headerlink" title="2小块互换技巧"></a>2小块互换技巧</h4><p>下面“小+大+小”和上面“两小”换位，上面出现一字。</p>
+<h3 id="上下层皆正方形"><a href="#上下层皆正方形" class="headerlink" title="上下层皆正方形"></a>上下层皆正方形</h3><h3 id="上下面同色"><a href="#上下面同色" class="headerlink" title="上下面同色"></a>上下面同色</h3><h4 id="上右-下后-楞换"><a href="#上右-下后-楞换" class="headerlink" title="上右-下后 楞换"></a>上右-下后 楞换</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">(1,0)/(3,0)/(3,0)</div><div class="line">/(-1,-1)/(-2,1)</div><div class="line">/(-3,0)／..</div></pre></td></tr></table></figure>
 <h4 id="中间2对楞上下互换"><a href="#中间2对楞上下互换" class="headerlink" title="中间2对楞上下互换"></a>中间2对楞上下互换</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">上错1换-归位</div><div class="line">下错1换-归位</div></pre></td></tr></table></figure>
 <h3 id="上下层侧角成对"><a href="#上下层侧角成对" class="headerlink" title="上下层侧角成对"></a>上下层侧角成对</h3><h4 id="下面1侧角同-朝后，转换侧楞角块颜色"><a href="#下面1侧角同-朝后，转换侧楞角块颜色" class="headerlink" title="下面1侧角同 朝后，转换侧楞角块颜色"></a>下面1侧角同 朝后，转换侧楞角块颜色</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">／(3,-3)/(0,3)</div><div class="line">/(-3,0)/(3,0)／(-3,0)</div></pre></td></tr></table></figure>
 <h3 id="上下层楞归位"><a href="#上下层楞归位" class="headerlink" title="上下层楞归位"></a>上下层楞归位</h3><h4 id="两层右后楞皆换"><a href="#两层右后楞皆换" class="headerlink" title="两层右后楞皆换"></a>两层右后楞皆换</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">(-2,0)/(3,0)</div><div class="line">/(-1,-1)/(-2,1)／..</div></pre></td></tr></table></figure>
 <h4 id="最后一对楞-上层右前"><a href="#最后一对楞-上层右前" class="headerlink" title="最后一对楞(上层右前)"></a>最后一对楞(上层右前)</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">／(-3,0)/(0,3)/(0,-3)/(0,3)</div><div class="line">／(2,0)/(0,2)/(-2,0)/(4,0)/(0,-2)/(0,2)</div><div class="line">／(-1,4)/(0,-3)/..</div></pre></td></tr></table></figure>
 <h3 id="中间正方形"><a href="#中间正方形" class="headerlink" title="中间正方形"></a>中间正方形</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">／(6,0)/(6,0)/</div></pre></td></tr></table></figure>
+<h2 id="5魔方"><a href="#5魔方" class="headerlink" title="5魔方"></a>5魔方</h2><p>特点：白底灰顶，下层和上层颜色相对。</p>
+<h3 id="前两层-1"><a href="#前两层-1" class="headerlink" title="前两层"></a>前两层</h3><h3 id="顶层之外所有层"><a href="#顶层之外所有层" class="headerlink" title="顶层之外所有层"></a>顶层之外所有层</h3><ul>
+<li>下层小尖儿</li>
+<li>尖儿旁楞（向目标位 - 远藏 - 拼 - 回）</li>
+<li>F2L角楞对</li>
+</ul>
+<h3 id="顶层五角星-侧面顺序"><a href="#顶层五角星-侧面顺序" class="headerlink" title="顶层五角星+侧面顺序"></a>顶层五角星+侧面顺序</h3><ul>
+<li>小犄角（1-2-3）朝左上: FRU…</li>
+<li>侧楞轮换: R’U’-RU’-R’U’U’U’-R(顺时针，可转化)</li>
+</ul>
+<h3 id="顶层角块"><a href="#顶层角块" class="headerlink" title="顶层角块"></a>顶层角块</h3><ul>
+<li>角朝向:  <ul>
+<li>配对 + 逆时针RUR’U’X2 - 顺时针URU’R’X2</li>
+<li>X3也可复原</li>
+</ul>
+</li>
+<li>角顺序: 下左上 - 下右上</li>
+</ul>
 <p><font size="3" face="黑体">（更多技巧参览</font><a href="http://www.rubik.com.cn" title="cube" target="_blank" rel="external">魔方小站</a>）  </p>
 
       
     </div>
 
+    <div>
+      
+        <div>
+    
+        <div style="text-align:center;color: #A52A2A; font-size:18px;">
+        < - 完 - >
+        </div>
+    
+</div>
+
+      
+    </div>
+    
     <div>
       
         
@@ -641,9 +760,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/规律/" rel="tag"># 规律</a>
+            <a href="/tags/规律/" rel="tag"><i class="fa fa-thumb-tack" aria-hidden="true"></i> 规律</a>
           
-            <a href="/tags/魔方/" rel="tag"># 魔方</a>
+            <a href="/tags/魔方/" rel="tag"><i class="fa fa-thumb-tack" aria-hidden="true"></i> 魔方</a>
           
         </div>
       
@@ -666,8 +785,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/03/22/励志-活着/" rel="prev" title="人是需要精神鸦片的">
-                人是需要精神鸦片的 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/03/14/新生大学-写作素材的积累/" rel="prev" title="网络世界牛人的写作（二）">
+                网络世界牛人的写作（二） <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -683,6 +802,32 @@
 
     <div class="post-spread">
       
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style_24x24">
+	<a class="jiathis_button_fb"></a>
+	<a class="jiathis_button_twitter"></a>
+	<a class="jiathis_button_googleplus"></a>
+	<a class="jiathis_button_linkedin"></a>
+	<a class="jiathis_button_ydnote"></a>
+	<a class="jiathis_button_tsina"></a>
+	<a class="jiathis_button_weixin"></a>
+	<a class="jiathis_button_qzone"></a>
+	<a class="jiathis_button_tieba"></a>
+	<a class="jiathis_button_fav"></a>
+	<a class="jiathis_button_copy"></a>
+	<a class="jiathis_button_cqq"></a>
+	<a class="jiathis_button_douban"></a>
+	<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+</div>
+<script type="text/javascript" >
+  var jiathis_config={
+    hideMore: false
+  }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+      
     </div>
   </div>
 
@@ -693,13 +838,6 @@
 
           
   <div class="comments" id="comments">
-    
-      <div id="disqus_thread">
-        <noscript>
-          Please enable JavaScript to view the
-          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-        </noscript>
-      </div>
     
   </div>
 
@@ -723,7 +861,7 @@
 
       
         <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
             文章目录
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview">
@@ -734,20 +872,19 @@
 
       <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="/uploads/avatar.jpg"
-               alt="喵小哥" />
+          <img class="site-author-image" itemprop="image" src="/uploads/avatar.jpg" alt="喵小哥"/>
           <p class="site-author-name" itemprop="name">喵小哥</p>
-           
-              <p class="site-description motion-element" itemprop="description"></p>
-           
+          
+            <p class="site-description motion-element" itemprop="description"></p>
+          
         </div>
+
         <nav class="site-state motion-element">
 
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">30</span>
+                <span class="site-state-item-count">90</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -757,10 +894,14 @@
             
             
             <div class="site-state-item site-state-categories">
-              <a href="/categories/index.html">
-                <span class="site-state-item-count">9</span>
+              
+                <a href="/categories/index.html">
+                
+                <span class="site-state-item-count">12</span>
                 <span class="site-state-item-name">分类</span>
-              </a>
+                
+                </a>
+              
             </div>
           
 
@@ -768,10 +909,14 @@
             
             
             <div class="site-state-item site-state-tags">
-              <a href="/tags/index.html">
-                <span class="site-state-item-count">42</span>
+              
+                <a href="/tags/index.html">
+                
+                <span class="site-state-item-count">86</span>
                 <span class="site-state-item-name">标签</span>
-              </a>
+                
+                </a>
+              
             </div>
           
 
@@ -792,11 +937,11 @@
               </span>
             
               <span class="links-of-author-item">
-                <a href="http://weibo.com/miaoxiaogege" target="_blank" title="微博">
+                <a href="http://wangwei.party" target="_blank" title="Resume">
                   
-                    <i class="fa fa-fw fa-weibo"></i>
+                    <i class="fa fa-fw fa-user-secret"></i>
                   
-                  微博
+                  Resume
                 </a>
               </span>
             
@@ -808,7 +953,7 @@
 
         
         
-          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+          <div class="links-of-blogroll motion-element  links-of-blogroll-inline">
             <div class="links-of-blogroll-title">
               <i class="fa  fa-fw fa-globe"></i>
               拓展学习
@@ -824,11 +969,15 @@
                 </li>
               
                 <li class="links-of-blogroll-item">
-                  <a href="http://macshuo.com/" title="MacTalk" target="_blank">MacTalk</a>
+                  <a href="http://macshuo.com/" title="池建强" target="_blank">池建强</a>
                 </li>
               
                 <li class="links-of-blogroll-item">
-                  <a href="http://mindhacks.cn/" title="MindHacks" target="_blank">MindHacks</a>
+                  <a href="http://www.geekonomics10000.com/" title="万维钢" target="_blank">万维钢</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://mindhacks.cn/" title="刘未鹏" target="_blank">刘未鹏</a>
                 </li>
               
                 <li class="links-of-blogroll-item">
@@ -836,12 +985,44 @@
                 </li>
               
                 <li class="links-of-blogroll-item">
-                  <a href="http://blog.devtang.com/" title="唐巧" target="_blank">唐巧</a>
+                  <a href="http://www.yinwang.org/" title="王 垠" target="_blank">王 垠</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.devtang.com/" title="唐 巧" target="_blank">唐 巧</a>
                 </li>
               
             </ul>
           </div>
         
+
+        <div class="hissoryCounter">
+          <div class="hissoryCounterChild1">-历史访问次数-<img border="0" src="http://cc.amazingcounters.com/counter.php?i=3214334&c=9643315" alt="AmazingCounters.com"></div>
+          <div class="hissoryCounterChild2">-历史访问人数-<img border="0" src="http://cc.amazingcounters.com/counter.php?i=3214333&c=9643312" alt="AmazingCounters.com"></div>
+        </div>
+
+
+        <!-- Start of StatCounter Code for Default Guide -->
+        <script type="text/javascript">
+        var sc_project=11440510;
+        var sc_invisible=1;
+        var sc_security="9bd592ab";
+        var scJsHost = (("https:" == document.location.protocol) ?
+        "https://secure." : "http://www.");
+        document.write("<sc"+"ript type='text/javascript' src='" +
+        scJsHost+
+        "statcounter.com/counter/counter.js'></"+"script>");
+        </script>
+        <noscript><div class="statcounter"><a title="site stats"
+        href="http://statcounter.com/" target="_blank"><img
+        class="statcounter"
+        src="//c.statcounter.com/11440510/0/9bd592ab/1/" alt="site
+        stats"></a></div></noscript>
+        <!-- End of StatCounter Code for Default Guide -->
+        <a href="http://statcounter.com/p11440510/?guest=1" style="color: #00FF7F; font-size: 12px;">
+        More Data
+        </a>
+
 
         
 
@@ -849,7 +1030,7 @@
       </section>
 
       
-      <!--noindex-->
+        <!--noindex-->
         <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
           <div class="post-toc">
 
@@ -858,12 +1039,12 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#3阶魔方（Rubik’s-Cube）-从最基本的开始"><span class="nav-number">1.</span> <span class="nav-text">3阶魔方（Rubik’s Cube） - 从最基本的开始</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#层先法-新手入门玩法"><span class="nav-number">1.1.</span> <span class="nav-text">层先法 - 新手入门玩法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#底层白色十字架"><span class="nav-number">1.1.1.</span> <span class="nav-text">底层白色十字架</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#底层白色角"><span class="nav-number">1.1.2.</span> <span class="nav-text">底层白色角</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4侧颜色楞快"><span class="nav-number">1.1.3.</span> <span class="nav-text">4侧颜色楞快</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#顶层黄十字"><span class="nav-number">1.1.4.</span> <span class="nav-text">顶层黄十字</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#整个黄色层"><span class="nav-number">1.1.5.</span> <span class="nav-text">整个黄色层</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#黄色2角皆同色"><span class="nav-number">1.1.6.</span> <span class="nav-text">黄色2角皆同色</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#黄色楞归位"><span class="nav-number">1.1.7.</span> <span class="nav-text">黄色楞归位</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CFOP法-竞速玩法"><span class="nav-number">1.2.</span> <span class="nav-text">CFOP法 - 竞速玩法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Cross"><span class="nav-number">1.2.1.</span> <span class="nav-text">Cross</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#F2L"><span class="nav-number">1.2.2.</span> <span class="nav-text">F2L</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#OLL"><span class="nav-number">1.2.3.</span> <span class="nav-text">OLL</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#PLL"><span class="nav-number">1.2.4.</span> <span class="nav-text">PLL</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2阶魔方（Pocket-Rubik’s-Cube-Mini-Cube）"><span class="nav-number">2.</span> <span class="nav-text">2阶魔方（Pocket Rubik’s Cube / Mini Cube）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#白色层且侧面对应"><span class="nav-number">2.1.</span> <span class="nav-text">白色层且侧面对应</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#黄顶"><span class="nav-number">2.2.</span> <span class="nav-text">黄顶</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2角同色"><span class="nav-number">2.3.</span> <span class="nav-text">2角同色</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4阶魔方（Rubik’s-Revenge）"><span class="nav-number">3.</span> <span class="nav-text">4阶魔方（Rubik’s Revenge）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#降阶法-新手入门玩法"><span class="nav-number">3.1.</span> <span class="nav-text">降阶法 - 新手入门玩法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#还原中心4格"><span class="nav-number">3.1.1.</span> <span class="nav-text">还原中心4格</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#合并楞"><span class="nav-number">3.1.2.</span> <span class="nav-text">合并楞</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#按3阶方法复原"><span class="nav-number">3.1.3.</span> <span class="nav-text">按3阶方法复原</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#特殊情况公式"><span class="nav-number">3.1.4.</span> <span class="nav-text">特殊情况公式</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#对楞换"><span class="nav-number">3.1.4.1.</span> <span class="nav-text">对楞换</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#单边翻楞"><span class="nav-number">3.1.4.2.</span> <span class="nav-text">单边翻楞</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#镜面魔方"><span class="nav-number">4.</span> <span class="nav-text">镜面魔方</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#金字塔魔方"><span class="nav-number">5.</span> <span class="nav-text">金字塔魔方</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#斜转魔方"><span class="nav-number">6.</span> <span class="nav-text">斜转魔方</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SQ1魔方（扇形魔方）"><span class="nav-number">7.</span> <span class="nav-text">SQ1魔方（扇形魔方）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#小块集合至一层（2小块为一单元原则）"><span class="nav-number">7.1.</span> <span class="nav-text">小块集合至一层（2小块为一单元原则）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2小块互换技巧"><span class="nav-number">7.1.1.</span> <span class="nav-text">2小块互换技巧</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#上下层皆正方形"><span class="nav-number">7.2.</span> <span class="nav-text">上下层皆正方形</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#上下面同色"><span class="nav-number">7.3.</span> <span class="nav-text">上下面同色</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#上右-下后-楞换"><span class="nav-number">7.3.1.</span> <span class="nav-text">上右-下后 楞换</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#中间2对楞上下互换"><span class="nav-number">7.3.2.</span> <span class="nav-text">中间2对楞上下互换</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#上下层侧角成对"><span class="nav-number">7.4.</span> <span class="nav-text">上下层侧角成对</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#下面1侧角同-朝后，转换侧楞角块颜色"><span class="nav-number">7.4.1.</span> <span class="nav-text">下面1侧角同 朝后，转换侧楞角块颜色</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#上下层楞归位"><span class="nav-number">7.5.</span> <span class="nav-text">上下层楞归位</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#两层右后楞皆换"><span class="nav-number">7.5.1.</span> <span class="nav-text">两层右后楞皆换</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#最后一对楞-上层右前"><span class="nav-number">7.5.2.</span> <span class="nav-text">最后一对楞(上层右前)</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#中间正方形"><span class="nav-number">7.6.</span> <span class="nav-text">中间正方形</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#3阶魔方（Rubik’s-Cube）-从最基本的开始"><span class="nav-number">1.</span> <span class="nav-text">3阶魔方（Rubik’s Cube） - 从最基本的开始</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#层先法-新手入门玩法"><span class="nav-number">1.1.</span> <span class="nav-text">层先法 - 新手入门玩法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#底层白色十字架"><span class="nav-number">1.1.1.</span> <span class="nav-text">底层白色十字架</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#底层白色角"><span class="nav-number">1.1.2.</span> <span class="nav-text">底层白色角</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4侧颜色楞快"><span class="nav-number">1.1.3.</span> <span class="nav-text">4侧颜色楞快</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#顶层黄十字"><span class="nav-number">1.1.4.</span> <span class="nav-text">顶层黄十字</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#整个黄色层"><span class="nav-number">1.1.5.</span> <span class="nav-text">整个黄色层</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#黄色2角皆同色"><span class="nav-number">1.1.6.</span> <span class="nav-text">黄色2角皆同色</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#黄色楞归位"><span class="nav-number">1.1.7.</span> <span class="nav-text">黄色楞归位</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CFOP法-竞速玩法"><span class="nav-number">1.2.</span> <span class="nav-text">CFOP法 - 竞速玩法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Cross"><span class="nav-number">1.2.1.</span> <span class="nav-text">Cross</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#F2L"><span class="nav-number">1.2.2.</span> <span class="nav-text">F2L</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#OLL"><span class="nav-number">1.2.3.</span> <span class="nav-text">OLL</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#PLL"><span class="nav-number">1.2.4.</span> <span class="nav-text">PLL</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#装逼盲拧"><span class="nav-number">1.3.</span> <span class="nav-text">装逼盲拧</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#角朝向"><span class="nav-number">1.3.1.</span> <span class="nav-text">角朝向</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#楞朝向"><span class="nav-number">1.3.2.</span> <span class="nav-text">楞朝向</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#楞顺序"><span class="nav-number">1.3.3.</span> <span class="nav-text">楞顺序</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#角顺序"><span class="nav-number">1.3.4.</span> <span class="nav-text">角顺序</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#奇偶校验"><span class="nav-number">1.3.5.</span> <span class="nav-text">奇偶校验</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2阶魔方（Pocket-Rubik’s-Cube-Mini-Cube）"><span class="nav-number">2.</span> <span class="nav-text">2阶魔方（Pocket Rubik’s Cube / Mini Cube）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#白色层且侧面对应"><span class="nav-number">2.1.</span> <span class="nav-text">白色层且侧面对应</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#黄顶"><span class="nav-number">2.2.</span> <span class="nav-text">黄顶</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2角同色"><span class="nav-number">2.3.</span> <span class="nav-text">2角同色</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4阶魔方（Rubik’s-Revenge）"><span class="nav-number">3.</span> <span class="nav-text">4阶魔方（Rubik’s Revenge）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#降阶法-新手入门玩法"><span class="nav-number">3.1.</span> <span class="nav-text">降阶法 - 新手入门玩法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#还原中心4格"><span class="nav-number">3.1.1.</span> <span class="nav-text">还原中心4格</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#合并楞"><span class="nav-number">3.1.2.</span> <span class="nav-text">合并楞</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#按3阶方法复原"><span class="nav-number">3.1.3.</span> <span class="nav-text">按3阶方法复原</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#特殊情况公式"><span class="nav-number">3.1.4.</span> <span class="nav-text">特殊情况公式</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#对楞换"><span class="nav-number">3.1.4.1.</span> <span class="nav-text">对楞换</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#单边翻楞"><span class="nav-number">3.1.4.2.</span> <span class="nav-text">单边翻楞</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#镜面魔方"><span class="nav-number">4.</span> <span class="nav-text">镜面魔方</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#粽子魔方"><span class="nav-number">5.</span> <span class="nav-text">粽子魔方</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#前两层"><span class="nav-number">5.1.</span> <span class="nav-text">前两层</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#顶层十字-楞顺序"><span class="nav-number">5.2.</span> <span class="nav-text">顶层十字+楞顺序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#顶层角"><span class="nav-number">5.3.</span> <span class="nav-text">顶层角</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#金字塔魔方"><span class="nav-number">6.</span> <span class="nav-text">金字塔魔方</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#底层"><span class="nav-number">6.1.</span> <span class="nav-text">底层</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#顶层"><span class="nav-number">6.2.</span> <span class="nav-text">顶层</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#斜转魔方"><span class="nav-number">7.</span> <span class="nav-text">斜转魔方</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#底层白色"><span class="nav-number">7.1.</span> <span class="nav-text">底层白色</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#侧面中心-顶层角块"><span class="nav-number">7.2.</span> <span class="nav-text">侧面中心+顶层角块</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SQ1魔方（扇形魔方）"><span class="nav-number">8.</span> <span class="nav-text">SQ1魔方（扇形魔方）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#小块集合至一层（2小块为一单元原则）"><span class="nav-number">8.1.</span> <span class="nav-text">小块集合至一层（2小块为一单元原则）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2小块互换技巧"><span class="nav-number">8.1.1.</span> <span class="nav-text">2小块互换技巧</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#上下层皆正方形"><span class="nav-number">8.2.</span> <span class="nav-text">上下层皆正方形</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#上下面同色"><span class="nav-number">8.3.</span> <span class="nav-text">上下面同色</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#上右-下后-楞换"><span class="nav-number">8.3.1.</span> <span class="nav-text">上右-下后 楞换</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#中间2对楞上下互换"><span class="nav-number">8.3.2.</span> <span class="nav-text">中间2对楞上下互换</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#上下层侧角成对"><span class="nav-number">8.4.</span> <span class="nav-text">上下层侧角成对</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#下面1侧角同-朝后，转换侧楞角块颜色"><span class="nav-number">8.4.1.</span> <span class="nav-text">下面1侧角同 朝后，转换侧楞角块颜色</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#上下层楞归位"><span class="nav-number">8.5.</span> <span class="nav-text">上下层楞归位</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#两层右后楞皆换"><span class="nav-number">8.5.1.</span> <span class="nav-text">两层右后楞皆换</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#最后一对楞-上层右前"><span class="nav-number">8.5.2.</span> <span class="nav-text">最后一对楞(上层右前)</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#中间正方形"><span class="nav-number">8.6.</span> <span class="nav-text">中间正方形</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5魔方"><span class="nav-number">9.</span> <span class="nav-text">5魔方</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#前两层-1"><span class="nav-number">9.1.</span> <span class="nav-text">前两层</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#顶层之外所有层"><span class="nav-number">9.2.</span> <span class="nav-text">顶层之外所有层</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#顶层五角星-侧面顺序"><span class="nav-number">9.3.</span> <span class="nav-text">顶层五角星+侧面顺序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#顶层角块"><span class="nav-number">9.4.</span> <span class="nav-text">顶层角块</span></a></li></ol></li></ol></div>
             
 
           </div>
         </section>
-      <!--/noindex-->
+        <!--/noindex-->
       
 
       
@@ -882,13 +1063,17 @@
   
   更新于<i class="fa fa-clock-o" aria-hidden="true"></i>
   
-  <span itemprop="copyrightYear">2017-04-05</span>
+  <span itemprop="copyrightYear">2017-10-20</span>
   <span class="with-love">
     <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">喵小哥</span>
+  <span class="author" itemprop="copyrightHolder"><a href="http://wangwei.party/">喵小哥</a></span>
 </div>
 
+<div class="theme-info">
+  <span class="post-count">当前博客共120.0k字</span>
+  <div class="powered-by"></div>
+</div>
 
 <div class="powered-by">
   每天进步一点点
@@ -896,7 +1081,7 @@
 
 <div class="theme-info">
   去另一条
-  <a class="theme-link" href="http://51world.pub">
+  <a class="theme-link" href="https://51world.wordpress.com/">
     时间轴
   </a>
 </div>
@@ -990,26 +1175,6 @@
 
   
 
-
-  
-
-    
-      <script id="dsq-count-scr" src="https://taketimeasafriend.disqus.com/count.js" async></script>
-    
-
-    
-      <script type="text/javascript">
-        var disqus_config = function () {
-          this.page.url = 'https://taketimeasafriend.github.io/2017/03/06/益智游戏-魔方/';
-          this.page.identifier = '2017/03/06/益智游戏-魔方/';
-          this.page.title = '学习魔方-完成童年未完成的遗憾';
-        };
-        var d = document, s = d.createElement('script');
-        s.src = 'https://taketimeasafriend.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', '' + +new Date());
-        (d.head || d.body).appendChild(s);
-      </script>
-    
 
   
 
@@ -1174,113 +1339,6 @@
 
 
   
-
-  
-  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
-  <script>AV.initialize("WoifFymbvNMkl3JBQKcero5f-gzGzoHsz", "Q5U0HKsYgtwH2aVo1rEcSy6g");</script>
-  <script>
-    function showTime(Counter) {
-      var query = new AV.Query(Counter);
-      var entries = [];
-      var $visitors = $(".leancloud_visitors");
-
-      $visitors.each(function () {
-        entries.push( $(this).attr("id").trim() );
-      });
-
-      query.containedIn('url', entries);
-      query.find()
-        .done(function (results) {
-          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
-
-          if (results.length === 0) {
-            $visitors.find(COUNT_CONTAINER_REF).text(0);
-            return;
-          }
-
-          for (var i = 0; i < results.length; i++) {
-            var item = results[i];
-            var url = item.get('url');
-            var time = item.get('time');
-            var element = document.getElementById(url);
-
-            $(element).find(COUNT_CONTAINER_REF).text(time);
-          }
-          for(var i = 0; i < entries.length; i++) {
-            var url = entries[i];
-            var element = document.getElementById(url);
-            var countSpan = $(element).find(COUNT_CONTAINER_REF);
-            if( countSpan.text() == '') {
-              countSpan.text(0);
-            }
-          }
-        })
-        .fail(function (object, error) {
-          console.log("Error: " + error.code + " " + error.message);
-        });
-    }
-
-    function addCount(Counter) {
-      var $visitors = $(".leancloud_visitors");
-      var url = $visitors.attr('id').trim();
-      var title = $visitors.attr('data-flag-title').trim();
-      var query = new AV.Query(Counter);
-
-      query.equalTo("url", url);
-      query.find({
-        success: function(results) {
-          if (results.length > 0) {
-            var counter = results[0];
-            counter.fetchWhenSave(true);
-            counter.increment("time");
-            counter.save(null, {
-              success: function(counter) {
-                var $element = $(document.getElementById(url));
-                $element.find('.leancloud-visitors-count').text(counter.get('time'));
-              },
-              error: function(counter, error) {
-                console.log('Failed to save Visitor num, with error message: ' + error.message);
-              }
-            });
-          } else {
-            var newcounter = new Counter();
-            /* Set ACL */
-            var acl = new AV.ACL();
-            acl.setPublicReadAccess(true);
-            acl.setPublicWriteAccess(true);
-            newcounter.setACL(acl);
-            /* End Set ACL */
-            newcounter.set("title", title);
-            newcounter.set("url", url);
-            newcounter.set("time", 1);
-            newcounter.save(null, {
-              success: function(newcounter) {
-                var $element = $(document.getElementById(url));
-                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
-              },
-              error: function(newcounter, error) {
-                console.log('Failed to create');
-              }
-            });
-          }
-        },
-        error: function(error) {
-          console.log('Error:' + error.code + " " + error.message);
-        }
-      });
-    }
-
-    $(function() {
-      var Counter = AV.Object.extend("Counter");
-      if ($('.leancloud_visitors').length == 1) {
-        addCount(Counter);
-      } else if ($('.post-title-link').length > 1) {
-        showTime(Counter);
-      }
-    });
-  </script>
-
-
 
   
 <script>

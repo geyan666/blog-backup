@@ -1,0 +1,1300 @@
+<!doctype html>
+
+
+
+
+<html class="theme-next muse" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+<link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+<style>
+    .pace .pace-progress {
+        background: #DC143C; /*进度条颜色*/
+        height: 3px;
+    }
+    .pace .pace-progress-inner {
+         box-shadow: 0 0 10px #00d200, 0 0 5px     #00d200; /*阴影颜色*/
+    }
+    .pace .pace-activity {
+        border-top-color: #00d200;    /*上边框颜色*/
+        border-left-color: #f00;    /*左边框颜色*/
+    }
+</style>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="读书,软件开发," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/uploads/favicon_books.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="软件开发 —— ⭐️What is needed, ⭐️On time, ⭐️On budget.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Head First 软件开发">
+<meta property="og:url" content="https://taketimeasafriend.github.io/2017/07/28/编程那点事儿-Head First软件开发/index.html">
+<meta property="og:site_name" content="时间的朋友">
+<meta property="og:description" content="软件开发 —— ⭐️What is needed, ⭐️On time, ⭐️On budget.">
+<meta property="og:image" content="http://ogudt6aal.bkt.clouddn.com/image/20170810171017_9ASvDO_bg2016090302.jpeg">
+<meta property="og:image" content="http://ogudt6aal.bkt.clouddn.com/image/20170810171109_pql7iv_bg2016090303.jpeg">
+<meta property="og:image" content="http://ogudt6aal.bkt.clouddn.com/image/20170810172344_bsW8T0_bg2016090304.jpeg">
+<meta property="og:image" content="http://ogudt6aal.bkt.clouddn.com/image/20170810172630_QzPyvp_bg2016090305.jpeg">
+<meta property="og:image" content="http://ogudt6aal.bkt.clouddn.com/image/20170810173423_d1622S_bg2016090306.jpeg">
+<meta property="og:image" content="http://ogudt6aal.bkt.clouddn.com/image/20170810174449_8EpUgy_bg2016090307.jpeg">
+<meta property="og:image" content="http://ogudt6aal.bkt.clouddn.com/image/20170810175647_10x9CY_bg2016090311.jpeg">
+<meta property="og:image" content="http://ogudt6aal.bkt.clouddn.com/image/20170810174722_cwMmvb_aliyunservice.jpeg">
+<meta property="og:image" content="http://ogudt6aal.bkt.clouddn.com/image/20170813012405_PHgWKJ_fanyi.jpeg">
+<meta property="og:image" content="http://ogudt6aal.bkt.clouddn.com/image/20170813011151_rIvUKW_wangjianshuo.jpeg">
+<meta property="og:updated_time" content="2017-08-12T17:36:13.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Head First 软件开发">
+<meta name="twitter:description" content="软件开发 —— ⭐️What is needed, ⭐️On time, ⭐️On budget.">
+<meta name="twitter:image" content="http://ogudt6aal.bkt.clouddn.com/image/20170810171017_9ASvDO_bg2016090302.jpeg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: false,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://taketimeasafriend.github.io/2017/07/28/编程那点事儿-Head First软件开发/"/>
+
+
+
+
+
+  <title> Head First 软件开发 | 时间的朋友 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-87405681-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?c854619f060bceda20bd4b4b29ce99f3";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+  <div style="display: none;">
+    <script src="//s95.cnzz.com/z_stat.php?id=1261612368&web_id=1261612368" language="JavaScript"></script>
+  </div>
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">时间的朋友</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">把琐碎的时间堆砌成一个伟大的生命。</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-clock-o"></i> <br />
+            
+            时间轴
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th-list"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-thumb-tack"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-museum">
+          <a href="/university" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-university"></i> <br />
+            
+            博物馆
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-test">
+          <a href="/test" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-flask"></i> <br />
+            
+            实验室
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user-plus"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            站内搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocapitalize="off" autocomplete="off" autocorrect="off"
+             placeholder="请输入在本站搜索的关键字..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    
+      <div id="idhyt-surprise-ball">
+  <div id="idhyt-surprise-ball-animation">
+    <!--xxxxxxx xxx xxxxx -->
+    <!--why you are here? -->
+    <span id="layer0Go" class="drag">w</span>
+    <span id="layer1Go" class="drag">h</span>
+    <span id="layer2Go" class="drag">y</span>
+    <span id="layer3Go" class="drag"></span>
+    <span id="layer4Go" class="drag">y</span>
+    <span id="layer5Go" class="drag">o</span>
+    <span id="layer6Go" class="drag">u</span>
+    <span id="layer7Go" class="drag">a</span>
+    <span id="layer8Go" class="drag">r</span>
+    <span id="layer9Go" class="drag">e</span>
+    <span id="layer10Go" class="drag">h</span>
+    <span id="layer11Go" class="drag">e</span>
+    <span id="layer12Go" class="drag">r</span>
+    <span id="layer13Go" class="drag">e</span>
+    <span id="layer14Go" class="drag">?</span>
+    <span id="layer15Go" class="drag ball"></span>
+  </div>
+</div>
+
+    
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://taketimeasafriend.github.io/2017/07/28/编程那点事儿-Head First软件开发/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="喵小哥">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="时间的朋友">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+            
+            
+              
+                Head First 软件开发
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-28T20:36:21+08:00">
+                2017-07-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/编程那点事儿/" itemprop="url" rel="index">
+                    <span itemprop="name">编程那点事儿</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote class="blockquote-center"><strong>软件开发</strong> —— ⭐️What is needed, ⭐️On time, ⭐️On budget.<br></blockquote>
+
+<a id="more"></a>
+<h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><p>计算机，这个炙手可热的高科技词汇，其实拆穿本质，和英语一样 —— 都是工具。</p>
+<p>早些年改革开放，为了和国际接轨，英语成为我们中国学生的主科，以求将来能看懂英文文档，能用英语能跟强大的老外打交道…那时候，英语跟语文、数学地位一样重要。当时计算机技术没有现在发达，经济条件也不允许有个人电脑，所以和英语比起来计算机的受众没有英语广。只有富贵人家弄潮儿才玩得起这种高级“玩具”（没错，很多人刚拥有个人电脑的时候就是为了能打电子游戏… <strong>也许是生物原始的欲望促进了科技的发展</strong> ？直播，VR… 都是从色情行业发迹的… 当然这是另一个话题，暂按下不表）。</p>
+<p>如今不一样了，几乎每人一台电脑（手机就是一台掌上电脑）。如此发展之下，必然造成一个后果 —— 计算机技术的地位和英语一样重要，甚至比英语还重要。如果不会用智能手机（一些老人），不会操作一些 APP（支付宝，ofo，滴滴…），那生活中将寸步难行（想象一下你在英语国家生活却不会讲英语罢）。</p>
+<p>说回重点：重要的计算机技术，重要在 <strong>软件开发</strong>。</p>
+<p>昨天回母校跟老师探讨他自主开发的土建工程计算软件 <a href="http://rbcce.com/" title="RBCCE" target="_blank" rel="external">RBCCE</a>，需求、前景、技术细节、盈利模式… 谈得挺多也挺杂乱，本以为能探讨一整天，却用了一上午草草收场… 未免也太不专业了！无论是沟通技巧还是专业能力，肯定哪里存在没有被我们当场发现的问题。</p>
+<p>盲人摸象，肯定不能得出一个统一的结论。于是，从书中找答案吧。</p>
+<h2 id="《Head-First-软件开发》"><a href="#《Head-First-软件开发》" class="headerlink" title="《Head First 软件开发》"></a>《Head First 软件开发》</h2><p>Head First 系列，用最少的专业词汇最快的速度带你鸟瞰最专业的领域。这本书介绍了一个软件从 0 到这款软件在世界上健康运营的全生命周期。</p>
+<p>软件开发流程：向客户收集需求 ➡️ 项目规划 ➡️ user story 情节和任务 ➡️ 版本控制 ➡️ 测试和连续集成 ➡️ 测试驱动开发 ➡️ 进入下一个循环 …</p>
+<p>（书还没看完，看完来补充笔记）。。。</p>
+<h2 id="《Software-Architecture-Patterns》"><a href="#《Software-Architecture-Patterns》" class="headerlink" title="《Software Architecture Patterns》"></a>《Software Architecture Patterns》</h2><p>软件架构（software architecture）就是软件的基本结构。</p>
+<p>合适的架构是软件成功的最重要因素之一。大型软件公司通常有专门的架构师职位（architect），只有资深程序员才可以担任。</p>
+<p>O’Reilly 出版过（上面的 Head First 系列也是他们出版的）一本免费的小册子《Software Architecture Patterns》， 介绍了五种最常见的软件架构：</p>
+<ul>
+<li>分层架构</li>
+<li>事件驱动架构</li>
+<li>微核架构</li>
+<li>微服务架构</li>
+<li>云架构</li>
+</ul>
+
+
+	<div class="row">
+    <embed src="http://ogudt6aal.bkt.clouddn.com/file/software-architecture-patterns.pdf" width="100%" height="1000" type="application/pdf">
+	</div>
+
+
+
+<p>下面一一介绍。</p>
+<h3 id="分层架构"><a href="#分层架构" class="headerlink" title="分层架构"></a>分层架构</h3><p>分层架构（layered architecture）是最常见的标准架构。如果你不知道要用什么架构，那就用它。</p>
+<p>这种架构将软件分成若干个水平层，每一层都有清晰的角色和分工，不需要知道其他层的细节。层与层之间通过接口通信。</p>
+<p>虽然没有明确约定，软件一定要分成多少层，但是四层的结构最常见。</p>
+<p><img src="http://ogudt6aal.bkt.clouddn.com/image/20170810171017_9ASvDO_bg2016090302.jpeg" alt=""></p>
+<p>用户的请求将依次通过这四层的处理，不能跳过其中任何一层。</p>
+<p><img src="http://ogudt6aal.bkt.clouddn.com/image/20170810171109_pql7iv_bg2016090303.jpeg" alt=""></p>
+<p>有时在业务层和持久层之间，加一个服务层（service），提供不同业务逻辑需要的一些通用接口。</p>
+<p>优点：</p>
+<blockquote><br>- 结构简单，容易理解和开发<br>- 不同技能的程序员可以分工，负责不同的层，天然适合大多数软件公司的组织架构<br>- 每一层都可以 <strong>独立测试</strong>，其他层的接口通过模拟解决<br></blockquote><br>缺点：<br><blockquote><br>- 一旦环境变化，需要代码调整或增加功能时，通常比较麻烦和费时<br>- 部署比较麻烦，即使只修改一个小地方，往往需要整个软件重新部署，不容易做持续发布<br>- 软件升级时，可能需要整个服务暂停<br>- <strong>扩展性差</strong>。用户请求大量增加时，必须依次扩展每一层，由于每一层内部是耦合的，扩展会很困难<br></blockquote>
+
+<h3 id="事件驱动架构"><a href="#事件驱动架构" class="headerlink" title="事件驱动架构"></a>事件驱动架构</h3><p>事件（event）是状态发生变化时，软件发出的通知。</p>
+<p>事件驱动架构（event-driven architecture）就是通过事件进行通信的软件架构。它分成四个部分。</p>
+<p><img src="http://ogudt6aal.bkt.clouddn.com/image/20170810172344_bsW8T0_bg2016090304.jpeg" alt=""></p>
+<ul>
+<li>事件队列：接收事件的入口</li>
+<li>分发器：将不同的事件分发到不同的业务逻辑单元</li>
+<li>事件通道：分发器与处理器之间的联系渠道</li>
+<li>事件处理器：实现业务逻辑，处理完成后会发出事件，触发下一步操作</li>
+</ul>
+<p>对于简单的项目，事件队列、分发器和事件通道，可以合为一体，整个软件就分成事件代理和事件处理器两部分。</p>
+<p><img src="http://ogudt6aal.bkt.clouddn.com/image/20170810172630_QzPyvp_bg2016090305.jpeg" alt=""></p>
+<p>优点：</p>
+<blockquote><br>- 分布式的异步架构，事件处理器之间高度解耦，软件的 <strong>扩展性好</strong><br>- 适用性广，各种类型的项目都可以用<br>- 性能较好，因为事件的异步本质，软件不易产生堵塞<br>- 事件处理器可以独立地加载和卸载，容易部署<br></blockquote><br>缺点：<br><blockquote><br>- 涉及异步编程（要考虑远程通信、失去响应等情况），开发相对复杂<br>- 难以支持原子性操作，因为事件通过会涉及多个处理器，很难回滚<br>- 分布式和异步特性导致这个架构 <strong>较难测试</strong><br></blockquote>
+
+<h3 id="微核架构"><a href="#微核架构" class="headerlink" title="微核架构"></a>微核架构</h3><p>微核架构（microkernel architecture）又称为”插件架构”（plug-in architecture），指的是软件的内核相对较小，主要功能和业务逻辑都通过插件实现。</p>
+<p>内核（core）通常只包含系统运行的最小功能。插件则是互相独立的，插件之间的通信，应该减少到最低，避免出现互相依赖的问题。</p>
+<p><img src="http://ogudt6aal.bkt.clouddn.com/image/20170810173423_d1622S_bg2016090306.jpeg" alt=""></p>
+<p>优点：</p>
+<blockquote><br>- 良好的功能 <strong>延伸性</strong>（extensibility），需要什么功能，开发一个插件即可<br>- 功能之间是隔离的，插件可以独立的加载和卸载，使得它比较容易部署，<br>- <strong>可定制性高</strong>，适应不同的开发需要<br>- 可以渐进式地开发，逐步增加功能<br></blockquote><br>缺点：<br><blockquote><br>- <strong>扩展性（scalability）差</strong>，内核通常是一个独立单元，不容易做成分布式<br>- 开发 <strong>难度相对较高</strong>，因为涉及到插件与内核的通信，以及内部的插件登记机制<br></blockquote>
+
+<p><br></p>
+<p>比如浏览器，有各种插件；各种拥有二次开发的专业客户端软件。</p>
+<h3 id="微服务架构"><a href="#微服务架构" class="headerlink" title="微服务架构"></a>微服务架构</h3><p>微服务架构（microservices architecture）是服务导向架构（service-oriented architecture，缩写 SOA）的升级。</p>
+<p>每一个服务就是一个独立的部署单元（separately deployed unit）。这些单元都是分布式的，互相解耦，通过远程通信协议（比如REST、SOAP）联系。</p>
+<p>微服务架构分成三种实现模式：</p>
+<ul>
+<li>RESTful API 模式：服务通过 API 提供，云服务就属于这一类</li>
+<li>RESTful 应用模式：服务通过传统的网络协议或者应用协议提供，背后通常是一个多功能的应用程序，常见于企业内部</li>
+<li>集中消息模式：采用消息代理（message broker），可以实现消息队列、负载均衡、统一日志和异常处理，缺点是会出现单点失败，消息代理可能要做成集群</li>
+</ul>
+<p><img src="http://ogudt6aal.bkt.clouddn.com/image/20170810174449_8EpUgy_bg2016090307.jpeg" alt=""></p>
+<p>优点：</p>
+<blockquote><br>- 扩展性好，各个服务之间低耦合<br>- 容易部署，软件从单一可部署单元，被拆成了多个服务，每个服务都是可部署单元<br>- 容易开发，每个组件都可以进行持续集成式的开发，可以做到实时部署，不间断地升级<br>- 易于测试，可以单独测试每一个服务<br></blockquote><br>缺点：<br><blockquote><br>- 由于强调互相独立和低耦合，服务可能会拆分得很细。这导致系统依赖大量的微服务，变得很 <strong>凌乱和笨重</strong>，性能也会不佳。<br>- 一旦服务之间需要通信（即一个服务要用到另一个服务），整个架构就会变得复杂。典型的例子就是一些通用的 Utility 类，一种解决方案是把它们拷贝到每一个服务中去，<strong>用冗余换取架构的简单性</strong>。<br>- 分布式的本质使得这种架构很难实现原子性操作，交易回滚会比较困难。<br></blockquote>
+
+<h3 id="云架构"><a href="#云架构" class="headerlink" title="云架构"></a>云架构</h3><p>云架构（cloud architecture）主要解决扩展性和并发的问题，是最容易扩展的架构。</p>
+<p>它的高扩展性，主要原因是没使用中央数据库，而是把数据都复制到内存中，变成可复制的内存数据单元。然后，业务处理能力封装成一个个处理单元（prcessing unit）。访问量增加，就新建处理单元；访问量减少，就关闭处理单元。由于没有中央数据库，所以扩展性的最大瓶颈消失了。由于每个处理单元的数据都在内存里，最好要进行数据持久化。</p>
+<p>这个模式主要分成两部分：处理单元（processing unit）和虚拟中间件（virtualized middleware）。</p>
+<p><img src="http://ogudt6aal.bkt.clouddn.com/image/20170810175647_10x9CY_bg2016090311.jpeg" alt=""></p>
+<ul>
+<li>处理单元：实现业务逻辑</li>
+<li>虚拟中间件：负责通信、保持sessions、数据复制、分布式处理、处理单元的部署。</li>
+</ul>
+<p>虚拟中间件又包含四个组件：</p>
+<ul>
+<li>消息中间件（Messaging Grid）：管理用户请求和session，当一个请求进来以后，决定分配给哪一个处理单元。</li>
+<li>数据中间件（Data Grid）：将数据复制到每一个处理单元，即数据同步。保证某个处理单元都得到同样的数据。</li>
+<li>处理中间件（Processing Grid）：可选，如果一个请求涉及不同类型的处理单元，该中间件负责协调处理单元</li>
+<li>部署中间件（Deployment Manager）：负责处理单元的启动和关闭，监控负载和响应时间，当负载增加，就新启动处理单元，负载减少，就关闭处理单元。</li>
+</ul>
+<p>优点：</p>
+<blockquote><br>- <strong>高负载</strong>，高扩展性<br>- <strong>动态部署</strong><br></blockquote><br>缺点：<br><blockquote><br>- <strong>实现复杂，成本较高</strong><br>- 主要适合网站类应用，不合适大量数据吞吐的大型数据库应用<br>- <strong>较难测试</strong><br></blockquote>
+
+<p><br></p>
+<p>后面这两种可以想一想阿里云服务器：</p>
+<p><img src="http://ogudt6aal.bkt.clouddn.com/image/20170810174722_cwMmvb_aliyunservice.jpeg" alt=""></p>
+<blockquote><br>注：《Software Architecture Patterns》知识整理于 <a href="http://www.ruanyifeng.com/blog/2016/09/software-architecture.html" title="阮一峰博客" target="_blank" rel="external">阮一峰博客</a>。<br></blockquote>
+
+<hr>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>开头说到，<strong>计算机和英语都是工具。</strong> 写到这里的时候我想到了另外一个进阶的类比：</p>
+<p>当你掌握了英语之后，给你提供了三种工作机会：</p>
+<ol>
+<li>在出版社替人家翻译需要翻译的文稿或图书（“专业”翻译从业人员，他们有时候会借助各种工具来翻译<a href="http://www.ruanyifeng.com/blog/2005/08/post_136.html" title="并且一塌糊涂" target="_blank" rel="external">并且一塌糊涂</a>）<img src="http://ogudt6aal.bkt.clouddn.com/image/20170813012405_PHgWKJ_fanyi.jpeg" alt=""></li>
+<li>翻译自己喜欢的英文原版书去出版，即使这本书可能不会畅销（比如阮一峰翻译的《黑客与画家》，不过很畅销；比如李笑来知笔墨翻译的<a href="http://www.zhibimo.com/books/wang-miao/mastering-bitcoin" title="《精通比特币》" target="_blank" rel="external">《精通比特币》</a>和整理的<a href="http://www.zhibimo.com/books/xiaolai/how-to-start-a-startup-a-yc-course" title="《How To Start A Startup - A YC Course》" target="_blank" rel="external">《How To Start A Startup - A YC Course》</a>并写了<a href="http://www.zhibimo.com/books/xiaolai/growth" title="自己的笔记" target="_blank" rel="external">自己的笔记</a>）</li>
+<li>自己写英文原版文稿或图书，即使可能费力且收入甚微（比如王建硕刚开始写的博客，如图：<img src="http://ogudt6aal.bkt.clouddn.com/image/20170813011151_rIvUKW_wangjianshuo.jpeg" alt=""> 全文链接<a href="http://www.ruanyifeng.com/blog/2010/04/talk_with_wangjianshuo.html" title="戳我" target="_blank" rel="external">戳我</a>）</li>
+</ol>
+<p>那么，当你掌握了某些计算机语言之后，同样有三种工作机会：</p>
+<ol>
+<li>找个要你的软件公司，什么软件不重要，但是工资越高越好</li>
+<li>找个自己喜欢的软件公司，即使它目前规模很小，给你的待遇很低</li>
+<li>自己编写自己想要实现的软件（创业），给他人创造价值，即使你前途一片未知</li>
+</ol>
+<p>现在你能力怎么样？你又会怎么选？</p>
+<p>（这个类比充分证明了多写作，能梳理思绪，更能发现惊喜，能把<a href="https://www.youtube.com/watch?v=5xM0KfaYV_0" title="乔布斯斯坦福大学演讲" target="_blank" rel="external">乔布斯斯坦福大学演讲</a>中的第一个故事中那些 dots 连接起来。)</p>
+
+      
+    </div>
+
+    <div>
+      
+        <div>
+    
+        <div style="text-align:center;color: #A52A2A; font-size:18px;">
+        < - 完 - >
+        </div>
+    
+</div>
+
+      
+    </div>
+    
+    <div>
+      
+        
+<div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="/uploads/weigonghao.jpg" alt="喵小哥 wechat" style="width: 200px; max-width: 100%;"/>
+    <div>上面是一个挤牙膏式的微公号。</div>
+</div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div> <span> - </span> 坚持分享  鼓励创作 <span> - </span> </div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/uploads/Wechat.png" alt="喵小哥 WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/uploads/Alipay.png" alt="喵小哥 Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+      
+        <div id="bitcoin" style="display: inline-block">
+          <img id="bitcoin_qr" src="/uploads/bitcoin.png" alt="喵小哥 Bitcoin"/>
+          <p>比特币打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+      <strong>本文作者：</strong>
+      喵小哥
+    </li>
+    <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://taketimeasafriend.github.io/2017/07/28/编程那点事儿-Head First软件开发/" title="Head First 软件开发">https://taketimeasafriend.github.io/2017/07/28/编程那点事儿-Head First软件开发/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong>
+      本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/读书/" rel="tag"><i class="fa fa-thumb-tack" aria-hidden="true"></i> 读书</a>
+          
+            <a href="/tags/软件开发/" rel="tag"><i class="fa fa-thumb-tack" aria-hidden="true"></i> 软件开发</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/07/15/编程那点事儿-人工智能之神经网络/" rel="next" title="人工智能的根本 - 神经网络">
+                <i class="fa fa-chevron-left"></i> 人工智能的根本 - 神经网络
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/08/04/社会生活-酸奶/" rel="prev" title="商家把戏之 - 酸奶">
+                商家把戏之 - 酸奶 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style_24x24">
+	<a class="jiathis_button_fb"></a>
+	<a class="jiathis_button_twitter"></a>
+	<a class="jiathis_button_googleplus"></a>
+	<a class="jiathis_button_linkedin"></a>
+	<a class="jiathis_button_ydnote"></a>
+	<a class="jiathis_button_tsina"></a>
+	<a class="jiathis_button_weixin"></a>
+	<a class="jiathis_button_qzone"></a>
+	<a class="jiathis_button_tieba"></a>
+	<a class="jiathis_button_fav"></a>
+	<a class="jiathis_button_copy"></a>
+	<a class="jiathis_button_cqq"></a>
+	<a class="jiathis_button_douban"></a>
+	<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+</div>
+<script type="text/javascript" >
+  var jiathis_config={
+    hideMore: false
+  }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image" src="/uploads/avatar.jpg" alt="喵小哥"/>
+          <p class="site-author-name" itemprop="name">喵小哥</p>
+          
+            <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">90</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              
+                <a href="/categories/index.html">
+                
+                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-name">分类</span>
+                
+                </a>
+              
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              
+                <a href="/tags/index.html">
+                
+                <span class="site-state-item-count">86</span>
+                <span class="site-state-item-name">标签</span>
+                
+                </a>
+              
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/taketimeasafriend" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://wangwei.party" target="_blank" title="Resume">
+                  
+                    <i class="fa fa-fw fa-user-secret"></i>
+                  
+                  Resume
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element  links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              拓展学习
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://zhibimo.com/explore/books/" title="知笔墨" target="_blank">知笔墨</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://web.archive.org/web/20111228123747/http://www.lixiaolai.com/" title="李笑来" target="_blank">李笑来</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://macshuo.com/" title="池建强" target="_blank">池建强</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.geekonomics10000.com/" title="万维钢" target="_blank">万维钢</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://mindhacks.cn/" title="刘未鹏" target="_blank">刘未鹏</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.ruanyifeng.com/blog/" title="阮一峰" target="_blank">阮一峰</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.yinwang.org/" title="王 垠" target="_blank">王 垠</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.devtang.com/" title="唐 巧" target="_blank">唐 巧</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        <div class="hissoryCounter">
+          <div class="hissoryCounterChild1">-历史访问次数-<img border="0" src="http://cc.amazingcounters.com/counter.php?i=3214334&c=9643315" alt="AmazingCounters.com"></div>
+          <div class="hissoryCounterChild2">-历史访问人数-<img border="0" src="http://cc.amazingcounters.com/counter.php?i=3214333&c=9643312" alt="AmazingCounters.com"></div>
+        </div>
+
+
+        <!-- Start of StatCounter Code for Default Guide -->
+        <script type="text/javascript">
+        var sc_project=11440510;
+        var sc_invisible=1;
+        var sc_security="9bd592ab";
+        var scJsHost = (("https:" == document.location.protocol) ?
+        "https://secure." : "http://www.");
+        document.write("<sc"+"ript type='text/javascript' src='" +
+        scJsHost+
+        "statcounter.com/counter/counter.js'></"+"script>");
+        </script>
+        <noscript><div class="statcounter"><a title="site stats"
+        href="http://statcounter.com/" target="_blank"><img
+        class="statcounter"
+        src="//c.statcounter.com/11440510/0/9bd592ab/1/" alt="site
+        stats"></a></div></noscript>
+        <!-- End of StatCounter Code for Default Guide -->
+        <a href="http://statcounter.com/p11440510/?guest=1" style="color: #00FF7F; font-size: 12px;">
+        More Data
+        </a>
+
+
+        
+
+
+      </section>
+
+      
+        <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#写在前面"><span class="nav-number">1.</span> <span class="nav-text">写在前面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#《Head-First-软件开发》"><span class="nav-number">2.</span> <span class="nav-text">《Head First 软件开发》</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#《Software-Architecture-Patterns》"><span class="nav-number">3.</span> <span class="nav-text">《Software Architecture Patterns》</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#分层架构"><span class="nav-number">3.1.</span> <span class="nav-text">分层架构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#事件驱动架构"><span class="nav-number">3.2.</span> <span class="nav-text">事件驱动架构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#微核架构"><span class="nav-number">3.3.</span> <span class="nav-text">微核架构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#微服务架构"><span class="nav-number">3.4.</span> <span class="nav-text">微服务架构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#云架构"><span class="nav-number">3.5.</span> <span class="nav-text">云架构</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#结语"><span class="nav-number">4.</span> <span class="nav-text">结语</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+        <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  更新于<i class="fa fa-clock-o" aria-hidden="true"></i>
+  
+  <span itemprop="copyrightYear">2017-10-20</span>
+  <span class="with-love">
+    <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder"><a href="http://wangwei.party/">喵小哥</a></span>
+</div>
+
+<div class="theme-info">
+  <span class="post-count">当前博客共120.0k字</span>
+  <div class="powered-by"></div>
+</div>
+
+<div class="powered-by">
+  每天进步一点点
+</div>
+
+<div class="theme-info">
+  去另一条
+  <a class="theme-link" href="https://51world.wordpress.com/">
+    时间轴
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+  
+  <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+      search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.popup').toggle();
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+      $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = $( "entry", xmlResponse ).map(function() {
+            return {
+              title: $( "title", this ).text(),
+              content: $("content",this).text(),
+              url: $( "url" , this).text()
+            };
+          }).get();
+          var $input = document.getElementById(search_id);
+          var $resultContent = document.getElementById(content_id);
+          $input.addEventListener('input', function(){
+            var matchcounts = 0;
+            var str='<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length > 1) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var content_index = [];
+                var data_title = data.title.trim().toLowerCase();
+                var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                var data_url = decodeURIComponent(data.url);
+                var index_title = -1;
+                var index_content = -1;
+                var first_occur = -1;
+                // only match artiles with not empty titles and contents
+                if(data_title != '') {
+                  keywords.forEach(function(keyword, i) {
+                    index_title = data_title.indexOf(keyword);
+                    index_content = data_content.indexOf(keyword);
+                    if( index_title >= 0 || index_content >= 0 ){
+                      isMatch = true;
+                      if (i == 0) {
+                        first_occur = index_content;
+                      }
+                    }
+
+                  });
+                }
+                // show search results
+                if (isMatch) {
+                  matchcounts += 1;
+                  str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                  var content = data.content.trim().replace(/<[^>]+>/g,"");
+                  if (first_occur >= 0) {
+                    // cut out 100 characters
+                    var start = first_occur - 20;
+                    var end = first_occur + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if(start == 0){
+                      end = 50;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    var match_content = content.substring(start, end);
+                    // highlight all keywords
+                    keywords.forEach(function(keyword){
+                      var regS = new RegExp(keyword, "gi");
+                      match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                    });
+
+                    str += "<p class=\"search-result\">" + match_content +"...</p>"
+                  }
+                  str += "</li>";
+                }
+              })};
+            str += "</ul>";
+            if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+            if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+            $resultContent.innerHTML = str;
+          });
+          proceedsearch();
+        }
+      });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+
+  
+
+</body>
+</html>

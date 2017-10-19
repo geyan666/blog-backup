@@ -23,7 +23,7 @@ This is a smart article about how to write in Markdown for this blog, just like 
 1. **邮箱 / 网址本身链接:** <内容>
 1. **代码:** 小段-`夹; 大段-4空格
 1. **水平线:** 3个-
-1. **转义:** 用\来转义表示文本中的Markdown符号
+1. **转义:** 用\来转义表示文本中的Markdown符号(表格中竖线用 ** &#1 2 4;** (124之间无空格)来代替)
 1. **video:**
 ``` bash
 <video src="http://.mp4" controls="controls" style="max-width: 100%; display: block; margin-left: auto; margin-right: auto;">

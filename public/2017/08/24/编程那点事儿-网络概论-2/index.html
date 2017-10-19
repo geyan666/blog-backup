@@ -1,0 +1,1242 @@
+<!doctype html>
+
+
+
+
+<html class="theme-next muse" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+<link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+<style>
+    .pace .pace-progress {
+        background: #DC143C; /*进度条颜色*/
+        height: 3px;
+    }
+    .pace .pace-progress-inner {
+         box-shadow: 0 0 10px #00d200, 0 0 5px     #00d200; /*阴影颜色*/
+    }
+    .pace .pace-activity {
+        border-top-color: #00d200;    /*上边框颜色*/
+        border-left-color: #f00;    /*左边框颜色*/
+    }
+</style>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="网络,DNS," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/uploads/favicon_books.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="DNS （Domain Name System）原理入门。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="网络概论（二）">
+<meta property="og:url" content="https://taketimeasafriend.github.io/2017/08/24/编程那点事儿-网络概论-2/index.html">
+<meta property="og:site_name" content="时间的朋友">
+<meta property="og:description" content="DNS （Domain Name System）原理入门。">
+<meta property="og:image" content="http://ogudt6aal.bkt.clouddn.com/image/20170825004523_dAD8pN_wangluogailun-8.jpeg">
+<meta property="og:image" content="http://ogudt6aal.bkt.clouddn.com/image/20170825011950_63vEG7_wangluogailun-9.jpeg">
+<meta property="og:image" content="http://ogudt6aal.bkt.clouddn.com/image/20170825013903_LMojNg_wangluogailun-10.jpeg">
+<meta property="og:image" content="http://ogudt6aal.bkt.clouddn.com/image/20170825014249_m7hk8R_wangluogailun-11-1.jpeg">
+<meta property="og:image" content="http://ogudt6aal.bkt.clouddn.com/image/20170825014750_4yg1gD_wangluogailun-12.jpeg">
+<meta property="og:image" content="http://ogudt6aal.bkt.clouddn.com/image/20170825015529_hhWe8j_wangluogailun-13.jpeg">
+<meta property="og:image" content="http://ogudt6aal.bkt.clouddn.com/image/20170825022839_9foJPe_wangluogailun-14-2.jpeg">
+<meta property="og:updated_time" content="2017-09-01T18:59:57.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="网络概论（二）">
+<meta name="twitter:description" content="DNS （Domain Name System）原理入门。">
+<meta name="twitter:image" content="http://ogudt6aal.bkt.clouddn.com/image/20170825004523_dAD8pN_wangluogailun-8.jpeg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: false,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://taketimeasafriend.github.io/2017/08/24/编程那点事儿-网络概论-2/"/>
+
+
+
+
+
+  <title> 网络概论（二） | 时间的朋友 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-87405681-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?c854619f060bceda20bd4b4b29ce99f3";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+  <div style="display: none;">
+    <script src="//s95.cnzz.com/z_stat.php?id=1261612368&web_id=1261612368" language="JavaScript"></script>
+  </div>
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">时间的朋友</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">把琐碎的时间堆砌成一个伟大的生命。</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-clock-o"></i> <br />
+            
+            时间轴
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th-list"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-thumb-tack"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-museum">
+          <a href="/university" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-university"></i> <br />
+            
+            博物馆
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-test">
+          <a href="/test" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-flask"></i> <br />
+            
+            实验室
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user-plus"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            站内搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocapitalize="off" autocomplete="off" autocorrect="off"
+             placeholder="请输入在本站搜索的关键字..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    
+      <div id="idhyt-surprise-ball">
+  <div id="idhyt-surprise-ball-animation">
+    <!--xxxxxxx xxx xxxxx -->
+    <!--why you are here? -->
+    <span id="layer0Go" class="drag">w</span>
+    <span id="layer1Go" class="drag">h</span>
+    <span id="layer2Go" class="drag">y</span>
+    <span id="layer3Go" class="drag"></span>
+    <span id="layer4Go" class="drag">y</span>
+    <span id="layer5Go" class="drag">o</span>
+    <span id="layer6Go" class="drag">u</span>
+    <span id="layer7Go" class="drag">a</span>
+    <span id="layer8Go" class="drag">r</span>
+    <span id="layer9Go" class="drag">e</span>
+    <span id="layer10Go" class="drag">h</span>
+    <span id="layer11Go" class="drag">e</span>
+    <span id="layer12Go" class="drag">r</span>
+    <span id="layer13Go" class="drag">e</span>
+    <span id="layer14Go" class="drag">?</span>
+    <span id="layer15Go" class="drag ball"></span>
+  </div>
+</div>
+
+    
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://taketimeasafriend.github.io/2017/08/24/编程那点事儿-网络概论-2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="喵小哥">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="时间的朋友">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+            
+            
+              
+                网络概论（二）
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-24T19:36:21+08:00">
+                2017-08-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/编程那点事儿/" itemprop="url" rel="index">
+                    <span itemprop="name">编程那点事儿</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote class="blockquote-center"><br><img src="http://ogudt6aal.bkt.clouddn.com/image/20170825004523_dAD8pN_wangluogailun-8.jpeg" width="480" alt="DNS"><br><strong>DNS</strong> （Domain Name System）原理入门。<br></blockquote>
+
+<a id="more"></a>
+<h2 id="什么是-DNS"><a href="#什么是-DNS" class="headerlink" title="什么是 DNS"></a><strong>什么是 DNS</strong></h2><p>由于 IP 不容易记忆，所以我们偏好让用户用域名(Domain Name)来访问服务器，但是数据包要传递必须用到 IP 。因此我们用 <a href="https://zh.wikipedia.org/zh-cn/%E5%9F%9F%E5%90%8D%E7%B3%BB%E7%BB%9F" title="域名系统" target="_blank" rel="external">域名系统</a> 来做 Domain Name 和 IP 的转换。</p>
+<p>除了 <strong>好记忆</strong> 的原因，使用域名也比较有弹性，服务器的 IP 位置可能会变动(例如换不同服务商的机房就一定会变动IP地址)，但是通过 DNS 就可以 <strong>保持域名不变</strong>。</p>
+<p>DNS 机制就是一个对照表，对照某域名查询它的 IP 地址是什么（你可以把它想象成一本巨大的电话本）。</p>
+<p>在我们本机电脑上就有一个对照表的档案文件，就是 <code>/etc/hosts</code>，你可以编辑它，写下域名和 IP 地址的对应。</p>
+<p>但是，本机不可能预先存好全世界域名的对照表，因此我们会用 DNS 协议来做即时线上查询。</p>
+<h3 id="域名-Domain-Name"><a href="#域名-Domain-Name" class="headerlink" title="域名(Domain Name)"></a><strong>域名(Domain Name)</strong></h3><p>我们先认识一下<a href="https://zh.wikipedia.org/zh-cn/%E5%9F%9F%E5%90%8D" title="域名" target="_blank" rel="external">域名</a>的组成：</p>
+<p>一个域名组成是 <code>sub-domain.second-level-domain(your-domain).top-level-domain</code>。</p>
+<p>例如 <code>test.51world.win</code> 其中 <code>.win</code> 就是 <code>top-level</code>、<code>51world</code> 是 <code>second-level</code>，而 <code>test</code> 是 <code>sub-domain</code>。这个 <code>sub-domain</code> 可以是空的，因此 <code>51world.win</code> 是合法的域名(即<a href="http://51world.win/" title="本博客主页" target="_blank" rel="external">本博客主页</a>)。</p>
+<p>全世界的 <code>top-level-domain</code> 是由 <a href="https://zh.wikipedia.org/zh-cn/%E4%BA%92%E8%81%94%E7%BD%91%E5%8F%B7%E7%A0%81%E5%88%86%E9%85%8D%E5%B1%80" title="互联网号码分配局 IANA" target="_blank" rel="external">互联网号码分配局 IANA</a> 所管理的，所有的 <code>top-level-domain</code> 的列表请参考 <a href="https://www.iana.org/domains/root/db" title="Root Zone Database" target="_blank" rel="external">Root Zone Database</a>，每个 <code>top-level-domain</code> 会分配给不同国家的非营利组织进行管理，例如管理 <code>.cn</code> 的单位是 <a href="http://www.cnnic.net.cn/" title="中国互联网络信息中心(CNNIC)" target="_blank" rel="external">中国互联网络信息中心(CNNIC)</a>。</p>
+<p>一般个人或公司会向这些非营利组织进行购买和登记，例如 <code>xxx.com</code> 是登记在负责管理 <code>.com</code> 域名的 VeriSign Global Registry Services 组织。不过实际上我们不会直接跟 VeriSign Global Registry Services 购买，而是透过 <strong>域名注册商</strong> 进行购买。在这些域名注册商的网站上（如 <a href="https://www.namecheap.com/" title="Namecheap" target="_blank" rel="external">Namecheap</a>、<a href="https://godaddy.com/" title="Godaddy" target="_blank" rel="external">Godaddy</a> 或 <a href="https://wanwang.aliyun.com/domain/" title="阿里云-万网" target="_blank" rel="external">阿里云-万网</a> 等），你可以一次选购各种不同的域名。</p>
+<p>买到自己的 <code>second-level-domain</code> 后，你就可以自行设定管理你的 <code>sub-domain</code>，例如 <code>test1.51world.win</code> 和 <code>test2.51world.win</code> 指向不同的 IP 地址，是不同的网站服务器。</p>
+<h2 id="DNS-如何查询"><a href="#DNS-如何查询" class="headerlink" title="DNS 如何查询"></a><strong>DNS 如何查询</strong></h2><p>一般用户是如何进行 DNS 查询的呢？在操作系统中可以设置偏好的 DNS 服务器，通常会使用 ISP 默认提供的 DNS 服务器，也可以自己指定，例如：</p>
+<ul>
+<li>阿里 DNS <code>http://www.alidns.com</code></li>
+<li>国内 114dns 的 <code>114.114.114.114</code></li>
+<li>Google 的 <code>8.8.8.8</code></li>
+</ul>
+<p>在 Mac 中的设定：</p>
+<p><img src="http://ogudt6aal.bkt.clouddn.com/image/20170825011950_63vEG7_wangluogailun-9.jpeg" alt=""></p>
+<p>查询的流程：</p>
+<blockquote><br>先从客户端偏好的 DNS 开始查询；如果 DNS 找不到纪录，则该 DNS 会从<a href="https://zh.wikipedia.org/zh-cn/%E6%A0%B9%E7%BD%91%E5%9F%9F%E5%90%8D%E7%A7%B0%E6%9C%8D%E5%8A%A1%E5%99%A8" title="根域名服务器" target="_blank" rel="external">根域名服务器</a>(root nameserver)开始查询，直到找到负责该域名的 DNS 服务器为止 … 在第一次查询后，那台客户端偏好的 DNS 就会缓存起来。<br><blockquote><br>举例：<br>查询 <code>test.51world.win</code> 时，如果客户端偏好的 DNS 没有纪录；<br>就会去问根域名服务器(root nameserver) <code>.win</code> 域名是谁管理的，它会回答出负责 <code>.win</code> 的 <code>nameserver</code>；<br>然后该 DNS 再去问 <code>.win</code> 的 <code>nameserver</code>， <code>51world.win</code> 是哪台 DNS 负责的；<br>再进一步，然后再去问那一台 <code>test.51world.win</code> 对应的 IP 是什么。<br></blockquote><br></blockquote>
+
+<h3 id="whois-指令"><a href="#whois-指令" class="headerlink" title="whois 指令"></a><strong>whois 指令</strong></h3><p>可以查询是谁注册了这个域名。不过，注册者可以选择关闭联络信息，所以不一定可以查到。</p>
+<p><img src="http://ogudt6aal.bkt.clouddn.com/image/20170825013903_LMojNg_wangluogailun-10.jpeg" alt=""><br><img src="http://ogudt6aal.bkt.clouddn.com/image/20170825014249_m7hk8R_wangluogailun-11-1.jpeg" alt=""></p>
+<h3 id="nslookup-指令"><a href="#nslookup-指令" class="headerlink" title="nslookup 指令"></a><strong>nslookup 指令</strong></h3><p>可以简单查询 DNS：</p>
+<p><img src="http://ogudt6aal.bkt.clouddn.com/image/20170825014750_4yg1gD_wangluogailun-12.jpeg" alt=""></p>
+<blockquote><br><code>Non-authoritative answer</code> 的意思是这个答案不是从负责 <code>51world.win</code> 域名的主机回传，而是直接从客户端偏好的 DNS 服务器 8.8.8.8 的缓存纪录回答的；<br>相反，<code>Authoritative</code> 的意思就是这个答案是从负责 <code>51world.win</code> 域名的 DNS 主机回传的。<br></blockquote>
+
+<h3 id="dig-指令"><a href="#dig-指令" class="headerlink" title="dig 指令"></a><strong>dig 指令</strong></h3><p>也可查询 DNS，提供更详细的数据：<br><img src="http://ogudt6aal.bkt.clouddn.com/image/20170825015529_hhWe8j_wangluogailun-13.jpeg" alt=""></p>
+<p>假设从根域名服务器开始查询：<br><img src="http://ogudt6aal.bkt.clouddn.com/image/20170825022839_9foJPe_wangluogailun-14-2.jpeg" alt=""></p>
+<blockquote><br>DNS 记录分不同类型，如：<br>- <code>A</code> :一笔 IPv4 纪录，某个 subdomain 指向某一个 IPv4 地址<br>- <code>AAAA</code> :一笔 IPv6 纪录<br>- <code>MX</code> :邮件服务器(如 xxx.com 的邮件服务器和网站不是同一台服务器，很多公司会把邮件服务器改用 <a href="https://gsuite.google.com/" title="Google Apps" target="_blank" rel="external">Google Apps</a>，这在 DNS 设定中就可以指定 MX 记录：<code>dig -t mx xxx.com</code>)<br>- <code>CNAME</code> :别名，可以设定某个 subdomain 指向另一个地址(不一定是同一个主域名)<br></blockquote>
+
+<h2 id="DNS-相关情境"><a href="#DNS-相关情境" class="headerlink" title="DNS 相关情境"></a><strong>DNS 相关情境</strong></h2><p>了解 DNS 机制的话，就可以理解以下现象：</p>
+<h3 id="故障排除"><a href="#故障排除" class="headerlink" title="故障排除"></a><strong>故障排除</strong></h3><p>有时网络故障，浏览器无法连接，但可以 <code>ping</code> <code>ip address</code>。这时候可以优先检查是否是 DNS 坏了，可以换一台电脑再试试看。</p>
+<h3 id="黄牛哄抬域名物价"><a href="#黄牛哄抬域名物价" class="headerlink" title="黄牛哄抬域名物价"></a><strong>黄牛哄抬域名物价</strong></h3><p>其实购买一个域名一年并不贵。但是一些热门的网址，很多网络黄牛会预先注册保留起来。如果你要买则需要花更贵的价钱才能买到。</p>
+<p>你也可以根据商标走法律程序，不过很多域名是跨国的，所以处理起来并不容易。</p>
+<h3 id="钓鱼网站"><a href="#钓鱼网站" class="headerlink" title="钓鱼网站"></a><strong>钓鱼网站</strong></h3><p>钓鱼网站，就是利用网址名字长得很像，然后 UI 画面也弄成几乎一样骗你输入帐号密码。</p>
+<p>例如：你的 Gmail 收到重新设定密码的邮件，然后链接指向 <code>g00gle.com/forget_password</code>，画面长的跟 <code>google</code> 一模一样。没有注意网址的话，很可能就不小心输入自己的帐号密码。</p>
+<h3 id="域名忘记续约"><a href="#域名忘记续约" class="headerlink" title="域名忘记续约"></a><strong>域名忘记续约</strong></h3><p>购买域名需要定期续约，一年、三年、五年等。大公司可能因为交接失败，造成域名失效的现象层出不穷，例如：</p>
+<ul>
+<li><a href="http://thehackernews.com/2016/07/tp-link-router-setting.html" title="TP Link" target="_blank" rel="external">TP Link</a></li>
+<li><a href="http://eq2wire.com/2014/07/15/sonyonline-net-domain-expires-shenanigans-ensue-for-all-soe-games-websites/" title="Sony Online" target="_blank" rel="external">Sony Online</a></li>
+</ul>
+<h3 id="DNS-污染"><a href="#DNS-污染" class="headerlink" title="DNS 污染"></a><strong>DNS 污染</strong></h3><p>身为网站主，是无法控制用户偏好使用哪个 DNS 服务器的。在一个理想信任的网络环境中，如果用户的 DNS 不知道答案，它会一层一层去询问。但是在一个受管制的网络环境，DNS 可以被控制回答不正确的 IP ，进而限制一般用户无法顺利浏览，甚至回答钓鱼网站的 IP。这就是 DNS 污染。(据说苹果 iCloud 因为此原因导致各种被锁，让人火大)</p>
+<h3 id="Geo-based（基于地理位置）-或-Round-Robin（轮询调度）"><a href="#Geo-based（基于地理位置）-或-Round-Robin（轮询调度）" class="headerlink" title="Geo-based（基于地理位置） 或 Round-Robin（轮询调度）"></a><strong>Geo-based（基于地理位置） 或 Round-Robin（轮询调度）</strong></h3><p>查询 DNS 时，不一定总回答同一个 IP：</p>
+<ul>
+<li><p>有些网站会在不同国家有服务器，但希望网址是一样的。这时可以根据用户不同的地理位置，回答不同的 IP。（Geo-based）</p>
+</li>
+<li><p>超高流量的网站，则可以回答不同台服务器的 IP ，来分散流量到不同服务器。（<a href="https://baike.baidu.com/item/Round%20Robin/1980131?fr=aladdin" title="Round-Robin" target="_blank" rel="external">Round-Robin</a>）</p>
+</li>
+</ul>
+<h2 id="拓展阅读"><a href="#拓展阅读" class="headerlink" title="拓展阅读"></a><strong>拓展阅读</strong></h2><ul>
+<li><a href="http://www.ruanyifeng.com/blog/2016/06/dns.html" title="阮一峰博客《DNS 原理入门》" target="_blank" rel="external">阮一峰博客《DNS 原理入门》</a></li>
+</ul>
+<hr>
+<p><a href="http://51world.win/2017/08/23/%E7%BC%96%E7%A8%8B%E9%82%A3%E7%82%B9%E4%BA%8B%E5%84%BF-%E7%BD%91%E7%BB%9C%E6%A6%82%E8%AE%BA-1/" title="网络概论（一）" target="_blank" rel="external">网络概论（一）</a> ：<strong>网络</strong> 概念初识。<br><a href="http://51world.win/2017/08/24/%E7%BC%96%E7%A8%8B%E9%82%A3%E7%82%B9%E4%BA%8B%E5%84%BF-%E7%BD%91%E7%BB%9C%E6%A6%82%E8%AE%BA-2/" title="网络概论（二）" target="_blank" rel="external">网络概论（二）</a> ：<strong>DNS</strong> 原理入门。<br><a href="http://51world.win/2017/08/25/%E7%BC%96%E7%A8%8B%E9%82%A3%E7%82%B9%E4%BA%8B%E5%84%BF-%E7%BD%91%E7%BB%9C%E6%A6%82%E8%AE%BA-3/" title="网络概论（三）" target="_blank" rel="external">网络概论（三）</a> ：<strong>HTTP</strong> （Hypertext Transfer Protocol-超文本传输协议）入门。</p>
+
+      
+    </div>
+
+    <div>
+      
+        <div>
+    
+        <div style="text-align:center;color: #A52A2A; font-size:18px;">
+        < - 完 - >
+        </div>
+    
+</div>
+
+      
+    </div>
+    
+    <div>
+      
+        
+<div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="/uploads/weigonghao.jpg" alt="喵小哥 wechat" style="width: 200px; max-width: 100%;"/>
+    <div>上面是一个挤牙膏式的微公号。</div>
+</div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div> <span> - </span> 坚持分享  鼓励创作 <span> - </span> </div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/uploads/Wechat.png" alt="喵小哥 WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/uploads/Alipay.png" alt="喵小哥 Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+      
+        <div id="bitcoin" style="display: inline-block">
+          <img id="bitcoin_qr" src="/uploads/bitcoin.png" alt="喵小哥 Bitcoin"/>
+          <p>比特币打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+      <strong>本文作者：</strong>
+      喵小哥
+    </li>
+    <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://taketimeasafriend.github.io/2017/08/24/编程那点事儿-网络概论-2/" title="网络概论（二）">https://taketimeasafriend.github.io/2017/08/24/编程那点事儿-网络概论-2/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong>
+      本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/网络/" rel="tag"><i class="fa fa-thumb-tack" aria-hidden="true"></i> 网络</a>
+          
+            <a href="/tags/DNS/" rel="tag"><i class="fa fa-thumb-tack" aria-hidden="true"></i> DNS</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/08/23/编程那点事儿-网络概论-1/" rel="next" title="网络概论（一）">
+                <i class="fa fa-chevron-left"></i> 网络概论（一）
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/08/25/编程那点事儿-网络概论-3/" rel="prev" title="网络概论（三）">
+                网络概论（三） <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style_24x24">
+	<a class="jiathis_button_fb"></a>
+	<a class="jiathis_button_twitter"></a>
+	<a class="jiathis_button_googleplus"></a>
+	<a class="jiathis_button_linkedin"></a>
+	<a class="jiathis_button_ydnote"></a>
+	<a class="jiathis_button_tsina"></a>
+	<a class="jiathis_button_weixin"></a>
+	<a class="jiathis_button_qzone"></a>
+	<a class="jiathis_button_tieba"></a>
+	<a class="jiathis_button_fav"></a>
+	<a class="jiathis_button_copy"></a>
+	<a class="jiathis_button_cqq"></a>
+	<a class="jiathis_button_douban"></a>
+	<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+</div>
+<script type="text/javascript" >
+  var jiathis_config={
+    hideMore: false
+  }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image" src="/uploads/avatar.jpg" alt="喵小哥"/>
+          <p class="site-author-name" itemprop="name">喵小哥</p>
+          
+            <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">90</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              
+                <a href="/categories/index.html">
+                
+                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-name">分类</span>
+                
+                </a>
+              
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              
+                <a href="/tags/index.html">
+                
+                <span class="site-state-item-count">86</span>
+                <span class="site-state-item-name">标签</span>
+                
+                </a>
+              
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/taketimeasafriend" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://wangwei.party" target="_blank" title="Resume">
+                  
+                    <i class="fa fa-fw fa-user-secret"></i>
+                  
+                  Resume
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element  links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              拓展学习
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://zhibimo.com/explore/books/" title="知笔墨" target="_blank">知笔墨</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://web.archive.org/web/20111228123747/http://www.lixiaolai.com/" title="李笑来" target="_blank">李笑来</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://macshuo.com/" title="池建强" target="_blank">池建强</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.geekonomics10000.com/" title="万维钢" target="_blank">万维钢</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://mindhacks.cn/" title="刘未鹏" target="_blank">刘未鹏</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.ruanyifeng.com/blog/" title="阮一峰" target="_blank">阮一峰</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.yinwang.org/" title="王 垠" target="_blank">王 垠</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.devtang.com/" title="唐 巧" target="_blank">唐 巧</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        <div class="hissoryCounter">
+          <div class="hissoryCounterChild1">-历史访问次数-<img border="0" src="http://cc.amazingcounters.com/counter.php?i=3214334&c=9643315" alt="AmazingCounters.com"></div>
+          <div class="hissoryCounterChild2">-历史访问人数-<img border="0" src="http://cc.amazingcounters.com/counter.php?i=3214333&c=9643312" alt="AmazingCounters.com"></div>
+        </div>
+
+
+        <!-- Start of StatCounter Code for Default Guide -->
+        <script type="text/javascript">
+        var sc_project=11440510;
+        var sc_invisible=1;
+        var sc_security="9bd592ab";
+        var scJsHost = (("https:" == document.location.protocol) ?
+        "https://secure." : "http://www.");
+        document.write("<sc"+"ript type='text/javascript' src='" +
+        scJsHost+
+        "statcounter.com/counter/counter.js'></"+"script>");
+        </script>
+        <noscript><div class="statcounter"><a title="site stats"
+        href="http://statcounter.com/" target="_blank"><img
+        class="statcounter"
+        src="//c.statcounter.com/11440510/0/9bd592ab/1/" alt="site
+        stats"></a></div></noscript>
+        <!-- End of StatCounter Code for Default Guide -->
+        <a href="http://statcounter.com/p11440510/?guest=1" style="color: #00FF7F; font-size: 12px;">
+        More Data
+        </a>
+
+
+        
+
+
+      </section>
+
+      
+        <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是-DNS"><span class="nav-number">1.</span> <span class="nav-text">什么是 DNS</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#域名-Domain-Name"><span class="nav-number">1.1.</span> <span class="nav-text">域名(Domain Name)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DNS-如何查询"><span class="nav-number">2.</span> <span class="nav-text">DNS 如何查询</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#whois-指令"><span class="nav-number">2.1.</span> <span class="nav-text">whois 指令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#nslookup-指令"><span class="nav-number">2.2.</span> <span class="nav-text">nslookup 指令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#dig-指令"><span class="nav-number">2.3.</span> <span class="nav-text">dig 指令</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DNS-相关情境"><span class="nav-number">3.</span> <span class="nav-text">DNS 相关情境</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#故障排除"><span class="nav-number">3.1.</span> <span class="nav-text">故障排除</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#黄牛哄抬域名物价"><span class="nav-number">3.2.</span> <span class="nav-text">黄牛哄抬域名物价</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#钓鱼网站"><span class="nav-number">3.3.</span> <span class="nav-text">钓鱼网站</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#域名忘记续约"><span class="nav-number">3.4.</span> <span class="nav-text">域名忘记续约</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DNS-污染"><span class="nav-number">3.5.</span> <span class="nav-text">DNS 污染</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Geo-based（基于地理位置）-或-Round-Robin（轮询调度）"><span class="nav-number">3.6.</span> <span class="nav-text">Geo-based（基于地理位置） 或 Round-Robin（轮询调度）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#拓展阅读"><span class="nav-number">4.</span> <span class="nav-text">拓展阅读</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+        <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  更新于<i class="fa fa-clock-o" aria-hidden="true"></i>
+  
+  <span itemprop="copyrightYear">2017-10-20</span>
+  <span class="with-love">
+    <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder"><a href="http://wangwei.party/">喵小哥</a></span>
+</div>
+
+<div class="theme-info">
+  <span class="post-count">当前博客共120.0k字</span>
+  <div class="powered-by"></div>
+</div>
+
+<div class="powered-by">
+  每天进步一点点
+</div>
+
+<div class="theme-info">
+  去另一条
+  <a class="theme-link" href="https://51world.wordpress.com/">
+    时间轴
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+  
+  <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+      search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.popup').toggle();
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+      $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = $( "entry", xmlResponse ).map(function() {
+            return {
+              title: $( "title", this ).text(),
+              content: $("content",this).text(),
+              url: $( "url" , this).text()
+            };
+          }).get();
+          var $input = document.getElementById(search_id);
+          var $resultContent = document.getElementById(content_id);
+          $input.addEventListener('input', function(){
+            var matchcounts = 0;
+            var str='<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length > 1) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var content_index = [];
+                var data_title = data.title.trim().toLowerCase();
+                var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                var data_url = decodeURIComponent(data.url);
+                var index_title = -1;
+                var index_content = -1;
+                var first_occur = -1;
+                // only match artiles with not empty titles and contents
+                if(data_title != '') {
+                  keywords.forEach(function(keyword, i) {
+                    index_title = data_title.indexOf(keyword);
+                    index_content = data_content.indexOf(keyword);
+                    if( index_title >= 0 || index_content >= 0 ){
+                      isMatch = true;
+                      if (i == 0) {
+                        first_occur = index_content;
+                      }
+                    }
+
+                  });
+                }
+                // show search results
+                if (isMatch) {
+                  matchcounts += 1;
+                  str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                  var content = data.content.trim().replace(/<[^>]+>/g,"");
+                  if (first_occur >= 0) {
+                    // cut out 100 characters
+                    var start = first_occur - 20;
+                    var end = first_occur + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if(start == 0){
+                      end = 50;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    var match_content = content.substring(start, end);
+                    // highlight all keywords
+                    keywords.forEach(function(keyword){
+                      var regS = new RegExp(keyword, "gi");
+                      match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                    });
+
+                    str += "<p class=\"search-result\">" + match_content +"...</p>"
+                  }
+                  str += "</li>";
+                }
+              })};
+            str += "</ul>";
+            if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+            if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+            $resultContent.innerHTML = str;
+          });
+          proceedsearch();
+        }
+      });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+
+  
+
+</body>
+</html>

@@ -1,0 +1,1298 @@
+<!doctype html>
+
+
+
+
+<html class="theme-next muse" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+<link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+<style>
+    .pace .pace-progress {
+        background: #DC143C; /*进度条颜色*/
+        height: 3px;
+    }
+    .pace .pace-progress-inner {
+         box-shadow: 0 0 10px #00d200, 0 0 5px     #00d200; /*阴影颜色*/
+    }
+    .pace .pace-activity {
+        border-top-color: #00d200;    /*上边框颜色*/
+        border-left-color: #f00;    /*左边框颜色*/
+    }
+</style>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="计算机原理," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/uploads/favicon_books.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="计算机基础知识点：加密技术。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="计算机的加密与通信">
+<meta property="og:url" content="https://taketimeasafriend.github.io/2017/07/02/编程那点事儿-计算机的加密与通信/index.html">
+<meta property="og:site_name" content="时间的朋友">
+<meta property="og:description" content="计算机基础知识点：加密技术。">
+<meta property="og:image" content="http://ogudt6aal.bkt.clouddn.com/image/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9A%84%E5%8A%A0%E5%AF%86%E4%B8%8E%E9%80%9A%E4%BF%A11.png">
+<meta property="og:image" content="http://ogudt6aal.bkt.clouddn.com/image/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9A%84%E5%8A%A0%E5%AF%86%E4%B8%8E%E9%80%9A%E4%BF%A12.png">
+<meta property="og:image" content="http://ogudt6aal.bkt.clouddn.com/image/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9A%84%E5%8A%A0%E5%AF%86%E4%B8%8E%E9%80%9A%E4%BF%A13.png">
+<meta property="og:image" content="http://ogudt6aal.bkt.clouddn.com/image/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9A%84%E5%8A%A0%E5%AF%86%E4%B8%8E%E9%80%9A%E4%BF%A14.png">
+<meta property="og:image" content="http://ogudt6aal.bkt.clouddn.com/image/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9A%84%E5%8A%A0%E5%AF%86%E4%B8%8E%E9%80%9A%E4%BF%A15.png">
+<meta property="og:image" content="http://ogudt6aal.bkt.clouddn.com/image/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9A%84%E5%8A%A0%E5%AF%86%E4%B8%8E%E9%80%9A%E4%BF%A16.png">
+<meta property="og:image" content="http://ogudt6aal.bkt.clouddn.com/image/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9A%84%E5%8A%A0%E5%AF%86%E4%B8%8E%E9%80%9A%E4%BF%A17.png">
+<meta property="og:image" content="http://ogudt6aal.bkt.clouddn.com/image/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9A%84%E5%8A%A0%E5%AF%86%E4%B8%8E%E9%80%9A%E4%BF%A18.png">
+<meta property="og:image" content="http://ogudt6aal.bkt.clouddn.com/image/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9A%84%E5%8A%A0%E5%AF%86%E4%B8%8E%E9%80%9A%E4%BF%A19.png">
+<meta property="og:image" content="http://ogudt6aal.bkt.clouddn.com/image/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9A%84%E5%8A%A0%E5%AF%86%E4%B8%8E%E9%80%9A%E4%BF%A110.png">
+<meta property="og:image" content="http://ogudt6aal.bkt.clouddn.com/image/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9A%84%E5%8A%A0%E5%AF%86%E4%B8%8E%E9%80%9A%E4%BF%A111.png">
+<meta property="og:image" content="http://ogudt6aal.bkt.clouddn.com/image/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9A%84%E5%8A%A0%E5%AF%86%E4%B8%8E%E9%80%9A%E4%BF%A112.png">
+<meta property="og:image" content="http://ogudt6aal.bkt.clouddn.com/image/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9A%84%E5%8A%A0%E5%AF%86%E4%B8%8E%E9%80%9A%E4%BF%A113.png">
+<meta property="og:image" content="http://ogudt6aal.bkt.clouddn.com/image/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9A%84%E5%8A%A0%E5%AF%86%E4%B8%8E%E9%80%9A%E4%BF%A114.jpg">
+<meta property="og:image" content="http://ogudt6aal.bkt.clouddn.com/image/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9A%84%E5%8A%A0%E5%AF%86%E4%B8%8E%E9%80%9A%E4%BF%A115.png">
+<meta property="og:image" content="http://ogudt6aal.bkt.clouddn.com/image/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9A%84%E5%8A%A0%E5%AF%86%E4%B8%8E%E9%80%9A%E4%BF%A116.png">
+<meta property="og:image" content="http://ogudt6aal.bkt.clouddn.com/image/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9A%84%E5%8A%A0%E5%AF%86%E4%B8%8E%E9%80%9A%E4%BF%A117.png">
+<meta property="og:image" content="http://ogudt6aal.bkt.clouddn.com/image/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9A%84%E5%8A%A0%E5%AF%86%E4%B8%8E%E9%80%9A%E4%BF%A118.png">
+<meta property="og:image" content="http://ogudt6aal.bkt.clouddn.com/image/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9A%84%E5%8A%A0%E5%AF%86%E4%B8%8E%E9%80%9A%E4%BF%A119.jpg">
+<meta property="og:image" content="http://ogudt6aal.bkt.clouddn.com/image/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9A%84%E5%8A%A0%E5%AF%86%E4%B8%8E%E9%80%9A%E4%BF%A120.png">
+<meta property="og:updated_time" content="2017-07-01T21:15:43.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="计算机的加密与通信">
+<meta name="twitter:description" content="计算机基础知识点：加密技术。">
+<meta name="twitter:image" content="http://ogudt6aal.bkt.clouddn.com/image/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9A%84%E5%8A%A0%E5%AF%86%E4%B8%8E%E9%80%9A%E4%BF%A11.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: false,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://taketimeasafriend.github.io/2017/07/02/编程那点事儿-计算机的加密与通信/"/>
+
+
+
+
+
+  <title> 计算机的加密与通信 | 时间的朋友 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-87405681-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?c854619f060bceda20bd4b4b29ce99f3";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+  <div style="display: none;">
+    <script src="//s95.cnzz.com/z_stat.php?id=1261612368&web_id=1261612368" language="JavaScript"></script>
+  </div>
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">时间的朋友</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">把琐碎的时间堆砌成一个伟大的生命。</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-clock-o"></i> <br />
+            
+            时间轴
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th-list"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-thumb-tack"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-museum">
+          <a href="/university" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-university"></i> <br />
+            
+            博物馆
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-test">
+          <a href="/test" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-flask"></i> <br />
+            
+            实验室
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user-plus"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            站内搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocapitalize="off" autocomplete="off" autocorrect="off"
+             placeholder="请输入在本站搜索的关键字..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    
+      <div id="idhyt-surprise-ball">
+  <div id="idhyt-surprise-ball-animation">
+    <!--xxxxxxx xxx xxxxx -->
+    <!--why you are here? -->
+    <span id="layer0Go" class="drag">w</span>
+    <span id="layer1Go" class="drag">h</span>
+    <span id="layer2Go" class="drag">y</span>
+    <span id="layer3Go" class="drag"></span>
+    <span id="layer4Go" class="drag">y</span>
+    <span id="layer5Go" class="drag">o</span>
+    <span id="layer6Go" class="drag">u</span>
+    <span id="layer7Go" class="drag">a</span>
+    <span id="layer8Go" class="drag">r</span>
+    <span id="layer9Go" class="drag">e</span>
+    <span id="layer10Go" class="drag">h</span>
+    <span id="layer11Go" class="drag">e</span>
+    <span id="layer12Go" class="drag">r</span>
+    <span id="layer13Go" class="drag">e</span>
+    <span id="layer14Go" class="drag">?</span>
+    <span id="layer15Go" class="drag ball"></span>
+  </div>
+</div>
+
+    
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://taketimeasafriend.github.io/2017/07/02/编程那点事儿-计算机的加密与通信/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="喵小哥">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="时间的朋友">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+            
+            
+              
+                计算机的加密与通信
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-02T00:56:21+08:00">
+                2017-07-02
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/编程那点事儿/" itemprop="url" rel="index">
+                    <span itemprop="name">编程那点事儿</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote class="blockquote-center">计算机基础知识点：加密技术。<br></blockquote>
+
+<a id="more"></a>
+<h2 id="加密方法"><a href="#加密方法" class="headerlink" title="加密方法"></a>加密方法</h2><h3 id="加密方法分两大类："><a href="#加密方法分两大类：" class="headerlink" title="加密方法分两大类："></a>加密方法分两大类：</h3><ul>
+<li>单钥加密（private key cryptography）：加密和解密过程都用同一套密码</li>
+<li>双钥加密（public key cryptography）：加密和解密过程用的是两套密码</li>
+</ul>
+<p>历史上，人类传统的加密方法都是前一种，比如二战期间德军用的Enigma电报密码。莫尔斯电码也可以看作是一种单钥加密方法。</p>
+<p>在单钥加密的情况下，密钥只有一把，所以密钥的保存变得很重要，一旦密钥泄漏，密码也就被破解。在双钥加密的情况下，密钥有两把，一把是公开的 <strong>公钥</strong>，还有一把是不公开的 <strong>私钥</strong>。（注意此处 <strong>公私</strong> 和开始处 <strong>private public</strong> 字眼的混淆）</p>
+<p>目前，通用的单钥加密算法为DES（Data Encryption Standard），通用的双钥加密算法为RSA（ Rivest-Shamir-Adleman），都产生于上个世纪70年代。</p>
+<p>下面主要介绍后一种。</p>
+<h3 id="双钥加密的原理如下："><a href="#双钥加密的原理如下：" class="headerlink" title="双钥加密的原理如下："></a>双钥加密的原理如下：</h3><ol>
+<li>公钥和私钥是 <strong>一一对应</strong> 的关系，有一把公钥就必然有一把与之对应的、独一无二的私钥，反之亦成立。</li>
+<li><strong>所有的（公钥, 私钥）对都是不同的。</strong></li>
+<li><strong>用公钥可以解开私钥加密的信息，反之亦成立。</strong></li>
+<li>同时生成公钥和私钥应该相对比较容易，但是从公钥推算出私钥，应该是很困难或者是不可能的。</li>
+<li>在双钥体系中，公钥用来加密信息，私钥用来 <strong>数字签名</strong>。</li>
+</ol>
+<p>因为任何人都可以生成自己的（公钥，私钥）对，所以为了防止有人散布伪造的公钥骗取信任，就需要一个 <strong>可靠的第三方机构</strong> 来生成经过认证的（公钥，私钥）对。比如，之前世界上最主要的数字服务认证商是位于美国加州的Verisign公司，它的主要业务就是分发RSA <strong>数字证书</strong>。</p>
+<h2 id="数字签名（digital-signature）和数字证书（digital-certificate）"><a href="#数字签名（digital-signature）和数字证书（digital-certificate）" class="headerlink" title="数字签名（digital signature）和数字证书（digital certificate）"></a>数字签名（digital signature）和数字证书（digital certificate）</h2><p>以下用一个小例子解释：</p>
+<p>1.<br><img src="http://ogudt6aal.bkt.clouddn.com/image/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9A%84%E5%8A%A0%E5%AF%86%E4%B8%8E%E9%80%9A%E4%BF%A11.png" alt="鲍勃有两把钥匙，一把是公钥，另一把是私钥。" title="鲍勃有两把钥匙，一把是公钥，另一把是私钥。"><br>2.<br><img src="http://ogudt6aal.bkt.clouddn.com/image/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9A%84%E5%8A%A0%E5%AF%86%E4%B8%8E%E9%80%9A%E4%BF%A12.png" alt="鲍勃把公钥送给他的朋友们 —— 帕蒂、道格、苏珊 —— 每人一把。" title="鲍勃把公钥送给他的朋友们 —— 帕蒂、道格、苏珊 —— 每人一把。"><br>3.<br><img src="http://ogudt6aal.bkt.clouddn.com/image/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9A%84%E5%8A%A0%E5%AF%86%E4%B8%8E%E9%80%9A%E4%BF%A13.png" alt="苏珊要给鲍勃写一封保密的信。她写完后用鲍勃的公钥加密，就可以达到保密的效果。" title="苏珊要给鲍勃写一封保密的信。她写完后用鲍勃的公钥加密，就可以达到保密的效果。"><br>4.<br><img src="http://ogudt6aal.bkt.clouddn.com/image/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9A%84%E5%8A%A0%E5%AF%86%E4%B8%8E%E9%80%9A%E4%BF%A14.png" alt="鲍勃收信后，用私钥解密，就看到了信件内容。" title="鲍勃收信后，用私钥解密，就看到了信件内容。"></p>
+<p>这里要强调的是，只要鲍勃的私钥不泄露，这封信就是安全的，即使落在别人手里，也无法解密。</p>
+<p>5.<br><img src="http://ogudt6aal.bkt.clouddn.com/image/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9A%84%E5%8A%A0%E5%AF%86%E4%B8%8E%E9%80%9A%E4%BF%A15.png" alt="鲍勃给苏珊回信，决定采用&quot;数字签名&quot;。他写完后先用Hash函数，生成信件的摘要（digest）。" title="鲍勃给苏珊回信，决定采用&quot;数字签名&quot;。他写完后先用Hash函数，生成信件的摘要（digest）。"><br>6.<br><img src="http://ogudt6aal.bkt.clouddn.com/image/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9A%84%E5%8A%A0%E5%AF%86%E4%B8%8E%E9%80%9A%E4%BF%A16.png" alt="然后，鲍勃使用私钥，对这个摘要加密，生成&quot;数字签名&quot;（signature）。" title="然后，鲍勃使用私钥，对这个摘要加密，生成&quot;数字签名&quot;（signature）。"><br>7.<br><img src="http://ogudt6aal.bkt.clouddn.com/image/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9A%84%E5%8A%A0%E5%AF%86%E4%B8%8E%E9%80%9A%E4%BF%A17.png" alt="鲍勃将这个签名，附在信件下面，一起发给苏珊。" title="鲍勃将这个签名，附在信件下面，一起发给苏珊。"><br>8.<br><img src="http://ogudt6aal.bkt.clouddn.com/image/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9A%84%E5%8A%A0%E5%AF%86%E4%B8%8E%E9%80%9A%E4%BF%A18.png" alt="苏珊收信后，取下数字签名，用鲍勃的公钥解密，得到信件的摘要。" title="苏珊收信后，取下数字签名，用鲍勃的公钥解密，得到信件的摘要。"></p>
+<p>由此证明，这封信确实是鲍勃发出的。</p>
+<p>9.<br><img src="http://ogudt6aal.bkt.clouddn.com/image/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9A%84%E5%8A%A0%E5%AF%86%E4%B8%8E%E9%80%9A%E4%BF%A19.png" alt="苏珊再对信件本身使用Hash函数，将得到的结果，与上一步得到的摘要进行对比。" title="苏珊再对信件本身使用Hash函数，将得到的结果，与上一步得到的摘要进行对比。"></p>
+<p>如果两者一致，就证明这封信未被修改过。</p>
+<p>10.<br><img src="http://ogudt6aal.bkt.clouddn.com/image/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9A%84%E5%8A%A0%E5%AF%86%E4%B8%8E%E9%80%9A%E4%BF%A110.png" alt=""></p>
+<p>复杂的情况出现了。道格想欺骗苏珊，他偷偷使用了苏珊的电脑，用自己的公钥换走了鲍勃的公钥。此时，苏珊实际拥有的是道格的公钥，但是还以为这是鲍勃的公钥。因此，道格就可以冒充鲍勃，用自己的私钥做成”数字签名”，写信给苏珊，让苏珊用假的鲍勃公钥进行解密。</p>
+<p>11.<br><img src="http://ogudt6aal.bkt.clouddn.com/image/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9A%84%E5%8A%A0%E5%AF%86%E4%B8%8E%E9%80%9A%E4%BF%A111.png" alt=""></p>
+<p>后来，苏珊感觉不对劲，发现自己无法确定公钥是否真的属于鲍勃。她想到了一个办法，要求鲍勃去找 <strong>“证书中心”（certificate authority，简称CA）</strong>，为公钥做认证。证书中心用自己的私钥，对鲍勃的公钥和一些相关信息一起加密，生成 <strong>“数字证书”（Digital Certificate）</strong>。</p>
+<p>12.<br><img src="http://ogudt6aal.bkt.clouddn.com/image/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9A%84%E5%8A%A0%E5%AF%86%E4%B8%8E%E9%80%9A%E4%BF%A112.png" alt=""></p>
+<p>鲍勃拿到数字证书以后，就可以放心了。以后再给苏珊写信，只要在签名的同时，再附上数字证书就行了。</p>
+<p>13.<br><img src="http://ogudt6aal.bkt.clouddn.com/image/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9A%84%E5%8A%A0%E5%AF%86%E4%B8%8E%E9%80%9A%E4%BF%A113.png" alt=""></p>
+<p>苏珊收信后，用CA的公钥解开数字证书，就可以拿到鲍勃真实的公钥了，然后就能证明”数字签名”是否真的是鲍勃签的。</p>
+<p>14.<br><img src="http://ogudt6aal.bkt.clouddn.com/image/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9A%84%E5%8A%A0%E5%AF%86%E4%B8%8E%E9%80%9A%E4%BF%A114.jpg" alt=""></p>
+<p>最后，我们看一个应用”数字证书”的实例：https协议。这个协议主要用于网页加密。</p>
+<p>15.<br><img src="http://ogudt6aal.bkt.clouddn.com/image/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9A%84%E5%8A%A0%E5%AF%86%E4%B8%8E%E9%80%9A%E4%BF%A115.png" alt="首先，客户端向服务器发出加密请求。" title="首先，客户端向服务器发出加密请求。"><br>16.<br><img src="http://ogudt6aal.bkt.clouddn.com/image/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9A%84%E5%8A%A0%E5%AF%86%E4%B8%8E%E9%80%9A%E4%BF%A116.png" alt="服务器用自己的私钥加密网页以后，连同本身的数字证书，一起发送给客户端。" title="服务器用自己的私钥加密网页以后，连同本身的数字证书，一起发送给客户端。"><br>17.<br><img src="http://ogudt6aal.bkt.clouddn.com/image/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9A%84%E5%8A%A0%E5%AF%86%E4%B8%8E%E9%80%9A%E4%BF%A117.png" alt="&quot;证书管理器&quot;" title="&quot;证书管理器&quot;"></p>
+<p>客户端（浏览器）的”证书管理器”，有”受信任的根证书颁发机构”列表。客户端会根据这张列表，查看解开数字证书的公钥是否在列表之内。</p>
+<p>18.<br><img src="http://ogudt6aal.bkt.clouddn.com/image/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9A%84%E5%8A%A0%E5%AF%86%E4%B8%8E%E9%80%9A%E4%BF%A118.png" alt=""></p>
+<p>如果数字证书记载的网址，与你正在浏览的网址不一致，就说明这张证书可能被冒用，浏览器会发出警告。</p>
+<p>19.<br><img src="http://ogudt6aal.bkt.clouddn.com/image/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9A%84%E5%8A%A0%E5%AF%86%E4%B8%8E%E9%80%9A%E4%BF%A119.jpg" alt=""></p>
+<p>如果这张数字证书不是由受信任的机构颁发的，浏览器会发出另一种警告。</p>
+<p>20.<br><img src="http://ogudt6aal.bkt.clouddn.com/image/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9A%84%E5%8A%A0%E5%AF%86%E4%B8%8E%E9%80%9A%E4%BF%A120.png" alt=""></p>
+<p>如果数字证书是可靠的，客户端就可以使用证书中的服务器公钥，对信息进行加密，然后与服务器交换加密信息。</p>
+<h2 id="Linux-的-SSH"><a href="#Linux-的-SSH" class="headerlink" title="Linux 的 SSH"></a>Linux 的 SSH</h2><p>SSH 是每一台 Linux 电脑的标准配置。随着Linux设备从电脑逐渐扩展到手机、外设和家用电器，SSH 的使用范围也越来越广。不仅程序员离不开它，很多普通用户也每天使用。</p>
+<p>SSH 具备多种功能，可以用于很多场合。有些事情，没有它就是办不成。</p>
+<h3 id="什么是-SSH-？"><a href="#什么是-SSH-？" class="headerlink" title="什么是 SSH ？"></a>什么是 SSH ？</h3><p>最早的时候，互联网通信都是明文通信，一旦被截获，内容就暴露无疑。1995年，芬兰学者 Tatu Ylonen 设计了 SSH 协议，将登录信息全部加密，成为互联网安全的一个基本解决方案，迅速在全世界获得推广，目前已经成为 Linux 系统的标准配置。</p>
+<p>SSH 是一种网络协议，用于计算机之间的加密登录。如果一个用户从本地计算机，使用 SSH 协议登录另一台远程计算机，我们就可以认为，这种登录是安全的，即使被中途截获，密码也不会泄露。</p>
+<p>需要指出的是，<strong>SSH 只是一种协议，存在多种实现</strong>，既有商业实现，也有开源实现。此处针对的实现是 OpenSSH，它是自由软件，应用非常广泛。（另外，此处只讨论 SSH 在 Linux Shell 中的用法。如果要在 Windows 系统中使用 SSH，会用到另一种软件 PuTTY）</p>
+<h3 id="基本用法"><a href="#基本用法" class="headerlink" title="基本用法"></a>基本用法</h3><p>SSH 主要用于远程登录。假定你要以用户名 user，登录远程主机 host，只要一条简单命令就可以了。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ ssh user@host</div></pre></td></tr></table></figure>
+<p>如果本地用户名与远程用户名一致，登录时可以省略用户名。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ ssh host</div></pre></td></tr></table></figure>
+<p>SSH的默认端口是22，也就是说，你的登录请求会送进远程主机的22端口。使用 p 参数，可以修改这个端口。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ ssh -p 2222 user@host</div></pre></td></tr></table></figure>
+<p>上面这条命令表示，ssh直接连接远程主机的2222端口。</p>
+<h3 id="中间人攻击"><a href="#中间人攻击" class="headerlink" title="中间人攻击"></a>中间人攻击</h3><p>SSH 之所以能够保证安全，原因在于它采用了公钥加密。整个过程是这样的：</p>
+<ol>
+<li>远程主机收到用户的登录请求，把自己的公钥发给用户。</li>
+<li>用户使用这个公钥，将登录密码加密后，发送回来。</li>
+<li>远程主机用自己的私钥，解密登录密码，如果密码正确，就同意用户登录。</li>
+</ol>
+<p>这个过程本身是安全的，但是实施的时候存在一个风险：如果有人截获了登录请求，然后冒充远程主机，将伪造的公钥发给用户，那么用户很难辨别真伪。因为 <strong>不像 https 协议，SSH 协议的公钥是没有证书中心（CA）公证</strong> 的，也就是说，都是自己签发的。可以设想，如果攻击者插在用户与远程主机之间（ <strong>比如在公共的wifi区域</strong> ），用伪造的公钥，获取用户的登录密码。再用这个密码登录远程主机，那么 SSH 的安全机制就荡然无存了。这种风险就是著名的”中间人攻击”（Man-in-the-middle attack）。</p>
+<p>SSH 协议是如何应对的呢？</p>
+<h3 id="口令登录"><a href="#口令登录" class="headerlink" title="口令登录"></a>口令登录</h3><p>如果你是第一次登录对方主机，系统会出现下面的提示：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ ssh user@host</div><div class="line">The authenticity of host <span class="string">'host (12.18.429.21)'</span> can<span class="string">'t be established.</span></div><div class="line">RSA key fingerprint is 98:2e:d7:e0:de:9f:ac:67:28:c2:42:2d:37:16:58:4d.</div><div class="line">Are you sure you want to continue connecting (yes/no)?</div></pre></td></tr></table></figure>
+<p>这段话的意思是，无法确认 host 主机的真实性，只知道它的公钥指纹，问你还想继续连接吗？</p>
+<p>所谓”公钥指纹”，是指公钥长度较长（这里采用 RSA 算法，长达1024位），很难比对，所以对其进行 MD5 计算，将它变成一个128位的指纹。上例中是 98:2e:d7:e0:de:9f:ac:67:28:c2:42:2d:37:16:58:4d，再进行比较，就容易多了。</p>
+<p>很自然的一个问题就是，用户怎么知道远程主机的公钥指纹应该是多少？回答是没有好办法，<strong>远程主机必须在自己的网站上贴出公钥指纹，以便用户自行核对</strong>。</p>
+<p>假定经过风险衡量以后，用户决定接受这个远程主机的公钥。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Are you sure you want to <span class="built_in">continue</span> connecting (yes/no)? yes</div></pre></td></tr></table></figure>
+<p>系统会出现一句提示，表示host主机已经得到认可。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Warning: Permanently added <span class="string">'host,12.18.429.21'</span> (RSA) to the list of known hosts.</div></pre></td></tr></table></figure>
+<p>然后，会要求输入密码。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Password: (enter password)</div></pre></td></tr></table></figure>
+<p>如果密码正确，就可以登录了。</p>
+<p>当远程主机的公钥被接受以后，它就会被保存在文件 <strong>$HOME/.ssh/known_hosts</strong> 之中。下次再连接这台主机，系统就会认出它的公钥已经保存在本地了，从而跳过警告部分，直接提示输入密码。</p>
+<p>每个 SSH 用户都有自己的 <strong>known_hosts</strong> 文件，此外系统也有一个这样的文件，通常是 <strong>/etc/ssh/ssh_known_hosts</strong>，保存一些对所有用户都可信赖的远程主机的公钥。</p>
+<h3 id="公钥登录"><a href="#公钥登录" class="headerlink" title="公钥登录"></a>公钥登录</h3><p>使用密码登录，每次都必须输入密码，非常麻烦。好在 SSH 还提供了公钥登录，可以省去输入密码的步骤。</p>
+<p>所谓”公钥登录”，原理很简单，就是 <strong>用户将自己的公钥储存在远程主机上</strong>。登录的时候，远程主机会向用户发送一段随机字符串，用户用自己的私钥加密后，再发回来。远程主机用事先储存的公钥进行解密，如果成功，就证明用户是可信的，直接允许登录 shell，不再要求密码。</p>
+<p>这种方法要求 <strong>用户必须提供自己的公钥</strong>。如果没有现成的，可以直接用 ssh-keygen 生成一个：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ ssh-keygen</div></pre></td></tr></table></figure>
+<p>运行上面的命令以后，系统会出现一系列提示，可以一路回车。其中有一个问题是，要不要对私钥设置口令（passphrase），如果担心私钥的安全，这里可以设置一个。</p>
+<p>运行结束以后，在 <strong>$HOME/.ssh/</strong> 目录下，会新生成两个文件：<strong>id_rsa.pub</strong> 和 <strong>id_rsa</strong>。前者是你的公钥，后者是你的私钥。</p>
+<p>这时再输入下面的命令，将公钥传送到远程主机host上面：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ ssh-copy-id user@host</div></pre></td></tr></table></figure>
+<p>好了，从此你再登录，就不需要输入密码了。</p>
+<p>如果还是不行，就打开远程主机的 <strong>/etc/ssh/sshd_config</strong> 这个文件，检查下面几行前面”#”注释是否取掉。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">RSAAuthentication yes</div><div class="line">PubkeyAuthentication yes</div><div class="line">AuthorizedKeysFile .ssh/authorized_keys</div></pre></td></tr></table></figure>
+<p>然后，重启远程主机的ssh服务。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">// ubuntu系统</div><div class="line">service ssh restart</div><div class="line">// debian系统</div><div class="line">/etc/init.d/ssh restart</div></pre></td></tr></table></figure>
+<h3 id="authorized-keys文件"><a href="#authorized-keys文件" class="headerlink" title="authorized_keys文件"></a>authorized_keys文件</h3><p>远程主机将用户的公钥，保存在登录后的用户主目录的 <strong>$HOME/.ssh/authorized_keys</strong> 文件中。公钥就是一段字符串，只要把它追加在 <strong>authorized_keys</strong> 文件的末尾就行了。</p>
+<p>这里不使用上面的 <strong>ssh-copy-id</strong> 命令，改用下面的命令，解释公钥的保存过程：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ ssh user@host <span class="string">'mkdir -p .ssh &amp;&amp; cat &gt;&gt; .ssh/authorized_keys'</span> &lt; ~/.ssh/id_rsa.pub</div></pre></td></tr></table></figure>
+<p>这条命令由多个语句组成，依次分解开来看：</p>
+<ol>
+<li>“$ ssh user@host”，表示登录远程主机；</li>
+<li>单引号中的 mkdir .ssh &amp;&amp; cat &gt;&gt; .ssh/authorized_keys，表示登录后在远程 shell 上执行的命令；</li>
+<li>“$ mkdir -p .ssh”的作用是，如果用户主目录中的 .ssh 目录不存在，就创建一个；</li>
+<li>‘cat &gt;&gt; .ssh/authorized_keys’ &lt; ~/.ssh/id_rsa.pub 的作用是，将本地的公钥文件 ~/.ssh/id_rsa.pub，重定向追加到远程文件 authorized_keys 的末尾。</li>
+</ol>
+<p>写入 authorized_keys 文件后，公钥登录的设置就完成了。</p>
+<hr>
+<h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><p>本文参考 <a href="http://www.ruanyifeng.com/blog/" title="阮一峰博客" target="_blank" rel="external">阮一峰博客</a> 整理。</p>
+
+      
+    </div>
+
+    <div>
+      
+        <div>
+    
+        <div style="text-align:center;color: #A52A2A; font-size:18px;">
+        < - 完 - >
+        </div>
+    
+</div>
+
+      
+    </div>
+    
+    <div>
+      
+        
+<div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="/uploads/weigonghao.jpg" alt="喵小哥 wechat" style="width: 200px; max-width: 100%;"/>
+    <div>上面是一个挤牙膏式的微公号。</div>
+</div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div> <span> - </span> 坚持分享  鼓励创作 <span> - </span> </div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/uploads/Wechat.png" alt="喵小哥 WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/uploads/Alipay.png" alt="喵小哥 Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+      
+        <div id="bitcoin" style="display: inline-block">
+          <img id="bitcoin_qr" src="/uploads/bitcoin.png" alt="喵小哥 Bitcoin"/>
+          <p>比特币打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+      <strong>本文作者：</strong>
+      喵小哥
+    </li>
+    <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://taketimeasafriend.github.io/2017/07/02/编程那点事儿-计算机的加密与通信/" title="计算机的加密与通信">https://taketimeasafriend.github.io/2017/07/02/编程那点事儿-计算机的加密与通信/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong>
+      本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/计算机原理/" rel="tag"><i class="fa fa-thumb-tack" aria-hidden="true"></i> 计算机原理</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/07/02/编程那点事儿-浅入浅出命令行/" rel="next" title="浅入浅出命令行">
+                <i class="fa fa-chevron-left"></i> 浅入浅出命令行
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/07/04/编程那点事儿-JavaScript以及它的后代: jQuery和Ajax/" rel="prev" title="JavaScript 以及它的后代：jQuery 和 Ajax">
+                JavaScript 以及它的后代：jQuery 和 Ajax <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style_24x24">
+	<a class="jiathis_button_fb"></a>
+	<a class="jiathis_button_twitter"></a>
+	<a class="jiathis_button_googleplus"></a>
+	<a class="jiathis_button_linkedin"></a>
+	<a class="jiathis_button_ydnote"></a>
+	<a class="jiathis_button_tsina"></a>
+	<a class="jiathis_button_weixin"></a>
+	<a class="jiathis_button_qzone"></a>
+	<a class="jiathis_button_tieba"></a>
+	<a class="jiathis_button_fav"></a>
+	<a class="jiathis_button_copy"></a>
+	<a class="jiathis_button_cqq"></a>
+	<a class="jiathis_button_douban"></a>
+	<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+</div>
+<script type="text/javascript" >
+  var jiathis_config={
+    hideMore: false
+  }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image" src="/uploads/avatar.jpg" alt="喵小哥"/>
+          <p class="site-author-name" itemprop="name">喵小哥</p>
+          
+            <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">90</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              
+                <a href="/categories/index.html">
+                
+                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-name">分类</span>
+                
+                </a>
+              
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              
+                <a href="/tags/index.html">
+                
+                <span class="site-state-item-count">86</span>
+                <span class="site-state-item-name">标签</span>
+                
+                </a>
+              
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/taketimeasafriend" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://wangwei.party" target="_blank" title="Resume">
+                  
+                    <i class="fa fa-fw fa-user-secret"></i>
+                  
+                  Resume
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element  links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              拓展学习
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://zhibimo.com/explore/books/" title="知笔墨" target="_blank">知笔墨</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://web.archive.org/web/20111228123747/http://www.lixiaolai.com/" title="李笑来" target="_blank">李笑来</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://macshuo.com/" title="池建强" target="_blank">池建强</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.geekonomics10000.com/" title="万维钢" target="_blank">万维钢</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://mindhacks.cn/" title="刘未鹏" target="_blank">刘未鹏</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.ruanyifeng.com/blog/" title="阮一峰" target="_blank">阮一峰</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.yinwang.org/" title="王 垠" target="_blank">王 垠</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.devtang.com/" title="唐 巧" target="_blank">唐 巧</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        <div class="hissoryCounter">
+          <div class="hissoryCounterChild1">-历史访问次数-<img border="0" src="http://cc.amazingcounters.com/counter.php?i=3214334&c=9643315" alt="AmazingCounters.com"></div>
+          <div class="hissoryCounterChild2">-历史访问人数-<img border="0" src="http://cc.amazingcounters.com/counter.php?i=3214333&c=9643312" alt="AmazingCounters.com"></div>
+        </div>
+
+
+        <!-- Start of StatCounter Code for Default Guide -->
+        <script type="text/javascript">
+        var sc_project=11440510;
+        var sc_invisible=1;
+        var sc_security="9bd592ab";
+        var scJsHost = (("https:" == document.location.protocol) ?
+        "https://secure." : "http://www.");
+        document.write("<sc"+"ript type='text/javascript' src='" +
+        scJsHost+
+        "statcounter.com/counter/counter.js'></"+"script>");
+        </script>
+        <noscript><div class="statcounter"><a title="site stats"
+        href="http://statcounter.com/" target="_blank"><img
+        class="statcounter"
+        src="//c.statcounter.com/11440510/0/9bd592ab/1/" alt="site
+        stats"></a></div></noscript>
+        <!-- End of StatCounter Code for Default Guide -->
+        <a href="http://statcounter.com/p11440510/?guest=1" style="color: #00FF7F; font-size: 12px;">
+        More Data
+        </a>
+
+
+        
+
+
+      </section>
+
+      
+        <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#加密方法"><span class="nav-number">1.</span> <span class="nav-text">加密方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#加密方法分两大类："><span class="nav-number">1.1.</span> <span class="nav-text">加密方法分两大类：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#双钥加密的原理如下："><span class="nav-number">1.2.</span> <span class="nav-text">双钥加密的原理如下：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数字签名（digital-signature）和数字证书（digital-certificate）"><span class="nav-number">2.</span> <span class="nav-text">数字签名（digital signature）和数字证书（digital certificate）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Linux-的-SSH"><span class="nav-number">3.</span> <span class="nav-text">Linux 的 SSH</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是-SSH-？"><span class="nav-number">3.1.</span> <span class="nav-text">什么是 SSH ？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#基本用法"><span class="nav-number">3.2.</span> <span class="nav-text">基本用法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#中间人攻击"><span class="nav-number">3.3.</span> <span class="nav-text">中间人攻击</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#口令登录"><span class="nav-number">3.4.</span> <span class="nav-text">口令登录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#公钥登录"><span class="nav-number">3.5.</span> <span class="nav-text">公钥登录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#authorized-keys文件"><span class="nav-number">3.6.</span> <span class="nav-text">authorized_keys文件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#说明"><span class="nav-number">4.</span> <span class="nav-text">说明</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+        <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  更新于<i class="fa fa-clock-o" aria-hidden="true"></i>
+  
+  <span itemprop="copyrightYear">2017-10-20</span>
+  <span class="with-love">
+    <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder"><a href="http://wangwei.party/">喵小哥</a></span>
+</div>
+
+<div class="theme-info">
+  <span class="post-count">当前博客共120.0k字</span>
+  <div class="powered-by"></div>
+</div>
+
+<div class="powered-by">
+  每天进步一点点
+</div>
+
+<div class="theme-info">
+  去另一条
+  <a class="theme-link" href="https://51world.wordpress.com/">
+    时间轴
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+  
+  <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+      search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.popup').toggle();
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+      $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = $( "entry", xmlResponse ).map(function() {
+            return {
+              title: $( "title", this ).text(),
+              content: $("content",this).text(),
+              url: $( "url" , this).text()
+            };
+          }).get();
+          var $input = document.getElementById(search_id);
+          var $resultContent = document.getElementById(content_id);
+          $input.addEventListener('input', function(){
+            var matchcounts = 0;
+            var str='<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length > 1) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var content_index = [];
+                var data_title = data.title.trim().toLowerCase();
+                var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                var data_url = decodeURIComponent(data.url);
+                var index_title = -1;
+                var index_content = -1;
+                var first_occur = -1;
+                // only match artiles with not empty titles and contents
+                if(data_title != '') {
+                  keywords.forEach(function(keyword, i) {
+                    index_title = data_title.indexOf(keyword);
+                    index_content = data_content.indexOf(keyword);
+                    if( index_title >= 0 || index_content >= 0 ){
+                      isMatch = true;
+                      if (i == 0) {
+                        first_occur = index_content;
+                      }
+                    }
+
+                  });
+                }
+                // show search results
+                if (isMatch) {
+                  matchcounts += 1;
+                  str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                  var content = data.content.trim().replace(/<[^>]+>/g,"");
+                  if (first_occur >= 0) {
+                    // cut out 100 characters
+                    var start = first_occur - 20;
+                    var end = first_occur + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if(start == 0){
+                      end = 50;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    var match_content = content.substring(start, end);
+                    // highlight all keywords
+                    keywords.forEach(function(keyword){
+                      var regS = new RegExp(keyword, "gi");
+                      match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                    });
+
+                    str += "<p class=\"search-result\">" + match_content +"...</p>"
+                  }
+                  str += "</li>";
+                }
+              })};
+            str += "</ul>";
+            if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+            if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+            $resultContent.innerHTML = str;
+          });
+          proceedsearch();
+        }
+      });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+
+  
+
+</body>
+</html>
